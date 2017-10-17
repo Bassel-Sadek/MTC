@@ -1,5 +1,3 @@
----+ Plan/Bay Area
-
 _2013 Regional Transportation Plan and Sustainable Communities Strategy_
 
 <a href="/foswiki/pub/Main/Documents/2011_03_22_Release_First_Round_Travel_Model_Technical_Summary.pdf" target="_blank" title="Technical Summary of Predicted Traveler Responses to First Round Scenarios">Technical Report: Predicted Traveler Responses to First Round Scenarios</a>

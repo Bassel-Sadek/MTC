@@ -1,6 +1,6 @@
 [[TravelModel]] - MTC Travel Model
 
-[[http://metropolitantransportationcommission.github.io/baus_docs/][Bay Area !UrbanSim Two]] - MTC Land Use Model
+[Bay Area UrbanSim Two](http://bayareametro.github.io/baus_docs/) - MTC Land Use Model
 
 [[PopulationSynthesizers]] - MTC Population Synthesizers
 

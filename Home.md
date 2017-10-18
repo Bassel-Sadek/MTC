@@ -1,4 +1,6 @@
-# Welcome to the MTC ABAG Analytical Modeling Wiki
+# MTC ABAG Analytical Modeling Wiki
+
+The old MTC ABAG Analytical Modeling Wiki (http://analytics.mtc.ca.gov/foswiki/Main/WebHome) began having problems so it was moved here in October 2017.
 
 [[TravelModel]] - MTC Travel Model
 

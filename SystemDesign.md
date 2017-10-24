@@ -23,8 +23,7 @@ The CT-RAMP Java software allows for the choice models to be distributed across 
 
 As noted on the [[ComputingEnvironment]] page, MTC uses one computer. The JPPF driver process is executed on this computer and acts like a traffic cop by acquiring tasks from the client and distributing those tasks to the node processes. When the node processes complete tasks, the results are returned back to the client via the JPPF driver. One node is used in the MTC application. After being created, the node listens for tasks from the JPPF driver.
 
-<img alt="JPPF Workflow" height="596" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/SystemDesign/JPPF_Workflow.png" title="JPPF_Workflow.png" width="446" />
-
+![](https://github.com/BayAreaMetro/modeling-website/blob/master/foswiki_imgs/JPPF_Workflow.png)
 
 Node processes receive tasks, perform those tasks, and return the results. Nodes are configured to communicate with the driver process when they are started. MTC configures the nodes to use 66 GB of memory and 24 threads (see the [[SetupConfiguration]] page for details on where these parameters are specified). The JPPF driver attempts to balance computational loads across available nodes. The driver also retrieves class files, i.e. sets of Java code, from the client application and passes those to the nodes as needed.
 

@@ -1,0 +1,81 @@
+[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[SetupConfiguration]]
+
+----
+
+__TOC__
+
+=Setup and Configuration=
+
+This page provides details on setting up the travel model to run on a cluster of computers, including descriptions of the necessary configuration files.
+
+==Step 1: Create the required folder structure==
+
+The MTC travel model is delivered as a compressed folder containing two directories, <strong>CTRAMP </strong>and *INPUT* and one <a href="http://en.wikipedia.org/wiki/MS-DOS_batch_files" target="_blank" title="Wikipedia MS-DOS Batch file">MS DOS batch file</a>, *<a href="https://github.com/MetropolitanTransportationCommission/travel-model-one/blob/master/model-files/RunModel.bat" target="_blank">RunModel.bat</a>*. These files can be placed in any directory on a computer designated as the main controller of the program flow. On MTC's set up, these files are placed on the _mainmodel_ computer (see SystemDesign page for more details).
+
+The <strong>CTRAMP </strong>directory contains all of the model configuration files, Java instructions, and Cube scripts required to run the travel model, organized in the following three folders:
+   * <strong><a href="https://github.com/MetropolitanTransportationCommission/travel-model-one/tree/master/model-files/model" target="_blank">model</a> </strong>-- contains all of the UtilityExpressionCalculator files that specify the choice models;
+   * <strong><a href="https://github.com/MetropolitanTransportationCommission/travel-model-one/tree/master/model-files/runtime" target="_blank">runtime</a> </strong>-- contains all of the Java configuration and JAR (executable) files, as well as the files necessary for Java to communicate with Cube;
+   * <strong><a href="https://github.com/MetropolitanTransportationCommission/travel-model-one/tree/master/model-files/scripts" target="_blank">scripts</a> </strong>-- contains all of the Cube scripts and associated helper files.
+The <strong>INPUT </strong>directory contains all of the InputFiles required to run a specific scenario. MTC will deliver the model with a set of scenario-specific inputs. When configuring the model on a new computing system, one should make sure that the results from an established scenario can be recreated before developing and analyzing a new scenario. The <strong>INPUT </strong>directory contains the following folders:
+   * <strong>hwy </strong>-- contains the input free flow highway network, which is named, by convention, *freeflow.net* (see the HighwayNetworkCoding page for details);
+   * <strong>trn </strong>-- contains all of the input transit network files organized across three directories, namely: *transit_lines*, *transt_fares*, and *transit_support* (see the TransitNetworkCoding page for details);
+   * *landuse* -- contains the socio-economic input land use file (described on the TazData page) and walk shares file;
+   * <strong>nonres </strong>-- contains the fixed, year-specific internal/external trip tables, the fixed, year-specific air passenger trip tables, and files used to support the commercial vehicle model;
+   * <strong>popsyn </strong>-- contains the synthetic population files per the formats described on the PopSynHousehold and PopSynPerson pages.
+The <strong>RunModel.bat </strong>contains a list of MS-DOS instructions that control model flow.
+
+ 
+==Step 2: Map a network drive to share across computers==
+
+As noted in the previous section, the MTC model files can be placed within any directory on a computer disk. After establishing this location, the user must map a network drive to a shared folder to allow other computers access. On MTC's machine, the directory '''E:\MainModelShare''' is first mapped to the letter drive *M:\* and this directory is then shared across on the network (*M:\ = \\MainModel\MainModelShare\*). Satellite computers should also map the letter drive *M:\* to this network location.
+
+Please note that the model components running on the main machine should use the local version of the directory (i.e. '''M:\Projects\2000_04_XXX\''') rather than the network version (i.e. '''\\MainModel\MainModelShare\Projects\2000_04_XXX\''').
+
+ 
+==Step 3: Configure the CT-RAMP and JPPF Services==
+
+Prior to executing a model run, the files controlling the CTRAMP and JPPF services must be configured. Please see the SystemDesign page for a broad overview of these services. When executing the travel model, the user first executes a start-up script separately on each computer in the cluster, if multiple computers are used. Each script specifies the tasks assigned to each computer and need not be configured exactly as described on the [[SystemDesign]] page (we describe MTC's setup; numerous other configurations are possible). In the MTC setup, the '''runMain.cmd''' and '''runNode0.cmd''' files execute the tasks assigned to the single computer we use to execute the model. The *.cmd* files are MS-DOS batch scripts and can be edited in a text editor, such as Notepad.
+
+
+===SetPath.bat===
+
+Variables common to each of these scripts are described in the table below and specified in the [https://github.com/MetropolitanTransportationCommission/travel-model-one/blob/master/model-files/runtime/SetPath.bat SetPath.bat] file, with the MTC setup provided as an example.
+ 
+
+{|
+! Statement
+! Purpose
+|-
+|<code>set JAVA_PATH=c:\program files\java\jdk1.7.0_71</code>
+|Specify the 64-bit Java path; the JDK path is needed to compile code "on-the-fly"; version 1.7.X must be used
+|-
+|<code>set GAWK_PATH=m:\util\gawk</code>
+|Specify the Java path
+|-
+|<code>set TPP_PATH=c:\progam files(x86)\citilabs\cubevoyager</code>
+|Specify the Cube Voyager path
+|-
+|<code>set RUNTIME=ctramp\runtime</code>
+|Specify the location of the CT-RAMP software (relative to the project directory)
+|-
+|<code>set OLD_PATH=%path%</code>
+|Store the old path to place after the new path variables to ensure the software we want is accessed first
+|-
+|<code>set PATH=%RUNTIME%;%JAVA_PATH%/bin;%TPP_PATH%;%GAWK_PATH%/bin;%OLD_PATH%</code>
+| Set the path DOS environment variable for the model run
+|-
+|<code>set CLASSPATH=%RUNTIME%/mtc.jar;%RUNTIME%/config;%RUNTIME%;%RUNTIME%/config/jppf-2.4/jppf-2.4-driver/lib/</code>
+|Set the Java CLASSPATH, pointing to the MTC Java files as well as the JPPF Java library
+|-
+|<code>set HOST_IP=192.168.1.200</code>
+|The IP address of the host machine
+|}
+
+===RuntimeConfiguration.py===
+
+[https://github.com/MetropolitanTransportationCommission/travel-model-one/blob/master/model-files/scripts/preprocess/RuntimeConfiguration.py RuntimeConfiguration.py] is meant to do the remainder of the runtime-setup automatically, so that all the configuration is in one place and done automatically.  See the script for details.
+
+Now that the model is configured, the user can run the model; the steps required to do so are described on the RunModel page.
+ 
+
+-- Main.DavidOry - 22 Apr 2014

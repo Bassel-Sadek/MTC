@@ -8,7 +8,7 @@
 
 [[UsersGuide]] - _Travel Model One_ User's Guide
 
-[[DataRepository]] - Technical travel model results
+[DataRepository](http://data.mtc.ca.gov/data-repository/) - Technical travel model results
 
 [[Consistency]] - Consistency guidelines and data tables for Congestion Management Agencies
 

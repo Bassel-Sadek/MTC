@@ -8,9 +8,9 @@ The hardware and software MTC uses to execute _Travel Model One_ are described o
 ## Hardware
 
 MTC uses a single server with the following characteristics:
-   1 Operating system: Microsoft Windows Server 2012 R2 Standard, 64-bit;
-   1 Processors: Two Intel Xeon E5-2680 v3 @ 2.50 GHz (24 cores, 48 logical processors);
-   1 Memory (RAM): 256.0 GB
+* Operating system: Microsoft Windows Server 2012 R2 Standard, 64-bit;
+* Processors: Two Intel Xeon E5-2680 v3 @ 2.50 GHz (24 cores, 48 logical processors);
+* Memory (RAM): 256.0 GB
 
 ## Software
 

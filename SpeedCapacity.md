@@ -52,6 +52,6 @@ MTC uses area type and facility type specific free flow travel speed and roadway
 | 4 (Suburban) | 8 | 65 | 2250 |
 | 5 (Rural) | 8 | 65 | 2250 |
 | All (0 through 5) | 9 (Special facility) | Varies | Varies |
- 
+
 
 -- Main.DavidOry - 20 Aug 2015

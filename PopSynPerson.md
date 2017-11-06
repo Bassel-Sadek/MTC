@@ -1,3 +1,7 @@
+[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[DataDictionary]] > [[PopSynPerson]]
+
+***
+
 ## Person file from Population Synthesizer
 
 The population synthesizer generates a [household file](PopSynHousehold) and this person file. Variables below in UPPER CASE are drawn directly from PUMS records; variables in lower case are derived from PUMS variables.

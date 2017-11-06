@@ -6,7 +6,7 @@ Identical CSV and DBF versions of this file are used by the travel model.
 
 | *Name* | *Definition* | *Scale* | *Join with &hellip;* |
 |--------|--------------|---------|----------------------|
-| ZONE | Transportation analysis zone | Integer, 1 to 1454 | Origins, destinations,[shape file](http://opendata.mtc.ca.gov/datasets/b85ba4d43f9843128d3542260d9a2f1f_0) |
+| ZONE | Transportation analysis zone | Integer, 1 to 1454 | Origins, destinations, [shape file](http://opendata.mtc.ca.gov/datasets/b85ba4d43f9843128d3542260d9a2f1f_0) |
 | DISTRICT | Superdistrict geographic designation | Integer, 1 to 34 |   |
 | SD | Superdistrict geographic designation (duplicate) | Integer, 1 to 34 |   |
 | COUNTY | County | Integer, 1 to 9 | 1=San Francisco; 2=San Mateo; 3=Santa Clara; 4=Alameda; 5=Contra Costa; 6=Solano; 7= Napa; 8=Sonoma; 9=Marin |

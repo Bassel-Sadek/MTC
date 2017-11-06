@@ -2,8 +2,6 @@
 
 ***
 
-# Data Dictionary
-
 ## Definitions of variables in key input files
 
 [[TazData]] - Land use (zonal) data

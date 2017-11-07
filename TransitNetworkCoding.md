@@ -73,30 +73,31 @@ Table 3 lists the input and output files used in the creation of the transit acc
  
 ## 2. Transit Line Files
 
-The transit lines are specified in a series of files ending with the extension .tpl, organized by transit operator and line-haul mode. For example, AC transit operates two types of transit lines (or technologies): local bus as specified in AC_Local.tpl and express bus as specified in AC_TransBay.tpl. Figure 2 shows an example of the transit line file. <span style='font-size: 12pt; font-family: "Times New Roman","serif";'>A  name is assigned to each route based on the operator mode and a description of the route, usually the line number and the direction of the route if necessary. Attributes of the transit lines  include runtime, stop node sequence</span>, line-haul mode, and headways by time period (FREQ[1-5] which refer to Early AM, AM Peak, Midday, PM Peak, and Evening respectively). The sequence of nodes specify the path of the route, where the node numbers correspond to the nodes in the highway network. Consult the Cube manual for details on the specification of the transit line files. The relationship to the highway network will be discussed in [[#TransitBackgroundFiles][transit background network]] section below.
+The transit lines are specified in a series of files ending with the extension .tpl, organized by transit operator and line-haul mode. For example, AC transit operates two types of transit lines (or technologies): local bus as specified in AC_Local.tpl and express bus as specified in AC_TransBay.tpl. Figure 2 shows an example of the transit line file. A  name is assigned to each route based on the operator mode and a description of the route, usually the line number and the direction of the route if necessary. Attributes of the transit lines  include runtime, stop node sequence, line-haul mode, and headways by time period (FREQ[1-5] which refer to Early AM, AM Peak, Midday, PM Peak, and Evening respectively). The sequence of nodes specify the path of the route, where the node numbers correspond to the nodes in the highway network. Consult the Cube manual for details on the specification of the transit line files. The relationship to the highway network will be discussed in [[#TransitBackgroundFiles][transit background network]] section below.
 
 *Figure 2 Transit Line File Example*
 
-<img alt="Tpl_file.jpg" height="371" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Tpl_file.jpg" title="Tpl_file.jpg" width="989" />
+![Transit Line File Example](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Tpl_file.jpg)
+
 
 The current MTC model has 34 transit operators and 46 transit line files. To avoid having to update the script that builds the transit network whenever a new line file is added, the transit line files are specified in a transit block file (transit_line.block) that is read in by Cube when running the transit network build script. As a result, whenever a new transit operator is added to the model, the analyst must create a new transit line file, with the &lt;operator&gt;_&lt;line-haul mode&gt;.tpl filename and then add it to the transit block file (transit_line.block). Figure 3 shows the transit_line.block file.
 
-*<a name="TransitLineBlockFile"></a>Figure 3 Transit Line Block File (Transit_line.block)*
+*Figure 3 Transit Line Block File (Transit_line.block)*
 
-<img alt="transit_line_block_file.jpg" height="400" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/transit_line_block_file.jpg" title="transit_line_block_file.jpg" width="988" />
+![Transit Line Block File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_line_block_file.jpg)
 
-It is important to note that some transit <span style='font-size: 12pt; font-family: "Times New Roman","serif";'>segments are not included in the highway network. This is the case for rail lines, ferries or dedicated lanes used only by buses (for example, the bus ramps between the Bay Bridge and the Transbay Terminal). These links are transit-only links and are coded in the .tpl file of the respective operator and mode. The link should include information about the time and distance between nodes,  as well as the transit modes that can travel the link.</span>. These may need to be updated as well when coding/modifying the transit network.
+It is important to note that some transit segments are not included in the highway network. This is the case for rail lines, ferries or dedicated lanes used only by buses (for example, the bus ramps between the Bay Bridge and the Transbay Terminal). These links are transit-only links and are coded in the .tpl file of the respective operator and mode. The link should include information about the time and distance between nodes,  as well as the transit modes that can travel the link. These may need to be updated as well when coding/modifying the transit network.
 
  
 ## 3. Transit Networks
 
 The transit networks are built in two steps:
-   1 By creating the transit network files from the highway network <span style='font-size: 12pt; font-family: "Times New Roman","serif";'>and relevant transit files</span> for the 5 time periods.
-   1 By generating the access, egress, and transfer support links from the transit network and other support files.
+1. By creating the transit network files from the highway network and relevant transit files for the 5 time periods.
+1. By generating the access, egress, and transfer support links from the transit network and other support files.
  
 ### 3.1 Transit Network Files
 
-The transit network files are the [[HighwayNetworkCoding][highway network files ]] with bus speeds, transit access links, transit transfer links, walk funnel links, and drive funnel links which are added by the &ldquo;<strong>[[#PrepHwyNet][PrepHwyNet.job]]</strong>&rdquo; script. There are two types of temporary transit networks that are created by this script, as follows:
+The transit network files are the [highway network files](HighwayNetworkCoding) with bus speeds, transit access links, transit transfer links, walk funnel links, and drive funnel links which are added by the [PrepHwyNet.job](TransitNetworkCoding#script-prephwynetjob) script. There are two types of temporary transit networks that are created by this script, as follows:
 
 1. &lt;time period&gt;_temporary_transit_background_accesslinks.net - Highway network with transit access links (see Figure 1, above) between:
    * Highway nodes and walk access funnel nodes
@@ -109,7 +110,7 @@ The transit network files are the [[HighwayNetworkCoding][highway network files 
 
 The script "PrepHwyNet.job" performs the following three steps:
 
-1. Computes the bus travel time on every highway link by assuming a fixed delay (in minutes per mile), segmented by link area type ( [[MasterNetworkLookupTables][AT]]) and facility type ( [[MasterNetworkLookupTables][FT]]). Links with speeds below a minimum threshold (2 MPH) are set to that minimum threshold to help the path builder find valid paths. This step also adds transit-only nodes to the highway network which are needed for the second and third steps in the script.
+1. Computes the bus travel time on every highway link by assuming a fixed delay (in minutes per mile), segmented by link area type ([AT](MasterNetworkLookupTables)) and facility type ([FT](MasterNetworkLookupTables)). Links with speeds below a minimum threshold (2 MPH) are set to that minimum threshold to help the path builder find valid paths. This step also adds transit-only nodes to the highway network which are needed for the second and third steps in the script.
 1. Transit access links are added to the highway network. This is necessary for Cube to automatically generate walk and drive access links in a later step.
 1. Transit transfer links are added to the highway network. This is necessary for Cube to automatically generate transfer access links in a later step.
 
@@ -124,7 +125,7 @@ Two new variables, BUS_TIME and PNR_TIME, are computed from the highway variable
 | FT | [Facility Type](MasterNetworkLookupTables) | 1,2,..9 |
 | AT | [Area Type](MasterNetworkLookupTables) | 0,1,..5 |
 | DISTANCE | Link Distance (miles) | 1.45 |
- 
+
 *Table 5 Input and Output Files used in Computing BUS_TIME and PNR_TIME*
 | Input/ Output | File | Description | Example |
 |---|---|---|---|

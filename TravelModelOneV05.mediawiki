@@ -1,0 +1,165 @@
+[[Home]] > [[TravelModel]] > [[Development]] > [[TravelModelOneV05]]
+
+----
+
+= What is Travel Model One (v 0.5)? =
+
+Travel Model One v0.5 is an update to MTC's Activity-Based Travel Model that incorporates the effects of '''pavement quality''' on auto, transit and truck travel.  This is done in several ways:
+* For auto and truck travel, the monetary cost of a link has been updated based on link attributes rather than assuming a uniform operating cost (per mile) throughout the network.
+* For transit travel, additional boarding and in-vehicle delays are assessed based on the distance traveled for specific [[TransitModes|transit modes]].
+
+The following changes were made to Travel Model One in order to incorporate the effects of pavement quality on auto operating costs.
+
+== Inputs ==
+
+=== Roadway Network ===
+
+For Travel Model One v0.5, the input roadway network ('''''INPUT\hwy\freeflow.NET''''') is required to have an attribute, ''cityid'', for each link, which is an integer code for the city in which the link is situated.  Additionally, the county code (''gl'') is used if the pavement conditions for that city is unknown.  
+
+See [https://github.com/MetropolitanTransportationCommission/travel-model-one/tree/master/utilities/AttachShapeToNetwork AttachShapeToNetwork].
+
+=== Auto Operating Costs ===
+
+In Travel Model One v0.4, a single auto operating cost was specified in '''''INPUT\params.properties''''':
+<pre style="background-color:#fcc">
+# Units = year 2000 cents per mile
+AutoOperatingCost = 16.80
+</pre>
+
+For Travel Model One v0.5, this auto operating cost  has been split into two separate components:
+1 Repair and maintence cost
+1 Fuel cost
+
+Further, the auto operating costs specified in '''''INPUT\params.properties''''' now represents the auto operating costs for streets and roads in a "perfect" state of repair.  These "perfect" costs will then be factored up based upon the average Pavement Condition Index (PCI) of the city in which the link is situated.  These city-based adjustments apply to non-freeway links only ([[MasterNetworkLookupTables|facility types 3,4,6,7]]), because they are maintained by the city.  For the remaining freeway links, the same file also specifies the freeway adjustment factors to be used.
+
+<pre style="background-color:#cfc">
+# Units = year 2000 cents per mile
+AutoOpCost_perfect_RM      =  4.29
+AutoOpCost_perfect_Fuel    = 12.04
+# freeway adjustments based on average PCI
+AutoOpCost_fwyadj_RM       = 1.00000
+AutoOpCost_fwyadj_Fuel     = 1.03984
+</pre>
+
+City-based auto operating cost adjustments are specified in a new input file, '''''INPUT\sgr\city_opcost_adjustment.csv'''''.  This file contains the following columns:
+
+{|
+!Column
+!Description
+|-
+|  1  
+| ''cityid'' in the roadway network, an integer
+|-
+|  2 
+| city name, a string
+|-
+|  3 
+| year, an integer.  This isn't used but it helps to clarify the relevant year for this data.
+|-
+|  4 
+| auto repair & maintenance cost adjustment
+|-
+|  5  
+| auto fuel cost adjustment 
+|-
+|  6  
+| small truck repair & maintenance cost adjustment
+|-
+|  7  
+| small truck fuel cost adjustment 
+|-
+|  8 
+| large truck repair & maintenance cost adjustment
+|-
+|  9  
+| large truck fuel cost adjustment
+|-
+|  10  
+| bus repair & maintenance cost adjustment
+|-
+|  11  
+| bus fuel cost adjustment
+|}
+
+Note that several of these rows refer to county remainders (one for each of the 9 counties), so if a link's ''cityid'' is not found here, the relevant county remainder cost adjustments will be used.
+
+=== Truck Operating Costs ===
+
+Similarly, the previous truck operating cost in  '''''INPUT\params.properties''''' changed from
+<pre style="background-color:#fcc">
+TruckOperatingCost   = 42.94
+</pre>
+
+For Travel Model One v0.5, the configuration requires more detail, including operating costs for small and large trucks, for both perfect local roads as well as for freeways.
+
+<pre style="background-color:#cfc">
+# Units = year 2000 cents per mile
+SmTruckOpCost_perfect_RM   =  8.57
+SmTruckOpCost_perfect_Fuel = 24.60
+# freeway adjustments based on average PCI
+SmTruckOpCost_fwyadj_RM    = 1.00000
+SmTruckOpCost_fwyadj_Fuel  = 1.01772
+
+# Units = year 2000 cents per mile
+LrTruckOpCost_perfect_RM   = 12.86
+LrTruckOpCost_perfect_Fuel = 36.33
+# freeway adjustments based on average PCI
+LrTruckOpCost_fwyadj_RM    = 1.00000
+LrTruckOpCost_fwyadj_Fuel  = 1.03365
+</pre>
+
+The city-based adjustments for trucks are included in '''''INPUT\sgr\city_opcost_adjustment.csv''''', as described above.
+
+=== Bus Operating Costs ===
+
+The '''''INPUT\params.properties''''' should also include operating costs for buses, for both perfect local roads as well as for freeways.
+
+<pre style="background-color:#cfc">
+# Units = year 2000 cents per mile
+BusOpCost_perfect_RM       = 12.86
+BusOpCost_perfect_Fuel     = 36.33
+# freeway adjustments based on average PCI
+BusOpCost_fwyadj_RM        = 1.00000
+BusOpCost_fwyadj_Fuel      = 1.03365
+</pre>
+
+The city-based adjustments for buses are included in '''''INPUT\sgr\city_opcost_adjustment.csv''''', as described above.
+
+=== Transit Delays ===
+
+Transit delays are configured in two files and they are coded by [[TransitModes|transit mode]].
+
+In '''''INPUT\sgr\Boarding_Penalties_by_Mode_Code.block''''', additional boarding penalties are configured for different transit modes.  The units are minutes x 100.
+
+<pre style="background-color:#cfc">
+_board_30  = 26.7010
+_board_133 = 32.0269
+_board_120 = 53.1122
+...
+</pre>
+
+In '''''INPUT\sgr\Invehicle_Penalties_by_Mode_Code.block''''', in vehicle penalties are configured for different transit modes.  The units here are (minutes x 100)/mile.
+
+<pre style="background-color:#cfc">
+_invehicle_30  = 0.7382
+_invehicle_133 = 0.1900
+_invehicle_120 = 2.9124
+...
+</pre>
+
+== Process ==
+
+The primary changes to the Travel Model One process in order to reflect pavement condition costs are as follows:
+
+# In the preprocessing step, the new script '''''scripts/preprocess/AddPavementCost.job''''' performs the lookup of the various city-indexed cost adjustment factors, and adds them to the network.
+# In highway skimming, '''''scripts/skims/HwySkims.job''''' has been updated to use the link-based operating costs for autos and for trucks.  In addition, the ''BTOLL'' skim tables also include the pavement costs, since these are read by the core choice models. An additional table is added to the roadway skim files for each vehicle class to encapsulate the '''additional''' pavement costs alone (that is, costs above the "perfect pavement" costs).  This is because benefit/cost analysis comparing different modes needs this to be separate from the bridge toll costs, because bridge toll expenditure/revenue between scenario should not be included in a benefit/cost analysis.
+# In transit skimming, '''''scripts/skims/TransitSkims.job''''' has been updated to assess the tally the distance traveled by each of the relevant transit modes.  For transit modes with a positive distance, the boarding delay is added to the wait tables in the transit skims, and the in vehicle delay is added to the in-vehicle time tables.
+# In highway assignment, '''''scripts/assign/HwyAssign.job''''' has been updated to use the link-based operating costs for autos and for trucks.
+
+Additionally, a set of [https://github.com/MetropolitanTransportationCommission/travel-model-one/tree/master/model-files/scripts/metrics metrics] have been developed in order to calculate costs and benefits of a particular scenario.  These have been updated to include the effects of pavement costs.  The configured bus costs are incorporated here.
+
+== Validation ==
+
+Travel Model One v0.5 was validated for model years [[TravelModelOneV05TableauInteractive2000Validation|2000]], [[TravelModelOneV05TableauInteractive2005Validation|2005]] and [[TravelModelOneV05TableauInteractive2010Validation|2010]].
+
+-- Main.LisaZorn - 27 Jan 2015

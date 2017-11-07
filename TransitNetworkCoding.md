@@ -210,7 +210,7 @@ Figure 7 and Figure 8 show an example of the input and output networks from the 
 
 ### 3.2 Transit Access/Egress/Transfer Links
 
-The zonal walk and drive access and egress connectors, as well as the transfer links, are generated automatically via the script &ldquo;<strong> [[#buildTransitNetwork][buildTransitNetwork.job]]</strong>&rdquo;. The script invokes the Cube Transit Path Builder function and generates the access and egress connectors, as well as the transfer links. The script is run five times, once for each time period.
+The zonal walk and drive access and egress connectors, as well as the transfer links, are generated automatically via the script [buildTransitNetwork.job](TransitNetworkCoding#script-buildtransitnetworkjob). The script invokes the Cube Transit Path Builder function and generates the access and egress connectors, as well as the transfer links. The script is run five times, once for each time period.
 
 #### Script "buildTransitNetwork.job"
 
@@ -221,48 +221,57 @@ The access and egress connectors and transfer links are built via the following 
 1. Based on the transit transfer link files (&lt;Operator&gt;_NETI_XFER_LINKS.DAT), transit network files and transit line files, Cube builds paths and generates the transit transfer links between any two transit stations or bus stops that are within 0.75 miles of each other. The transfer links are also merged with the access and egress links in this step to create one output file (&lt;timeperiod&gt;_transit_suplinks.dat).
 1. Gawk is used to select the two best park-and-ride lots for each zone in terms of distance for each of type of line haul facility that has park-and-ride lots.
 
-The walk access and drive access connector creation step requires the user to input the walk and drive funnel links described earlier. These funnel links are defined in the &lt;Operator&gt;.ZAC file (see [[#Figure9][Figure 9]]) for walk access funnel links and &lt;Operator.PNR&gt; (see [[#Figure10][Figure 10]]) for drive access funnel links. The walk funnel links are defined by an A-NODE, B-NODE and mode (which is equal to 5). The drive funnel links are defined by an A-NODE, B-NODE, travel time, and applicable zone set (which is set to all zones). The additional walk access link file (walk_access.sup) consists of hand-coded walk access links from zones to selected bus stops or transit stations that are not on the network. It is used as an over-ride to the automated access link coding process. The file is shown in Figure 11. These supplemental links are defined by an A-NODE, B-NODE, mode (which is mode 1 for walk access), and include a distance and speed attribute. Tables 12 - 16 describes the inputs and outputs of each step of this script.
+The walk access and drive access connector creation step requires the user to input the walk and drive funnel links described earlier. These funnel links are defined in the &lt;Operator&gt;.ZAC file (see [Figure 9]) for walk access funnel links and &lt;Operator.PNR&gt; (see Figure 10) for drive access funnel links. The walk funnel links are defined by an A-NODE, B-NODE and mode (which is equal to 5). The drive funnel links are defined by an A-NODE, B-NODE, travel time, and applicable zone set (which is set to all zones). The additional walk access link file (walk_access.sup) consists of hand-coded walk access links from zones to selected bus stops or transit stations that are not on the network. It is used as an over-ride to the automated access link coding process. The file is shown in Figure 11. These supplemental links are defined by an A-NODE, B-NODE, mode (which is mode 1 for walk access), and include a distance and speed attribute. Tables 12 - 16 describes the inputs and outputs of each step of this script.
 
-*<a name="Figure9"></a>Figure* *9* *Walk Access Funnel Links File (&lt;Operator&gt;.ZAC)*
+*Figure 9 Walk Access Funnel Links File (&lt;Operator&gt;.ZAC)*
 
-<img alt="Walk_Access_Funnel_Links_File.jpg" height="303" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Walk_Access_Funnel_Links_File.jpg" title="Walk_Access_Funnel_Links_File.jpg" width="992" />
+![Walk Access Funnel Links File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Walk_Access_Funnel_Links_File.jpg)
 
-*<a name="Figure10"></a>Figure* *10* *Drive Access Funnel Links File (&lt;Operator&gt;.PNR)*
----+ <img alt="Drive_Access_Funnel_Links_File.jpg" height="302" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Drive_Access_Funnel_Links_File.jpg" title="Drive_Access_Funnel_Links_File.jpg" width="992" />
+*Figure 10 Drive Access Funnel Links File (&lt;Operator&gt;.PNR)*
 
-*Figure* *11* *Additional Walk Access Links File (walk_access.sup)*
+![Drive Access Funnel Links File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Drive_Access_Funnel_Links_File.jpg)
 
-<img alt="walk_access.sup.jpg" height="291" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/walk_access.sup.jpg" title="walk_access.sup.jpg" width="996" />
+*Figure 11 Additional Walk Access Links File (walk_access.sup)*
+
+![Additional Walk Access Links File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/walk_access.sup.jpg)
 
 *Table 12 Create Walk Access Connectors Inputs/Outputs*
-| *Input/Output* | *Name* | *Description* | *Examples* |
+
+| Input/ Output | Name | Description | Examples |
+|--|---|---|---|
 | I | Background Transit Network | A transit background network that contains all the walk access funnel links | &lt;Time period&gt;_temporary_transit_background_accesslinks.net |
 | I | Walk Access Funnel Links | Walk access funnel links (mode=5) | amtrak.zac (&lt;provider&gt;.zac) |
 | I | Transit Lines | Transit stop locations file | transit_lines.block |
 | I | Walk Access Links | Additional hand-coded walk access links | walk_access.sup |
 | O | Zonal Walk Access Connectors | Zonal Walk Access Connectors in DBF Format | &lt;time_period&gt;_walk_links.dbf |
 | O | Zonal Walk Access Connectors | Zonal Walk Access Connectors in TXT Format (mode=1) | &lt;time_period&gt;_walk_acclinks.dat |
- 
+
 
 *Table 13 Create Drive Access Connector Inputs/Outputs*
-| *Input/Output* | *Name* | *Description* | *Examples* |
+
+| Input/ Output | Name | Description | Examples |
+|--|---|---|---|
 | I | Background Transit Network | A transit background network that contains all the drive access funnel links | &lt;Time period&gt;_temporary_transit_background_accesslinks.net |
 | I | Drive Access Funnel Links | Drive funnel link files (mode=4) | amtrak.PNR (&lt;provider&gt;.PNR) |
 | I | Transit Lines | Dummy transit line files | muni_local.tpl |
 | O | Zonal Drive Access Connectors | Zonal Drive Access Connectors in DBF Format | &lt;time_period&gt;_drive_links.dbf |
 | O | Zonal Drive Access Connectors | Zonal Drive Access Connectors in TXT Format (mode=2) | &lt;time_period&gt;_drive_acclinks.dat |
- 
+
 
 *Table 14 Gawk Egress Link Creation Inputs/Outputs*
-| *Input/<br />Output* | *Name* | *Description* | *Examples* |
+
+| Input/ Output | Name | Description | Examples |
+|--|---|---|---|
 | I | Zonal Walk Access Connectors | Zonal Walk Access Connectors in DBF Format (mode=1) | &lt;time_period&gt;_walk_acclinks.dat |
 | I | Zonal Drive Access Connectors | Zonal Drive Access Connectors in TXT Format (mode=2) | &lt;time_period&gt;_drive_acclinks.dat |
 | O | Zonal Walk Egress Connectors | Zonal Walk Egress Connectors in DBF Format (mode=6) | &lt;time_period&gt;_walk_egrlinks.dat |
 | O | Zonal Drive Egress Connectors | Zonal Drive Egress Connectors in TXT Format (mode=7) | &lt;time_period&gt;_drive_egrlinks.dat |
- 
+
 
 *Table 15 Create Transfer Links And Merge With Access and Egress Connectors Inputs/Outputs*
-| *Input/Output* | *Name* | *Description* | *Examples* |
+
+| Input/ Output | Name | Description | Examples |
+|--|---|---|---|
 | I | Background Transit Network | A transit background network that contains all the transfer links | &lt;Time period&gt;_temporary_transit_background_transferlinks.net |
 | I | Zonal Walk Access Connectors | Zonal Walk Access Connectors in TXT Format (mode=1) | &lt;time_period&gt;_walk_acclinks.dat |
 | I | Zonal Drive Access Connectors | Zonal Drive Access Connectors in TXT Format (mode=2) | &lt;time_period&gt;_drive_acclinks.dat |
@@ -271,22 +280,21 @@ The walk access and drive access connector creation step requires the user to in
 | I | Transit Lines | Transit line file | transit_lines.block |
 | O | Transfer Links | Transfer Links in DBF Format (mode=3) | &lt;time_period&gt;_transit_links.dbf |
 | O | Auxiliary Links | Access Connectors, Egress Connectors, and Transfer Links (mode=1,2,3,6,7) | &lt;time_period&gt;_transit_suplinks.dat |
- 
+
 
 *Table 16 Gawk Drive Access Link Reduction Inputs/Outputs*
-| *Input/<br />Output* | *Name* | *Description* | *Examples* |
+| Input/ Output | Name | Description | Examples |
+|--|---|---|---|
 | I | Auxiliary Links | Auxiliary Links in TXT Format | &lt;time_period&gt;_transit_suplinks.dat |
 | O | Auxiliary Links by &lt;operator&gt; | Auxiliary Links by operator such as BART | &lt;time_period&gt;_transit_suplinks_&lt;operator&gt;.dat |
- 
-
  
 ## 4. Transit Fare Files
 
 The transit fares are specified in separate files denoted with the &ldquo;.FAR&rdquo; extension. The fares are specified in year 2000 cents. There are four types of fare formats used in the MTC model:
-   1 [[#DirectFares][Direct Fare (Initial Boarding Fare)]]
-   1 [[#TransferFares][Transfer Fare]]
-   1 [[#StationFares][Station&ndash;to-Station Fare]]
-   1 [[#LinkFares][Link Based Fare]]
+   1 [[Direct Fare (Initial Boarding Fare)](TransitNetworkCoding#41-direct-fares)
+   1 [Transfer Fare](TransitNetworkCoding#42-transfer-fares)
+   1 [Station&ndash;to-Station Fare](TransitNetworkCoding#43-station-to-station-fares)
+   1 [Link Based Fares](TransitNetworkCoding#44-link-based-fares)
  
 ### 4.1 Direct Fares
 
@@ -317,7 +325,8 @@ The premium transit lines (modes 100-109 and 120 -137) charge fares between stat
 *Figure* *13* *Transit Station-to-Station Fare File (&lt;Operator&gt;.FAR)*
 
 <img alt="Operator_far.jpg" height="281" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Operator_far.jpg" title="Operator_far.jpg" width="838" />
----+++ <a name="LinkFares"></a>4.4 Link Based Fares
+
+### 4.4 Link Based Fares
 
 Some fare structures are provided between zones. Many times is hard to capture the exact fare using the methods explained above. In those cases we use the command FARELINK. This command adds a specific amount indicated in the FARELINK command to the basic fare as a link is traversed in a path. These links are included in the FARELINKS.FAR file.
 

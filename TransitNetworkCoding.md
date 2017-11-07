@@ -302,13 +302,13 @@ The transit fares are specified in separate files denoted with the &ldquo;.FAR&r
 
 Direct fares are the initial boarding fares for riding a transit line. Direct fares are specified in the &ldquo;XFARE.FAR&rdquo; file. This file lists both the initial and transfer fares in a matrix form of 137 X 137 transit modes (a combination of modes and operators). From this matrix, the initial fare and transfer fares are read into MODEFARE and XFARE variables of TP+ program respectively. The MODEFARE is an array of fares coded to auxiliary-transit links (walk access connector, drive access connector, walk funnel links) for all the transit modes and is used as an initial boarding fare. The XFARE is an array of transfer fares between all modes including auxiliary-transit to transit mode fares (same as MODEFARE). During path building, for the first boarding, the auxiliary-transit to transit MODEFARE value is read as the initial boarding fare instead of the XFARE auxiliary- transit to transit mode. For the subsequent boardings (transfers to another transit mode), the XFARE value for that mode pair is used as the transfer fare.
 
-The transfer fares are explained in the &ldquo; [[Transfer Fares]]&rdquo; section below. The initial boarding fares between transit modes to auxiliary-transit modes and auxiliar &ndash;transit modes to auxiliary-transit modes are specified as zeros. For some premium transit modes (modes 100-109 and 120-137) the initial fares are also specified as zeros and are substituded with a station-to-station fares, which are described under the &ldquo; [[Stationfares][Station-to-Station Fares]]<strong>&rdquo;</strong> section below.
+The transfer fares are explained in the [Transfer Fares](TransitNetworkCoding#42-transfer-fares) section below. The initial boarding fares between transit modes to auxiliary-transit modes and auxiliary-transit modes to auxiliary-transit modes are specified as zeros. For some premium transit modes (modes 100-109 and 120-137) the initial fares are also specified as zeros and are substituted with a station-to-station fares, which are described under the [Station-to-Station Fares](TransitNetworkCoding#43-station-to-station-fares) section below.
 
 *Figure 12 Transit Fare File (XFARE.FAR)*
 
 ![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The &ldquo;XFAR.FAR&rdquo; file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the ModesAndFares2005.xls Excel file with the following three tabs:
+The "XFAR.FAR" file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the ModesAndFares2005.xls Excel file with the following three tabs:
 1. 2005 Fares
 1. 2005 Fares Conv
 1. XFARE Table
@@ -334,13 +334,13 @@ The premium transit lines (modes 100-109 and 120 -137) charge fares between stat
 
 Some fare structures are provided between zones. Many times is hard to capture the exact fare using the methods explained above. In those cases we use the command FARELINK. This command adds a specific amount indicated in the FARELINK command to the basic fare as a link is traversed in a path. These links are included in the FARELINKS.FAR file.
 
-*Figure* *14* *Transit Link Based Fare File (FARELINKS.FAR)*
+*Figure 14 Transit Link Based Fare File (FARELINKS.FAR)*
 
-<img alt="Farelink_far.jpg" height="275" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Farelink_far.jpg" title="Farelink_far.jpg" width="978" />
+![Transit Link Based Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Farelink_far.jpg)
 
 Similar to the transit line block file, all transit fares are specified in a block file that is read in by the script at runtime as shown in Figure 15.
 
-*Figure* *15* *Transit Fare Block (Transit_faremat.block)*
+*Figure 15 Transit Fare Block (Transit_faremat.block)*
 
-<img alt="transit_farematrix_block.jpg" height="357" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/transit_farematrix_block.jpg" title="transit_farematrix_block.jpg" width="978" />
-<div id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: 0px; left: -10000px;">&#xFEFF;</div>
+![Transit Fare Block](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_farematrix_block.jpg)
+

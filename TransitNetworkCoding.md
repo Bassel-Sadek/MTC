@@ -127,6 +127,7 @@ Two new variables, BUS_TIME and PNR_TIME, are computed from the highway variable
 | DISTANCE | Link Distance (miles) | 1.45 |
 
 *Table 5 Input and Output Files used in Computing BUS_TIME and PNR_TIME*
+
 | Input/ Output | File | Description | Example |
 |---|---|---|---|
 | I | Input Highway Network | Highway network with key variables | avgload&lt;timeperiod&gt;.net |
@@ -134,18 +135,21 @@ Two new variables, BUS_TIME and PNR_TIME, are computed from the highway variable
 | O | Output Transit Background Network | A time-period-specific transit background network with PNR_TIME and BUS_TIME | &lt;timeperiod&gt;_transit_background.net |
 
 
-*Figure* *4* *Transit Support Nodes Transit Support File (Transit_Support_Nodes.DAT)*
+*Figure 4 Transit Support Nodes Transit Support File (Transit_Support_Nodes.DAT)*
 
-<img alt="transit_support_file.jpg" height="217" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/transit_support_file.jpg" title="transit_support_file.jpg" width="992" />
+![Transit Support Nodes Transit Support File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_support_file.jpg)
+
 
 The second step consists of adding the background transit access links to the transit networks produced in the above step. The input access links are specified in separate files by operator, where the file name is a concatenation of the operator and "_neti_access_links.dat" - except for the transit access links for the local bus mode, which are specified in "bus_neti_access_links.dat". Figure 5 shows a transit access link support file and Table 6 shows the list of transit access link files that the analyst is required to input as well as the output file from this step. The input access links file consists of two columns: A-NODE and B-NODE, as shown in Table 7. These represent highway nodes and walk access funnel nodes\PNR lot funnel nodes respectively.
 
 *Figure 5 Transit Access Links By Operator Transit Support File (&lt;Operator&gt;_NETI_ACCESS_LINKS.DAT)*
 
-<img alt="NETI_ACCESS_LINKS.DAT.jpg" height="201" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/NETI_ACCESS_LINKS.DAT.jpg" title="NETI_ACCESS_LINKS.DAT.jpg" width="988" />
+![Transit Access Links By Operator Transit Support File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/NETI_ACCESS_LINKS.DAT.jpg)
 
 *Table 6 List of Inputs and Output Files Used in Adding Transit Access Links*
-| <strong>Input/</strong><strong>Output</strong> | *File* | *Description* | *Example* |
+
+| Input/ Output | File | Description | Example |
+|--|--|--|--|
 | I | Input Access Link File | Amtrak access links | amtrak_neti_access_links.dat |
 | I | Input Access Link File | Bart access links | bart_neti_access_links.dat |
 | I | Input Access Link File | Caltrain access links | caltr_neti_access_links.dat |
@@ -158,19 +162,23 @@ The second step consists of adding the background transit access links to the tr
 
 
 *Table 7 Transit-Only Access Link File Data Fields/Columns*
-| *Variable* | *Description* | *Example* |
+
+| Variable | Description | Example |
+|---|----|---|
 | A | highway network node | 11122 |
 | B | walk or PNR funnel node | 14956 |
  
 
-The third step consists of adding the transit transfer links to the highway network. Similar to the transit access links, the transit transfer links are added to the transit networks. The input transfer link <span style='font-size: 12pt; font-family: "Times New Roman","serif";'>are specified in separate files by operator, where the file name is a concatenation of the operator and "_neti_xfer_links.dat"- except for the  transit access links for the<strong><span style="mso-spacerun: yes;"> </span></strong> PNR lots, which are specified in "bus_neti_xfer_links.dat"</span>. Figure 6 shows a transit transfer line support file and Table 9 lists inputs and outputs to this step. The input transfer link files consist of A-NODE B-NODE pairs that are used to create transfer links. Table 10 shows the key variables in the transit transfer link files.
+The third step consists of adding the transit transfer links to the highway network. Similar to the transit access links, the transit transfer links are added to the transit networks. The input transfer link are specified in separate files by operator, where the file name is a concatenation of the operator and "_neti_xfer_links.dat"- except for the  transit access links for the PNR lots, which are specified in "bus_neti_xfer_links.dat". Figure 6 shows a transit transfer line support file and Table 9 lists inputs and outputs to this step. The input transfer link files consist of A-NODE B-NODE pairs that are used to create transfer links. Table 10 shows the key variables in the transit transfer link files.
 
-*Figure* *6* *Transfer Links By Operator Transit Support File (&lt;Operator&gt;_NETI_XFER_LINKS.DAT)*
+*Figure 6 Transfer Links By Operator Transit Support File (&lt;Operator&gt;_NETI_XFER_LINKS.DAT)*
 
-<img alt="NETI_XFER_LINKS.DAT.jpg" height="155" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/NETI_XFER_LINKS.DAT.jpg" title="NETI_XFER_LINKS.DAT.jpg" width="988" />
+![Transfer Links By Operator Transfer Support File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/NETI_XFER_LINKS.DAT.jpg)
 
 *Table 9 Input and Output Files Used in Adding Transit Transfer Links*
-| *Input/Output* | *File* | *Description* | *Example* |
+
+| Input/ Output | File | Description | Example |
+|---|---|---|---|
 | I | Input Transfer Link File | Amtrak transfer links | amtrak_neti_xfer_links.dat |
 | I | Input Transfer Link File | Bart transfer links | bart_neti_xfer_links.dat |
 | I | Input Transfer Link File | Caltrain transfer links | caltr_neti_xfer_links.dat |
@@ -180,24 +188,25 @@ The third step consists of adding the transit transfer links to the highway netw
 | I | Input Transfer Link File | Bus transfer links that are not in the highway network | bus_neti_xfer_links.dat |
 | I | Input Transit Background Network | A time-period-specific transit background network with PNR_TIME, BUS_TIME | &lt;timeperiod&gt;_transit_background.net |
 | O | Output Transit Background Access Network | A time-period-specific transit background network with PNR_TIME, BUS_TIME, and transit access and transfer links | &lt;timeperiod&gt;_temporary_transit_background_transferlinks.net |
- 
+
 
 *Table 10 Transit Transfer Link File Data Fields/Columns*
-| *Variable* | *Description* | *Example* |
+
+| Variable | Description | Example |
+|---|---|---|
 | A | node on the highway network | 5175 |
 | B | stop on a transit line | 14641 |
 | Distance | Distance between A-node and B-node in miles | 0.5 |
- 
 
-Figure 7 and Figure 8 show an example of the input and output networks from the script &ldquo;<strong> [[#PrepHwyNet][PrepHwyNet.job]]</strong>&rdquo;, where the access link from the highway network node 5175 is connected to the walk access funnel node 14941.
+Figure 7 and Figure 8 show an example of the input and output networks from the script [PrepHwyNet.job](TransitNetworkCoding#script-prephwynetjob), where the access link from the highway network node 5175 is connected to the walk access funnel node 14941.
 
-<strong>Figure 7 Input Network Before Runnin</strong><strong>g </strong> *PrepHwyNet.job*
+*Figure 7 Input Network Before Running PrepHwyNet.job*
 
-<img alt="Input_Network_Before_Running_PrepHwyNet.job.jpg" height="815" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Input_Network_Before_Running_PrepHwyNet.job.jpg" title="Input_Network_Before_Running_PrepHwyNet.job.jpg" width="966" />
+![Input Network Before Running PrepHwyNet.job](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Input_Network_Before_Running_PrepHwyNet.job.jpg)
 
-*Figure 8 Output Network After Running* *PrepHwyNet.job*
+*Figure 8 Output Network After Running PrepHwyNet.job*
 
-<img alt="Output_Network_After_Running_PrepHwyNet.jpg" height="823" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Output_Network_After_Running_PrepHwyNet.jpg" title="Output_Network_After_Running_PrepHwyNet.jpg" width="962" />
+![Output Network After Running PrepHwyNet.job](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Output_Network_After_Running_PrepHwyNet.jpg)
 
 ### 3.2 Transit Access/Egress/Transfer Links
 

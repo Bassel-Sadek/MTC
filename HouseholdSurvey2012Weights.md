@@ -6,20 +6,20 @@
 
 ## Bay Area Weights
 * Sample Weighting and Expansion: Part I: Average Daily Weights (September 2013) 
-  * [[%ATTACHURL%/PartI_Daily_Weighting.zip][PartI_Daily_Weighting.zip]] (zipped archive of Excel, Word and PDF versions of Part II report and appendices)
-  * [[%ATTACHURL%/CHTS1213_BayArea_Weighting_Part_I_Daily.pdf][CHTS1213_BayArea_Weighting_Part_I_Daily.pdf]] PDF of Main Report: Part I
+  * [PartI_Daily_Weighting.zip](https://mtcdrive.box.com/s/uq0sn6j4y7q2hejap0ls48pa8b70tmq4) (zipped archive of Excel, Word and PDF versions of Part II report and appendices)
+  * [CHTS1213_BayArea_Weighting_Part_I_Daily.pdf](https://mtcdrive.box.com/s/y2s4yxa9rw6lnqkhitpssv31u8w7z62h) PDF of Main Report: Part I
 * Sample Weighting and Expansion: Part II: Average Weekday Weights (October 2013) 
-  * [[%ATTACHURL%/PartII_Weekday_Weighting.zip][PartII_Weekday_Weighting.zip]] (zipped archive of Excel, Word and PDF versions of Part II report and appendices)
-  * [[%ATTACHURL%/CHTS1213_BayArea_Weighting_Part_II_Weekday.pdf][CHTS1213_BayArea_Weighting_Part_II_Weekday.pdf]] PDF of Main Report: Part II
+  * [PartII_Weekday_Weighting.zip](https://mtcdrive.box.com/s/cgzbr4t20xmkxpxa427ibt3s5994vfe6) (zipped archive of Excel, Word and PDF versions of Part II report and appendices)
+  * [CHTS1213_BayArea_Weighting_Part_II_Weekday.pdf](https://mtcdrive.box.com/s/rhvfqt51l5i820xizv57xevvunm8jl2m) PDF of Main Report: Part II
 * Sample Weighting and Expansion: Part III: Average Saturday and Sunday Weights (October 2013) 
-  * [[%ATTACHURL%/PartIII_Weekend_Weighting.zip][PartIII_Weekend_Weighting.zip]] (zipped archive of Excel, Word and PDF versions of Part III report and appendices)
-  * [[%ATTACHURL%/CHTS1213_BayArea_Weighting_Part_III_Weekend.pdf][CHTS1213_BayArea_Weighting_Part_III_Weekend.pdf]] PDF of Main Report: Part III
+  * [PartIII_Weekend_Weighting.zip](https://mtcdrive.box.com/s/8xyskofzclx5t4xpafouenqkd0l9v3bm) (zipped archive of Excel, Word and PDF versions of Part III report and appendices)
+  * [CHTS1213_BayArea_Weighting_Part_III_Weekend.pdf](https://mtcdrive.box.com/s/xrnlemz9k9tw1abyvvim1y1iq1udsvpd) PDF of Main Report: Part III
 * Map of Bay Area Public Use Microdata Area (PUMAs), based on Census 2010 
-  * [[%ATTACHURL%/Figure1_BayArea_PUMA_Map_Census2010.pdf][Figure1_BayArea_PUMA_Map_Census2010.pdf]] PDF map showing Bay Area PUMAs
+  * [Figure1_BayArea_PUMA_Map_Census2010.pdf](https://mtcdrive.box.com/s/x26l4qxvwnum8dlri36u24akczn6b0qu) PDF map showing Bay Area PUMAs
 * Powerpoint Presentations on Bay Area Sample Weighting and Expansion 
   * Forthcoming
 * Final Weights for Household and Person Records (Bay Area) 
-  * [[%ATTACHURL%/CHTS1213_BayArea_Weights_Vers2.zip][CHTS1213_BayArea_Weights_Vers2.zip]]
+  * [CHTS1213_BayArea_Weights_Vers2.zip](https://mtcdrive.box.com/s/1bk2lzn10ksdymcy7782ym17nzy0v9ux)
  
 ## California Statewide Weights
 * Sample Weighting and Expansion: California Household Travel Survey 2012/13 for the California Statewide Sample (October 2013) 

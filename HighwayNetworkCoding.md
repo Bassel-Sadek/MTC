@@ -105,7 +105,7 @@ This script extracts the project-specific highway network from the master networ
 
 ### 3.2 Script "Network_Update_Modified.job"
 
-This script updates the project-specific highway network file with calculated attributes and writes out a new highway network file. The primary calculated attributes are capacity and free flow speed, but other attributes are set as well as shown in Table 6. The analyst is required to run this script after running the "<strong> [[#Create2040_Base][Create 2040_Base.job]]</strong>" script. Table 7 shows the input and output files of the script.
+This script updates the project-specific highway network file with calculated attributes and writes out a new highway network file. The primary calculated attributes are capacity and free flow speed, but other attributes are set as well as shown in Table 6. The analyst is required to run this script after running the [Create 2040_Base.job](HighwayNetworkCoding#31-script-create-2040_basejob) script. Table 7 shows the input and output files of the script.
 
 *Table 6 Highway Network Calculated Link Attributes*
 
@@ -134,7 +134,7 @@ After creating the project specific network file, the analyst must create the hi
 1. The analyst adds five sets of toll values to each link in the network where each set represents one of the five time periods shown in Table 8 and each set includes toll values for each user class.
 1. The analyst runs the script to create five highway networks by time-of-day.
 
-All tolls should be expressed in year 2000 cents. The scripts to do these two steps are: &ldquo;<strong> [[#SetTolls][SetTolls.job]]</strong>&rdquo; followed by &ldquo;<strong> [[#CreateFiveHighwayNetworks][CreateFiveHighwayNetworks.job]]</strong>&rdquo;.
+All tolls should be expressed in year 2000 cents. The scripts to do these two steps are: [SetTolls.job](HighwayNetworkCoding#41-script-settollsjob) followed by [CreateFiveHighwayNetworks.job](HighwayNetworkCoding#42-script-createfivehighwaynetworksjob).
 
 *Table 8 Highway Network Time Periods*
 
@@ -202,11 +202,13 @@ The attribute TOLL is a legacy attribute and is no longer output by this script.
 ### 4.2 Script "CreateFiveHighwayNetworks.job"
 
 Once the toll values are coded, the analyst must run this script to create five highway network files by time-of-day. In addition to being used for highway assignment, the five time-of-day highway networks are used as the background networks in developing the transit access connectors, and are also used in the transit skimming and assignment procedures. All of the five networks are identical except for the following:
+
 1. The reversible lanes on the Golden Gate bridge are coded in the southbound direction in the Early AM, AM Peak, and Midday periods and the northbound direction in the PM Peak and Evening periods.
 1. The Caldecott tunnel is coded with &lt;X&gt; lanes in the westbound direction in the Early AM, AM Peak Period, and Midday periods and &lt;X&gt; lanes in the eastbound direction in the PM Peak and Evening periods.
 1. The fixed time toll delay links are given time-of-day specific values.
 1. The shared ride toll bypass lanes are either left in place or deleted.
-The analyst runs the script &ldquo;<strong> [[#CreateFiveHighwayNetworks][CreateFiveHighwayNetworks.job]]</strong>&rdquo; to create these five networks. In this script, a new variable called PNROK is created with a zero value for certain bridges. This variable is then used in a later script to prevent park-and-ride paths from being built across these bridges. Table 13 and Table 14 show the script settings and input and output network files.
+
+The analyst runs the script [CreateFiveHighwayNetworks.job](HighwayNetworkCoding#42-script-createfivehighwaynetworksjob) to create these five networks. In this script, a new variable called PNROK is created with a zero value for certain bridges. This variable is then used in a later script to prevent park-and-ride paths from being built across these bridges. Table 13 and Table 14 show the script settings and input and output network files.
 
 *Table 13 Create Five Networks Script Input Link Attributes*
 

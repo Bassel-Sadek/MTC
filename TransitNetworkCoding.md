@@ -5,8 +5,8 @@
 The transit network consists of the following types of files:
 1. [Transit Modes](TransitNetworkCoding#1-transit-modes-and-transit-network-coding-illustration)
 1. [Transit Lines](TransitNetworkCoding#2-transit-line-files)
-1. [Transit Access/Egress/Transfer Links](TransitNetworkCoding#transit-access)
-1. [Transit Fares](TransitNetworkCoding#transit-fares)
+1. [Transit Access/Egress/Transfer Links](TransitNetworkCoding#3-transit-access-egress-transfer-links)
+1. [Transit Fares Files](TransitNetworkCoding#4-transit-fares-files)
 
 The transit network is created from these files plus the [transit background network](TransitNetworkCoding#transit-background-files) that is created from the [highway network](HighwayNetworkCoding). Before describing the files, it is important to introduce the transit modes and provide an example of transit network coding.
 
@@ -89,7 +89,7 @@ The current MTC model has 34 transit operators and 46 transit line files. To avo
 It is important to note that some transit segments are not included in the highway network. This is the case for rail lines, ferries or dedicated lanes used only by buses (for example, the bus ramps between the Bay Bridge and the Transbay Terminal). These links are transit-only links and are coded in the .tpl file of the respective operator and mode. The link should include information about the time and distance between nodes,  as well as the transit modes that can travel the link. These may need to be updated as well when coding/modifying the transit network.
 
  
-## 3. Transit Networks
+## 3. Transit Access/Egress/Transfer Links
 
 The transit networks are built in two steps:
 1. By creating the transit network files from the highway network and relevant transit files for the 5 time periods.

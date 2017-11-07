@@ -5,9 +5,9 @@
 The MTC highway network is coded and maintained as a comprehensive highway network file, commonly referred to as the *master highway network*. The file consists of network links that represent the roadways. A *project highway network* file is developed in three stages from the master highway network file. It consists of roadway links classified by functional class, zone connector links, and a few other additional links to support transit modeling. A project-specific highway network is developed as follows:
 
 1. [Start with the master network file](HighwayNetworkCoding#1-master-network)
-1. [Create a new project in the master highway network](HighwayNetworkCoding#2-create-a-new-project-in-the-masternetwork)
-1. [Extract a project specific (base) highway network from the master highway network]
-1. [Create highway networks by time-of-day]]
+1. [Create a new project in the master highway network](HighwayNetworkCoding#2-create-a-new-project-in-the-master-network)
+1. [Extract a project specific (base) highway network from the master highway network](HighwayNetworkCoding#3-extracting-a-project-network-from-the-master-network)
+1. [Create highway networks by time-of-day](HighwayNetworkCoding#4-creating-highway-networks-by-time-of-day)
 
 Once a project-specific highway network is extracted from the master network, the [transit background network](TransitNetworkCoding#transit-background-files) is created. The transit background network is later used in [creating the transit network](TransitNetworkCoding).
 
@@ -15,7 +15,7 @@ Once a project-specific highway network is extracted from the master network, th
 
 The master highway network consists of all the highway links for all projects. In the master network file, the analyst codes each link with attributes common to all projects, (such as distance) and also codes each link with the project-specific attributes such as area type, facility type, and number of lanes. Table 1 shows the list of project-specific variables in the master highway network. The attribute table lists the possible values for each of the project-specific variables.
 
-*Table 1 Project Specific Link [[MasterNetworkLookupTables][Attribute Table]]*
+*Table 1 Project Specific Link [Attribute Table](MasterNetworkLookupTables)*
 
 | Attribute | Description | Example Attribute Name {Values} |
 |-----------|-------------|---------------------------------|
@@ -33,7 +33,7 @@ At the beginning of a new project, the analyst must check the master network to 
 
 ## 2. Create a New Project in the Master Network
 
-The analyst first must check the master network for the project-specific links and variables. If the project is not defined then the analyst must add new links to the master network, usually by copying and pasting similar nearby links. After creating a new link, the analyst must set the project-specific attributes defined in Table 1. To do this, the analyst must run the script "<strong> [[#RTP2040_Base][RTP2040_Base.job]]</strong>" to create a new set of project-specific link variables in the master network that they then edit the attributes that are specific to the project.
+The analyst first must check the master network for the project-specific links and variables. If the project is not defined then the analyst must add new links to the master network, usually by copying and pasting similar nearby links. After creating a new link, the analyst must set the project-specific attributes defined in Table 1. To do this, the analyst must run the script [RTP2040_Base.job](HighwayNetworkCoding#21-script-rtp2040_basejob) to create a new set of project-specific link variables in the master network that they then edit the attributes that are specific to the project.
 
 ### 2.1 Script RTP2040_Base.job
 
@@ -59,12 +59,12 @@ Note that the TCLASS{CurrentProject} variable is coded as zero as it needs to be
 |---|----------------------------|------------------------------------|
 | I | Old Master Highway Network | MASTER_NETWORK_December22_2010.NET |
 | O | New Master Highway Network | MASTER_NETWORK_March30_2011.NET |
- 
+
 ## 3. Extracting a Project Network from the Master Network
 
-After creating project specific links and attributes in the master highway network, the analyst extracts a project specific network with the scripts &ldquo;<strong> [[#Create2040_Base][Create 2040_Base.job]]</strong>&rdquo;and &ldquo;<strong> [[#Network_Update_Modified][Network_Update_Modified.job]]</strong>&rdquo;.
+After creating project specific links and attributes in the master highway network, the analyst extracts a project specific network with the scripts [Create 2040_Base.job](HighwayNetworkCoding#31-script-create-2040_basejob) and [Network_Update_Modified.job](HighwayNetworkCoding#32-script-network_update_modifiedjob).
 
-### 3.1 Script &ldquo;Create 2040_Base.job&rdquo;
+### 3.1 Script "Create 2040_Base.job"
 
 This script extracts the project-specific highway network from the master network. The script creates a project-specific highway network from the master highway network with only the required attributes shown in Table 4. All of the project-specific attributes are renamed to drop the project name suffix and links with the setting LANE=0 are excluded during the extracting process. Many of the attributes are empty at this point since their value has yet to be calculated. Table 5 lists the input and output files of the script.
 
@@ -103,7 +103,7 @@ This script extracts the project-specific highway network from the master networ
 | I | Master Highway Network | MASTER_NETWORK_December22_2010.NET |
 | O | Project Specific Highway Network | Year2040_Base_NETWORK_December22_2010_w.NET |
 
-### 3.2 Script &ldquo;Network_Update_Modified.job&rdquo;
+### 3.2 Script "Network_Update_Modified.job"
 
 This script updates the project-specific highway network file with calculated attributes and writes out a new highway network file. The primary calculated attributes are capacity and free flow speed, but other attributes are set as well as shown in Table 6. The analyst is required to run this script after running the "<strong> [[#Create2040_Base][Create 2040_Base.job]]</strong>" script. Table 7 shows the input and output files of the script.
 
@@ -127,7 +127,7 @@ This script updates the project-specific highway network file with calculated at
 |--|--|--|
 | I | Project Specific Highway Network | Year2040_Base_NETWORK_December22_2010_w.NET |
 | O | Output Updated Project Specific Highway Network | Year2040_Base_NETWORK_December22_2010.NET |
- 
+
 ## 4. Creating Highway Networks by Time of Day
 
 After creating the project specific network file, the analyst must create the highway network files by time-of-day. This is done in two stages:

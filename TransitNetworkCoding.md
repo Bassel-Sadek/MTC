@@ -5,7 +5,7 @@
 The transit network consists of the following types of files:
 1. [Transit Modes](TransitNetworkCoding#1-transit-modes-and-transit-network-coding-illustration)
 1. [Transit Lines](TransitNetworkCoding#2-transit-line-files)
-1. [Transit Access/Egress/Transfer Links](TransitNetworkCoding#3-transit-access-egress-transfer-links)
+1. [Transit Access/Egress/Transfer Links](TransitNetworkCoding#3-transit-accessegresstransfer-links)
 1. [Transit Fares Files](TransitNetworkCoding#4-transit-fares-files)
 
 The transit network is created from these files plus the [transit background network](TransitNetworkCoding#transit-background-files) that is created from the [highway network](HighwayNetworkCoding). Before describing the files, it is important to introduce the transit modes and provide an example of transit network coding.

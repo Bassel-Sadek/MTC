@@ -23,19 +23,20 @@
  
 ## California Statewide Weights
 * Sample Weighting and Expansion: California Household Travel Survey 2012/13 for the California Statewide Sample (October 2013) 
-  * Zipped archive of PDF, Word and Excel Files for Full Report  [[%ATTACHURL%/Statewide_Weighting.zip][Statewide_Weighting.zip]]
-  * Main Body of Report (PDF) [[%ATTACHURL%/Statewide_Weighting.pdf][Statewide_Weighting.pdf]]
-  * Appendix A. Exploring Census and Survey Characteristics (PDF) [[%ATTACHURL%/Statewide_Weighting_Appendix_A.pdf][Statewide_Weighting_Appendix_A.pdf]]
-  * Appendix B. Household Level Model Validation: Combined Sample (PDF) [[%ATTACHURL%/Statewide_Weighting_Appendix_B.pdf][Statewide_Weighting_Appendix_B.pdf]]
-  * Appendix C. Household Level Model Validation: Weekday Sample (PDF) [[%ATTACHURL%/Statewide_Weighting_Appendix_C_Weekday.pdf][Statewide_Weighting_Appendix_C_Weekday.pdf]]
-  * Appendix D. Household Level Model Validation: Saturday Sample (PDF) [[%ATTACHURL%/Statewide_Weighting_Appendix_D_Saturday.pdf][Statewide_Weighting_Appendix_D_Saturday.pdf]]
-  * Appendix E. Household Level Model Validation: Sunday Sample (PDF) [[%ATTACHURL%/Statewide_Weighting_Appendix_E_Sunday.pdf][Statewide_Weighting_Appendix_E_Sunday.pdf]]
-  * Map of California 41 Super-Counties (PDF) [[%ATTACHURL%/Super_Counties_8x11.pdf][Super_Counties_8x11.pdf]]
+  * Zipped archive of PDF, Word and Excel Files for Full Report [Statewide_Weighting.zip](https://mtcdrive.box.com/s/9rtu3fm9df7ozj4w3npzr69jsj3l3en7)
+  * Main Body of Report (PDF) [Statewide_Weighting.pdf](https://mtcdrive.box.com/s/bbp8ia3ycjpq7zlivxcvjze20dyaorft)
+  * Appendix A. Exploring Census and Survey Characteristics (PDF) [Statewide_Weighting_Appendix_A.pdf](https://mtcdrive.box.com/s/74a1x65dk10pwxr4rqwzldgnkdo2euvq)
+  * Appendix B. Household Level Model Validation: Combined Sample (PDF) [Statewide_Weighting_Appendix_B.pdf](https://mtcdrive.box.com/s/ghkvd599n5u1tkag66z86p2vlrhl4pwt)
+  * Appendix C. Household Level Model Validation: Weekday Sample (PDF) [Statewide_Weighting_Appendix_C_Weekday.pdf](https://mtcdrive.box.com/s/j647zd0w5bz83oazwrrbq4boymn2er87)
+  * Appendix D. Household Level Model Validation: Saturday Sample (PDF) [Statewide_Weighting_Appendix_D_Saturday.pdf](https://mtcdrive.box.com/s/0oqgdox699jkefg179t6btfjtie0z3e2)
+  * Appendix E. Household Level Model Validation: Sunday Sample (PDF) [Statewide_Weighting_Appendix_E_Sunday.pdf](https://mtcdrive.box.com/s/stkhua2fyp0kqrghdc2vyxlkrt8iuakd)
+  * Map of California 41 Super-Counties (PDF) [Super_Counties_8x11.pdf](https://mtcdrive.box.com/s/j89xgoahc56yo8il4vqo3b1kr58g4xca)
 * Powerpoint Presentations on California Statewide Sample Weighting and Expansion 
   * Forthcoming
 * Final Weights for Household and Person Records (California Statewide) 
-   * Metadata for California Statewide Final Weights (Excel format) [[%ATTACHURL%/CHTS1213_CalifStatewide_Weights_Metadata.xlsx][CHTS1213_CalifStatewide_Weights_Metadata.xlsx]]
-   * Household and Person records with Final Weights, and Metadata file (CSV and Excel formats, zipped archive) [[%ATTACHURL%/CHTS1213_Calif_Final_HWeight_Ver1.zip][CHTS1213_Calif_Final_HWeight_Ver1.zip]]
+   * Metadata for California Statewide Final Weights (Excel format) [CHTS1213_CalifStatewide_Weights_Metadata.xlsx](https://mtcdrive.box.com/s/4mdlg32jbhbcvb0ipnbv88uytd9u7s0a)
+   * Household and Person records with Final Weights, and Metadata file (CSV and Excel formats, zipped archive) [CHTS1213_Calif_Final_HWeight_Ver1.zip](https://mtcdrive.box.com/s/za0ca25gwr505op3h7akszta0guvz5y5)
    * Important Note: the weights for Bay Area household and person records, in the "statewide final weights" files, are different than the weights in the previous section on Bay Area weights. The geography for Bay Area weights in the Bay Area files is at the PUMA level; in the California files, the minimum geography is Bay Area County. For Bay Area applications, use the "Bay Area" files.
- 
+
+
 -- Main.ChuckPurvis - 12 Feb 2014

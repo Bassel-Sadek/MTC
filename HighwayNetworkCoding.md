@@ -147,7 +147,7 @@ All tolls should be expressed in year 2000 cents. The scripts to do these two st
 | EV | Evening | 7pm to 3am |
 
 
-### 4.1 Script &ldquo;SetTolls.job&rdquo;
+### 4.1 Script "SetTolls.job"
 
 Before creating the time-of-day networks, but after creating the project-specific network, the analyst then updates the bridge and value tolls. Bridge tolls are the tolls charged at the bridges and value tolls are tolls paid to save time by shifting to an alternative facility (e.g. HOT) or nearby facility. Each of the eight existing Bay Area bridge toll booths links has a unique TOLL coded as shown in Table 9. All tolls should be expressed in year 2000 cents. To change a toll value, the script must be changed.
 
@@ -199,7 +199,7 @@ The attribute TOLL is a legacy attribute and is no longer output by this script.
 | I | Updated Project Specific highway Network | freeflow.net |
 | O | Highway Network with Toll values | withTolls.net |
 
-### 4.2 Script &ldquo;CreateFiveHighwayNetworks.job&rdquo;
+### 4.2 Script "CreateFiveHighwayNetworks.job"
 
 Once the toll values are coded, the analyst must run this script to create five highway network files by time-of-day. In addition to being used for highway assignment, the five time-of-day highway networks are used as the background networks in developing the transit access connectors, and are also used in the transit skimming and assignment procedures. All of the five networks are identical except for the following:
 1. The reversible lanes on the Golden Gate bridge are coded in the southbound direction in the Early AM, AM Peak, and Midday periods and the northbound direction in the PM Peak and Evening periods.

@@ -6,7 +6,7 @@ The transit network consists of the following types of files:
 1. [Transit Modes](TransitNetworkCoding#1-transit-modes-and-transit-network-coding-illustration)
 1. [Transit Lines](TransitNetworkCoding#2-transit-line-files)
 1. [Transit Access/Egress/Transfer Links](TransitNetworkCoding#3-transit-accessegresstransfer-links)
-1. [Transit Fares Files](TransitNetworkCoding#4-transit-fares-files)
+1. [Transit Fares Files](TransitNetworkCoding#4-transit-fare-files)
 
 The transit network is created from these files plus the [transit background network](TransitNetworkCoding#transit-background-files) that is created from the [highway network](HighwayNetworkCoding). Before describing the files, it is important to introduce the transit modes and provide an example of transit network coding.
 
@@ -283,18 +283,20 @@ The walk access and drive access connector creation step requires the user to in
 
 
 *Table 16 Gawk Drive Access Link Reduction Inputs/Outputs*
+
 | Input/ Output | Name | Description | Examples |
 |--|---|---|---|
 | I | Auxiliary Links | Auxiliary Links in TXT Format | &lt;time_period&gt;_transit_suplinks.dat |
 | O | Auxiliary Links by &lt;operator&gt; | Auxiliary Links by operator such as BART | &lt;time_period&gt;_transit_suplinks_&lt;operator&gt;.dat |
- 
+
 ## 4. Transit Fare Files
 
 The transit fares are specified in separate files denoted with the &ldquo;.FAR&rdquo; extension. The fares are specified in year 2000 cents. There are four types of fare formats used in the MTC model:
-   1 [[Direct Fare (Initial Boarding Fare)](TransitNetworkCoding#41-direct-fares)
-   1 [Transfer Fare](TransitNetworkCoding#42-transfer-fares)
-   1 [Station&ndash;to-Station Fare](TransitNetworkCoding#43-station-to-station-fares)
-   1 [Link Based Fares](TransitNetworkCoding#44-link-based-fares)
+
+1. [Direct Fare (Initial Boarding Fare)](TransitNetworkCoding#41-direct-fares)
+1. [Transfer Fare](TransitNetworkCoding#42-transfer-fares)
+1. [Station&ndash;to-Station Fare](TransitNetworkCoding#43-station-to-station-fares)
+1. [Link Based Fares](TransitNetworkCoding#44-link-based-fares)
  
 ### 4.1 Direct Fares
 
@@ -302,29 +304,31 @@ Direct fares are the initial boarding fares for riding a transit line. Direct fa
 
 The transfer fares are explained in the &ldquo; [[Transfer Fares]]&rdquo; section below. The initial boarding fares between transit modes to auxiliary-transit modes and auxiliar &ndash;transit modes to auxiliary-transit modes are specified as zeros. For some premium transit modes (modes 100-109 and 120-137) the initial fares are also specified as zeros and are substituded with a station-to-station fares, which are described under the &ldquo; [[Stationfares][Station-to-Station Fares]]<strong>&rdquo;</strong> section below.
 
-*Figure* *12* *Transit Fare File (XFARE.FAR)*
+*Figure 12 Transit Fare File (XFARE.FAR)*
 
-<img alt="transit_fare_file.jpg" height="321" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/transit_fare_file.jpg" title="transit_fare_file.jpg" width="970" />
+![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The &ldquo;XFAR.FAR&rdquo; file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the &ldquo; [[ModesAndFares2005.xls][Modes&Fares2005.xls]]&rdquo; Excel file with the following three tabs:
-   1 2005 Fares
-   1 2005 Fares Conv
-   1 XFARE Table
-The tab &ldquo;2005 Fares&rdquo; lists both the initial and transfer fares among all modes in 2005 year cents. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab &ldquo;2005 Fares Conv&rdquo; converts all the fares from 2005 to 2000 year cents by applying the consumer price index (CPI) factor. The tab &ldquo;XFARE Table&rdquo; reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as &ldquo;XFARE.FAR&rdquo;.
+The &ldquo;XFAR.FAR&rdquo; file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the ModesAndFares2005.xls Excel file with the following three tabs:
+1. 2005 Fares
+1. 2005 Fares Conv
+1. XFARE Table
+
+The tab "2005 Fares" lists both the initial and transfer fares among all modes in 2005 year cents. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2005 Fares Conv" converts all the fares from 2005 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".
 
  
 ### 4.2 Transfer Fares
 
-The transfer fares are fares that are charged when a transfer from one transit line to another occurs. These fares are also specified in the same &ldquo;XFARE.FAR&rdquo; file. The transfer fares between the same premium transit mode (modes 100-109 and 120-137) are specified as zero since the station-to-station fares actually count these transfer fares. Additional transfer fare files are specified to represent a county-to-county transit system transfer, which are described in detail in the &ldquo; [[LinkFares][Link Based Fares]]&rdquo; section.
+The transfer fares are fares that are charged when a transfer from one transit line to another occurs. These fares are also specified in the same "XFARE.FAR" file. The transfer fares between the same premium transit mode (modes 100-109 and 120-137) are specified as zero since the station-to-station fares actually count these transfer fares. Additional transfer fare files are specified to represent a county-to-county transit system transfer, which are described in detail in the [Link Based Fares](TransitNetworkCoding#44-link-based-fares) section.
 
  
 ### 4.3 Station-to-Station Fares
 
 The premium transit lines (modes 100-109 and 120 -137) charge fares between stations. These fares are specified in the &lt;operator&gt;.FAR files. For example, the BART.FAR file consists of fares between all BART stations. Figure 13 shows a sample station-to-station fare file.
 
-*Figure* *13* *Transit Station-to-Station Fare File (&lt;Operator&gt;.FAR)*
+*Figure 13 Transit Station-to-Station Fare File (&lt;Operator&gt;.FAR)*
 
-<img alt="Operator_far.jpg" height="281" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/NetworkCoding/Operator_far.jpg" title="Operator_far.jpg" width="838" />
+![Transit Station-to-Station Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Operator_far.jpg)
+
 
 ### 4.4 Link Based Fares
 

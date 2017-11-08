@@ -4,7 +4,6 @@
 
 Simulation results specific to joint tour decisions. Joint travel is defined in the model structure as two or more individuals from the same household making a complete travel tour together.
 
- 
 | Name | Definition | Scale | Join with &hellip; |
 |---|---|---|---|
 | hh_id | Unique household ID number | Long integer, any value | All model files, [synthetic population household file](PopSynHousehold) |

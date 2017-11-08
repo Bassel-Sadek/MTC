@@ -34,12 +34,12 @@
 * See Travel Model One v0.5 validation; Model year 2000-2010 results are unaffected.
 
 # Useful and/or Interesting Maps
-* [Travel Analysis Zone and Super District Boundaries](TravelModelOneGeographies)
+* [Travel Analysis Zone and Super District Boundaries](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones)
 * [Simulated Vehicle Miles Traveled by Household Location](VmtPerCapita)
 * [Simulated Vehicle Miles Traveled by Workplace Location](VmtPerWorker)
 
 ## Typical Weekday Flows and Speeds on Freeways
-* Data derived from <a href="http://pems.dot.ca.gov/" target="_blank" title="Caltrans">Caltrans Performance Measurement System</a> (or !PeMS) database
+* Data derived from <a href="http://pems.dot.ca.gov/" target="_blank" title="Caltrans">Caltrans Performance Measurement System</a> (or PeMS) database
   * [Year 2005 to Year 2014 Typical Weekday Flows and Speeds by Time Period](PeMSFlowsAndSpeeds)
   * [Year 2005 to Year 2014 Typical Weekday Flows and Speeds by Hour](PeMSFlowsAndSpeedsHour)
 * Data derived from counts provided by Caltrans 

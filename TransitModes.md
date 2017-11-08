@@ -3,7 +3,7 @@
 ---
 
 A complete list of transit modes.
- 
+
 | Name | Mode # | Mode Category | Notes |
 |------|--------|---------------|-------|
 | Walk access connector | 1 | Support |   |

@@ -4,7 +4,7 @@
 
 Two network check scripts can be run to ensure the transit network is ready for use. The first check builds the transit network to ensure the highway and transit networks are consistent (i.e. a node isnt missing in one file for example). The second check ensures the TP+ block files reference all of the input files that make up the network.
 1. [Transit Line Files Checks](TransitNetworkCheck#1-transit-line-files-tpl-checks)
-1. [Transit Block Files Checks]()
+1. [Transit Block Files Checks](TransitNetworkCheck#2-transit-block-files-block-checks)
 
 ## 1. Transit Line Files (.TPL) Checks
 
@@ -32,7 +32,7 @@ A second check can be done to ensure consistency among the TP+ [line block files
 
 ### 2.1 Transit Line Block File
 
-Each transit line file (*.tpl) is named by operator name and line-haul mode type. A number of transit line files therefore need to be read by TP+ when building the transit network. Instead of specifying the individual transit line files, a block file is specified, which consists of all the transit line files. Whenever a new transit file (.TPL) is developed, it needs to be referenced in the transit block file as well. As a result, there is a chance of omitting the transit line files in the block file. The script [[#CheckTransitLineBlock][CheckTransitLineBlock.job]] checks for consistency among the *tpl files in a folder and what is specified in the block file.
+Each transit line file (*.tpl) is named by operator name and line-haul mode type. A number of transit line files therefore need to be read by TP+ when building the transit network. Instead of specifying the individual transit line files, a block file is specified, which consists of all the transit line files. Whenever a new transit file (.TPL) is developed, it needs to be referenced in the transit block file as well. As a result, there is a chance of omitting the transit line files in the block file. The following script checks for consistency among the *tpl files in a folder and what is specified in the block file.
 
 #### Script CheckTransitLineBlock.job
 
@@ -64,7 +64,7 @@ The script outputs the following information:
 
 ### 2.2 Transit Fare Block File
 
-The transit fare block file is similar to the transit line block file. However, the direct fares, transfer fares and link fares are directly specified in the script and only the station-to-station fare files are specified as a block file (see section Transit Fare Files for more details on transit fare types). Whenever a new station-to-station fare file is developed it also needs to be referenced in the transit fare block. The script <strong> [[#CheckTransitFareBlock][CheckTransitFareBlock.job]]</strong> checks whether all the station-to-station fare files are specified in the block file.
+The transit fare block file is similar to the transit line block file. However, the direct fares, transfer fares and link fares are directly specified in the script and only the station-to-station fare files are specified as a block file (see section Transit Fare Files for more details on transit fare types). Whenever a new station-to-station fare file is developed it also needs to be referenced in the transit fare block. The following script checks whether all the station-to-station fare files are specified in the block file.
 
 #### Script CheckTransitFareBlock.job
 

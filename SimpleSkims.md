@@ -61,9 +61,6 @@ For automobile travel, the cost includes bridge tolls, value (HOT-lane) tolls, a
 | s3Toll | Cost for the shared ride 3+ value toll travel mode (those willing to pay to use an HOT lane, if scenario policy dictates they must pay) |   |
 | wTrnW | Cost for walk to transit to walk paths |   |
 | dTrnW | Cost for drive to transit to walk paths |   |
-| wTrnD | Cost for walk to transit to drive paths (returning home on a park-and-ride tour) |   |
- 
-
- 
+| wTrnD | Cost for walk to transit to drive paths (returning home on a park-and-ride tour) |   | 
 
 -- Main.DavidOry - 24 Oct 2014

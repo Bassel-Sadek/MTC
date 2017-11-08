@@ -3,12 +3,12 @@
 ---
 
 Two network check scripts can be run to ensure the transit network is ready for use. The first check builds the transit network to ensure the highway and transit networks are consistent (i.e. a node isnt missing in one file for example). The second check ensures the TP+ block files reference all of the input files that make up the network.
-1. [Transit Line Files Checks]()
+1. [Transit Line Files Checks](TransitNetworkCheck#1-transit-line-files-tpl-checks)
 1. [Transit Block Files Checks]()
 
 ## 1. Transit Line Files (.TPL) Checks
 
-The [[TransitNetworkCoding#TransitLineFiles][transit line files ]]are coded on top of the highway networks and these two networks need to be consistent. There are many ways to check for the consistency between the transit line files and highway network files. The simplest way is to build a transit network file via the  [[TransitNetworkCoding#buildTransitNetworks][**buildTransitNetworks.job**]] script. If the network is successfully built then it confirms the consistency between the highway and transit files. If the build fails, then TP+ will create a print file with a list of errors. Following are some typical inconsistencies and errors:
+The [transit line files](TransitNetworkCoding#2-transit-line-files) are coded on top of the highway networks and these two networks need to be consistent. There are many ways to check for the consistency between the transit line files and highway network files. The simplest way is to build a transit network file via the [**buildTransitNetworks.job**](TransitNetworkCoding#script-buildtransitnetworkjob) script. If the network is successfully built then it confirms the consistency between the highway and transit files. If the build fails, then TP+ will create a print file with a list of errors. Following are some typical inconsistencies and errors:
 
 1. All transit nodes must exist in the highway network or be specified in the support line files. Figure 1 shows the error message for this error.
 1. The transit node sequence should follow the same node sequence as in the highway networks. Figure 2 shows the error message for this error.
@@ -26,9 +26,9 @@ The [[TransitNetworkCoding#TransitLineFiles][transit line files ]]are coded on t
 
 <img alt="Check_transit_stops.jpg" height="273" src="%PUBURL%/Main/NetworkCoding/Check_transit_stops.jpg" title="Check_transit_stops.jpg" width="977" />
 
-## 2. Transit Block Files (.BLOCK) Check
+## 2. Transit Block Files (.BLOCK) Checks
 
-A second check can be done to ensure consistency among the TP+ [[TransitNetworkCoding#TransitLineBlockFile][line block files]]. A block file is a block of script that exists as a separate file and consists of lines of code or other specifications that are called by a main script. In order to keep from changing the main script every time a new operator or fare specification is added, these line and fare specifications are moved to block files. The block files refer to separate line and fare files that actually define the lines and fares.
+A second check can be done to ensure consistency among the TP+ [line block files](TransitNetworkCoding#2-transit-line-files). A block file is a block of script that exists as a separate file and consists of lines of code or other specifications that are called by a main script. In order to keep from changing the main script every time a new operator or fare specification is added, these line and fare specifications are moved to block files. The block files refer to separate line and fare files that actually define the lines and fares.
 
 ### 2.1 Transit Line Block File
 

@@ -16,15 +16,15 @@ The [transit line files](TransitNetworkCoding#2-transit-line-files) are coded on
 
 *Figure 1 Transit Nodes Not in Highway Network*
 
-<img alt="Check_transit_nodes.jpg" height="215" src="%PUBURL%/Main/NetworkCoding/Check_transit_nodes.jpg" title="Check_transit_nodes.jpg" width="795" />
+![Transit Nodes Not in Highway Network](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Check_transit_nodes.jpg)
 
 *Figure 2 All Transit Nodes Exist in Highway Network but not Coded in Correct Sequence*
 
-<img alt="Check_transit_nodes_seq.jpg" height="265" src="%PUBURL%/Main/NetworkCoding/Check_transit_nodes_seq.jpg" title="Check_transit_nodes_seq.jpg" width="970" />
+![All Transit Nodes Exist in Highway Network but not Coded in Correct Sequence](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Check_transit_nodes_seq.jpg)
 
 *Figure 3 Transit Stop Node Specified Twice in a Same Line*
 
-<img alt="Check_transit_stops.jpg" height="273" src="%PUBURL%/Main/NetworkCoding/Check_transit_stops.jpg" title="Check_transit_stops.jpg" width="977" />
+![Transit Stop Node Specified Twice in a Same Line](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Check_transit_stops.jpg)
 
 ## 2. Transit Block Files (.BLOCK) Checks
 
@@ -60,7 +60,8 @@ The script outputs the following information:
 
 *Figure 4 Transit Line Block Comparison (Compare_transit_lines.txt)*
 
-<img alt="Comapre_transit_block_lines.jpg" height="311" src="%PUBURL%/Main/NetworkCoding/Comapre_transit_block_lines.jpg" title="Comapre_transit_block_lines.jpg" width="984" />
+![Transit Line Block Comparison](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Compare_transit_block_lines.jpg)
+
 
 ### 2.2 Transit Fare Block File
 
@@ -92,4 +93,4 @@ Table 2 shows the input and outputs used in the script and Figure 5 shows the ou
 
 *Figure 5 Transit Fare Block Comparison (Compare_transit_farefiles.txt)*
 
-<img alt="Compare_transit_farefiles.jpg" height="463" src="%PUBURL%/Main/NetworkCoding/Compare_transit_farefiles.jpg" title="Compare_transit_farefiles.jpg" width="974" />
+![Transit Fare Block Comparison](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Compare_transit_farefiles.jpg)

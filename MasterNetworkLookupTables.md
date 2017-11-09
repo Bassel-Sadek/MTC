@@ -3,6 +3,14 @@
 ---
 
 Definition of variables included in the master network.
+* [Traffic Operations (TOS)](MasterNetworkLookupTables#traffic-operations-tos)
+* [Arterial Signal Coordination (SIGCOR)](MasterNetworkLookupTables#arterial-signal-coordination-sigcor)
+* [Vehicle Restrictions (USE)](MasterNetworkLookupTables#vehicle-restrictions-use)
+* [Toll Code (TOLLCLASS)](MasterNetworkLookupTables#toll-code-tollclass)
+* [Facility Type (FT)](MasterNetworkLookupTables#facility-type-ft)
+* [Area Type (AT)](MasterNetworkLookupTables#area-type-at)
+* [Bus Rapid Transit (BRT)](MasterNetworkLookupTables#bus-rapid-transit-brt)
+
 
 ## Traffic Operations (TOS)
 
@@ -43,7 +51,7 @@ Definition of variables included in the master network.
 | 10 | Placeholder for future bridge and/or cordon toll codes |
 | 11 and higher | Codes specific to high-occupancy toll (HOT) roadway segments |
 
-## Facility type (FT)
+## Facility Type (FT)
 
 | FT | Definition |
 |-----|------------|
@@ -58,7 +66,7 @@ Definition of variables included in the master network.
 | 9 | Special facility |
 | 10 | Toll plaza |
 
-## Area type (AT)
+## Area Type (AT)
 
 The formula is as follows:  (total population + 2.5 * total employment) / (developed residential acres + developed commercial acres)
 
@@ -72,7 +80,7 @@ The formula is as follows:  (total population + 2.5 * total employment) / (deve
 | 5 | Rural | &lt; 6 |
 
  
-## Bus Rapid Transit indicator (BRT)
+## Bus Rapid Transit (BRT)
 
 | BRT | Definition |
 |-----|------------|

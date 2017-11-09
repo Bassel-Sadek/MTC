@@ -13,5 +13,3 @@
 * [Typical Weekday Bridge Transactions](http://public.tableau.com/views/BridgeTransactionsbyLaneDesignation/Hour_N?:embed=y&:loadOrderID=0&:display_count=yes)
 * [PeMS Flows and Speeds by Hour](https://public.tableau.com/profile/lmz8249#!/vizhome/PeMSTypicalWeekdayHour_0/SelectaStation)
 * [PeMS Flows and Speeds by Time Period](https://public.tableau.com/views/PeMSTypicalWeekdayPeriod_0/SelectaStation?:embed=y&:display_count=yes&publish=yes)
-
--- Main.DavidOry - 17 Aug 2015

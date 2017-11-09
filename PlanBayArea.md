@@ -9,7 +9,5 @@ _2013 Regional Transportation Plan and Sustainable Communities Strategy_
 * [Technical Paper: Project Performance Assessment Travel Modeling Methodological Approach](https://mtcdrive.box.com/s/d2mu4125chgokferantykwnbnbgrcglg)
 * [Technical Report:  Predicted Traveler Responses (for EIR Scenarios)](http://onebayarea.org/pdf/final_supplemental_reports/FINAL_PBA_Predicted_Traveler_Responses.pdf)
 * [Interactive Travel Time and Housing Cost Map](http://maps.onebayarea.org/travel_housing)
-* [Interactive Simulated VMT per Capita by Place of Residence Map](PlanBayAreaVmtPerCapita)
-* [Interactive Simulated VMT per Worker by Place of Employment Map](PlanBayAreaVmtPerWorker)
-
--- Main.DavidOry - 24 Sep 2014
+* [Interactive Simulated VMT per Capita by Place of Residence Map](http://mtc.maps.arcgis.com/apps/webappviewer/index.html?id=5dac76d69b3d41e583882e146491568b)
+* [Interactive Simulated VMT per Worker by Place of Employment Map](http://mtc.maps.arcgis.com/apps/webappviewer/index.html?id=98463b4f73ca43c5944a5c30648fd689)

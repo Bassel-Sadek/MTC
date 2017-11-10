@@ -2,6 +2,11 @@
 
 ---
 
+```diff
+- This process is somewhat outdated.
+- See https://github.com/BayAreaMetro/travel-model-one/tree/master/utilities/check-network
+```
+
 Two network check scripts can be run to ensure the transit network is ready for use. The first check builds the transit network to ensure the highway and transit networks are consistent (i.e. a node isnt missing in one file for example). The second check ensures the TP+ block files reference all of the input files that make up the network.
 1. [Transit Line Files Checks](TransitNetworkCheck#1-transit-line-files-tpl-checks)
 1. [Transit Block Files Checks](TransitNetworkCheck#2-transit-block-files-block-checks)

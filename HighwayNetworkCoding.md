@@ -2,6 +2,11 @@
 
 ***
 
+```diff
+- This process is somewhat outdated.
+- See https://github.com/BayAreaMetro/travel-model-one/tree/master/utilities/check-network for update.
+```
+
 The MTC highway network is coded and maintained as a comprehensive highway network file, commonly referred to as the *master highway network*. The file consists of network links that represent the roadways. A *project highway network* file is developed in three stages from the master highway network file. It consists of roadway links classified by functional class, zone connector links, and a few other additional links to support transit modeling. A project-specific highway network is developed as follows:
 
 1. [Start with the master network file](HighwayNetworkCoding#1-master-network)

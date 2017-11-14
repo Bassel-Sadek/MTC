@@ -6,7 +6,7 @@
 
 Price indices assumed in the MTC Travel Model (Source:  [Bureau of Labor Statistics](http://www.bls.gov/regions/west/data/consumerpriceindex_sanfrancisco_table.pdf); [FRED API](https://research.stlouisfed.org/fred2/series/CUUSA422SA0)).
 
- 
+
 | Year | Consumer Price Index (1982 - 1984 Ref) | Consumer Price Index (2000 Reference) |
 |------|-------|------|
 | 1983 | 98.40 | 0.55 |

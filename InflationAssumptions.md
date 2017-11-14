@@ -2,8 +2,6 @@
 
 ---
 
----+ Inflation Assumptions
-
 Price indices assumed in the MTC Travel Model (Source:  [Bureau of Labor Statistics](http://www.bls.gov/regions/west/data/consumerpriceindex_sanfrancisco_table.pdf); [FRED API](https://research.stlouisfed.org/fred2/series/CUUSA422SA0)).
 
 

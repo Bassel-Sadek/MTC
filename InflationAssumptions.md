@@ -39,7 +39,5 @@ Price indices assumed in the MTC Travel Model (Source:  [Bureau of Labor Statis
 | 2012 | 239.65 | 1.33 |
 | 2013 | 245.02 | 1.36 |
 | 2014 | 251.99 | 1.40 |
-| 2015 | 258.81 | 1.44 |
-
-
-  -- Main.DavidOry - 12 May 2016
+| 2015 | 258.57 | 1.43 |
+| 2016 | 266.34 | 1.48 |

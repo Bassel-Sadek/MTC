@@ -2,7 +2,7 @@
 
 ***
 
-This is the documentation website for Bay Area Metro's Travel Model, also known as Travel Model One.
+This is the documentation website for Bay Area Metro's Travel Model, also known as **Travel Model One**.
 
 [[Projects]] - Travel model applications
 

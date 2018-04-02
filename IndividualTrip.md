@@ -15,9 +15,9 @@ Simulation results specific to individual trip decisions.
 | tour_purpose | Tour purpose, given the type of tour | String, "work_low"; "work_med"; "work_high"; "work_very high"; "university"; "school_high"; "school_grade"; "atwork_business"; "atwork_eat"; "atwork_maint"; "eatout"; "escort_kids"; "escort_no kids"; "othdiscr", "othmaint"; "shopping"; "social" |   |
 | orig_purpose | Purpose at the origin end of the trip | String, "Home", "work_low"; "work_med"; "work_high"; "work_very high"; "university"; "school_high"; "school_grade"; "atwork_business"; "atwork_eat"; "atwork_maint"; "eatout"; "escort_kids"; "escort_no kids"; "othdiscr", "othmaint"; "shopping"; "social" |   |
 | dest_purpose | Purpose at the destination end of the trip | String, "Home", "work_low"; "work_med"; "work_high"; "work_very high"; "university"; "school_high"; "school_grade"; "atwork_business"; "atwork_eat"; "atwork_maint"; "eatout"; "escort_kids"; "escort_no kids"; "othdiscr", "othmaint"; "shopping"; "social" |   |
-| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f#visualize) |
 | orig_walk_segment | Walk to transit origin sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short walk to transit; 2 - long walk to transit |   |
-| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f#visualize) |
 | dest_walk_segment | Walk to transit destination sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short walk to transit; 2 - long walk to transit |   |
 | parking_taz | Transportation analysis zone in which the trip maker(s) park (model component not yet implemented) | Integer, 1 to 1454; 0 if no parking zone is selected |   |
 | depart_hour | Time of departure for the trip | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |

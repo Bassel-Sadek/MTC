@@ -12,8 +12,8 @@ For automobile travel, the time includes the network time plus the terminal time
 
 | Name | Definition | Join with &hellip; |
 |---|---|---|
-| orig | Origin transportation analysis zone | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
-| dest | Destination transportation analysis zone | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| orig | Origin transportation analysis zone | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
+| dest | Destination transportation analysis zone | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | da | Door-to-door time for the drive alone travel mode (i.e. single occupant private automobile) |   |
 | daToll | Door-to-door time for the drive alone value toll travel mode (those willing to pay to use an HOT lane) |   |
 | s2 | Door-to-door time for the shared ride 2 travel mode (i.e. double occupant private automobile) |   |

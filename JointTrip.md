@@ -13,9 +13,9 @@ Simulation results specific to joint trip decisions. Joint travel is defined in 
 | tour_purpose | Purpose of the joint tour | String, "eatout", "othdiscr", "othmaint", "shopping", "social" |   |
 | orig_purpose | Purpose at the origin end of the trip | String, "Home", "eatout", "othdiscr", "othmaint", "shopping", "social" |   |
 | dest_purpose | Purpose at the destination end of the trip | String, "Home", "eatout", "othdiscr", "othmaint", "shopping", "social" |   |
-| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | orig_walk_segment | Walk to transit origin sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
-| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | dest_walk_segment | Walk to transit destination sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
 | parking_taz | Transportation analysis zone in which the trip maker(s) park (model component not yet implemented) | Integer, 1 to 1454; 0 if no parking zone is selected |   |
 | depart_hour | Time of departure for the trip | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |

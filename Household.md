@@ -9,7 +9,7 @@ Household-specific results from the travel model simulation.
 | Name | Definition | Scale | Join with &hellip; |
 |---|---|---|---|
 | hh_id | Unique household ID number | Integer, any value | All model files, <a href="/foswiki/bin/view/Main/PopSynHousehold" target="_blank" title="Household file from Population Synthesizer">synthetic population household file</a> |
-| taz | Transportation analysis zone of home location | Integer, 1 to 1454 | <a href="http://opendata.mtc.ca.gov/datasets/73d290f78ae34aac9c1b4fa469330cf1_13" target="_blank" title="TAZ map">Shape file</a> |
+| taz | Transportation analysis zone of home location | Integer, 1 to 1454 | <a href="https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f" target="_blank" title="TAZ map">Shape file</a> |
 | walk_subzone | Walk to transit sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
 | income | Annual household income ($2000) | Integer, 0 and up |   |
 | autos | Household automobiles | Integer |   |

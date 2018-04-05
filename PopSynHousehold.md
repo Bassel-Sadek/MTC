@@ -10,7 +10,7 @@ The population synthesizer generates this household file and a [person file](Pop
 | *Name* | *Definition* | *Scale* | *Join with &hellip;* |
 |--------|--------------|---------|----------------------|
 | HHID | Unique household ID number | Integer, any value | All model files |
-| TAZ | Transportation analysis zone of home location | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/b85ba4d43f9843128d3542260d9a2f1f_0) |
+| TAZ | Transportation analysis zone of home location | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | SERIALNO | PUMA serial number | Long integer, any value |   |
 | PUMA5 | PUMA geography from which the drawn household is from (not the PUMA where the household is placed) | Four-digit integer |   |
 | HINC | Household income | Year 2000 dollars |   |

@@ -13,9 +13,9 @@ Simulation results specific to individual tour decisions.
 | tour_id | Individual tour number unique to the person | Integer, 0 (1 individual tour), 1, 2, 3, or 4 (5 individual tours) |   |
 | tour_category | Type of tour | String, "MANDATORY"; "INDIVIDUAL_NON_MANDATORY"; "AT_WORK" |   |
 | tour_purpose | Tour purpose, given the type of tour | String, "work_low"; "work_med"; "work_high"; "work_very high"; "university"; "school_high"; "school_grade"; "atwork_business"; "atwork_eat"; "atwork_maint"; "eatout"; "escort_kids"; "escort_no kids"; "othdiscr", "othmaint"; "shopping"; "social" |   |
-| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | orig_walk_segment | Walk to transit origin sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
-| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | dest_walk_segment | Walk to transit destination sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
 | start_hour | Start time of the tour | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |
 | end_hour | End time of the tour | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |

@@ -6,7 +6,7 @@ Simulation results specific to mandatory location decisions.
 | Name | Definition | Scale | Join with  |
 |---|---|---|---|
 | HHID | Unique household ID number | Long integer, any value | All model files,[synthetic population household file](PopSynHousehold) |
-| HomeTAZ | Home transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| HomeTAZ | Home transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | HomeSubZone | Walk to transit home sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit | |
 | Income | Annual household income ($2000) | Integer, 0 and up | |
 | PersonID | Unique person ID number | Long integer, any value | [Synthetic population person file](PopSynPerson), [[Person]] |

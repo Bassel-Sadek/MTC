@@ -12,9 +12,9 @@ Simulation results specific to joint tour decisions. Joint travel is defined in 
 | tour_purpose | Purpose of the joint tour | String, "eatout", "othdiscr", "othmaint", "shopping", "social" |   |
 | tour_composition | Type of tour composition | Integer, 1 - adults only; 2 - children only; 3 - adults and children |   |
 | tour_participants | Household members participating in the tour | String of Integers, with spaces between, of the person_num | [Person file](Person) |
-| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| orig_taz | Origin transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | orig_walk_segment | Walk to transit origin sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
-| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones) |
+| dest_taz | Destination transportation analysis zone | Integer, 1 to 1454 | [Shape file](https://mtc.maps.arcgis.com/home/item.html?id=b85ba4d43f9843128d3542260d9a2f1f) |
 | dest_walk_segment | Walk to transit destination sub-zone (not located in space) | Integer, 1 to 1454 |   |
 | start_hour | Start time of the tour | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |
 | end_hour | End time of the tour | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |

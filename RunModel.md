@@ -14,6 +14,7 @@ The Cube Cluster software allows for the Cube scripts to be multi-threaded. In M
 * Select "1-48" under "Process List"
 * Check the "Hide New Nodes" option to minimize the number of pop-up windows
 * Click "Start Nodes"
+
 To double check that the nodes are started, expand the small upwards facing arrow on the task bar at the bottom-right of the screen. One should see 48 Cube icons.
 
 ## Step 2: Execute the RunModelBatch file

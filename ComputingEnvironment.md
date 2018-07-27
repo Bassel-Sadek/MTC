@@ -43,5 +43,18 @@ Please note that a variety of model utility scripts also use R and Tableau.
 #### Tips for Setup
 We typically run python from the Windows command line (See [How to Run a Python Script via a File or the Shell](https://www.pythoncentral.io/execute-python-script-file-shell/)).  We typically use 64-bit python 2.7
 
-* This involves setting your PATH environment variable so the command line knows where the python executable is located
+* This involves setting your `PATH` environment variable so the command line knows where the python executable is located.  For example, if your `python.exe` is installed in `C:\Python27\`, then the command line will execute python when the `PATH` includes the path of the executable:
+
+```bat
+    C:\temp>set PATH=unset
+    C:\temp>python
+    'python' is not recognized as an internal or external command,
+    operable program or batch file.
+
+    C:\temp>set PATH=C:\Python27
+    C:\temp>python
+    Python 2.7.8 (default, Jun 30 2014, 16:08:48) [MSC v.1500 64 bit (AMD64)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> quit()
+```
 * It also likely involves installing python packages, such as pandas, numpy, etc.  We recommend downloading the versions compiled for Windows from [Christoph Gohlke's Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/).  These modules are downloadable as .whl files, which are installable using [pip](https://pip.pypa.io/en/stable/installing/).  Note that you'll want to download the appropriate .whl file for your python installation - so for 64-bit python 2.7, you'd want the .whl file that includes `cp27 `for python 2.7, and `win_amd64` for 64-bit.

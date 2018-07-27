@@ -40,4 +40,8 @@ The CT-RAMP software allows discrete choice models to be specified via so-called
 
 Please note that a variety of model utility scripts also use R and Tableau.
 
--- Main.DavidOry - 27 May 2016
+#### Tips for Setup
+We typically run python from the Windows command line (See [How to Run a Python Script via a File or the Shell](https://www.pythoncentral.io/execute-python-script-file-shell/)).  We typically use 64-bit python 2.7
+
+* This involves setting your PATH environment variable so the command line knows where the python executable is located
+* It also likely involves installing python packages, such as pandas, numpy, etc.  We recommend downloading the versions compiled for Windows from [Christoph Gohlke's Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/).  These modules are downloadable as .whl files, which are installable using [pip](https://pip.pypa.io/en/stable/installing/).  Note that you'll want to download the appropriate .whl file for your python installation - so for 64-bit python 2.7, you'd want the .whl file that includes `cp27 `for python 2.7, and `win_amd64` for 64-bit.

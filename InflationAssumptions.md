@@ -41,3 +41,5 @@ Price indices assumed in the MTC Travel Model (Source:  [Bureau of Labor Statis
 | 2014 | 251.99 | 1.40 |
 | 2015 | 258.57 | 1.43 |
 | 2016 | 266.34 | 1.48 |
+| 2017 | 274.92 | 1.53 |
+| 2018 (first half) | 282.67 | 1.60 |

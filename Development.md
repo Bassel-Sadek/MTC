@@ -28,7 +28,7 @@
 * [Tableau Interactive Validation 2000](http://data.mtc.ca.gov/wiki_pages/TravelModelOneV05TableauInteractive2000Validation)
 * [Tableau Interactive Validation 2005](http://data.mtc.ca.gov/wiki_pages/TravelModelOneV05TableauInteractive2005Validation)
 * [Tableau Interactive Validation 2010](http://data.mtc.ca.gov/wiki_pages/TravelModelOneV05TableauInteractive2010Validation)
- * [Tableau Interactive Validation 2015](http://data.mtc.ca.gov/wiki_pages/TravelModelOneV05TableauInteractive2015Validation)
+* [Tableau Interactive Validation 2015](http://data.mtc.ca.gov/wiki_pages/TravelModelOneV05TableauInteractive2015Validation)
 
 ## Travel Model One (v 0.6) - Released July 2016
 * [What is Travel Model One (v 0.6)?](TravelModelOneV06)

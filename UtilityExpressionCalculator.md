@@ -8,7 +8,7 @@ _(Special thanks to our friends at the [Maricopa Association of Governments](htt
 
 ## Methodology
 
-Each UEC workbook (i.e. Excel file) consists of at least two worksheets. One must be the [[UECDataSheet]], which defines the input files used in the utility expressions, including zonal (vector) data and level-of-service "skims" (matrix data). The second, third, fourth, etc page specifies one or more multinomial or nested logit models via a unique UEC UtilitySheet. The UtilitySheet consists of three sections, as follows:
+Each UEC workbook (i.e. Excel file) consists of at least two worksheets. One must be the [[UECDataSheet]], which defines the input files used in the utility expressions, including zonal (vector) data and level-of-service "skims" (matrix data). The second, third, fourth, etc page specifies one or more multinomial or nested logit models via a unique [[UECUtilitySheet]]. The [[UECUtilitySheet]] consists of three sections, as follows:
 
 1. The first section specifies the nesting structure of the logit model -- if omitted, a multinomial structure is assumed;
 1. Next, variable names, or tokens, are defined for use in subsequent (moving down rows) utility equations; and,

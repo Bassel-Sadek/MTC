@@ -1,4 +1,4 @@
-[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[UtilityExpressionCalculator]] >> [[UECDataSheet]]
+[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[UtilityExpressionCalculator]] > [[UECDataSheet]]
 
 ---
 

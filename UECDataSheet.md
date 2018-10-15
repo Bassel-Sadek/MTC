@@ -1,7 +1,8 @@
----+ Utility Expression Calculator -- Data Sheet
+# Utility Expression Calculator -- Data Sheet
 
 The UtilityExpressionCalculator (UEC) is a Java package that reads and interprets an Excel workbook; the workbook specifies and identifies input variables for a nest or multinomial logit model. The DataSheet defines the data files input to the model, including zonal (vector) data and skim (matrix) data. The UtilitySheet specifies the structure and utility expressions of the model.
----++ Methodology
+
+## Methodology
 
 An example of a partial DataSheet is displayed below.
 

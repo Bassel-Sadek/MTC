@@ -34,6 +34,9 @@
 * [What is Travel Model One (v 0.6)?](TravelModelOneV06)
 * See Travel Model One v0.5 validation; Model year 2000-2010 results are unaffected.
 
+## Travel Model 1.5 - Under Development
+* [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate)
+
 # Useful and/or Interesting Maps
 * [Travel Analysis Zone and Super District Boundaries](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones)
 * [Simulated Vehicle Miles Traveled by Household Location](VmtPerCapita)

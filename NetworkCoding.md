@@ -2,6 +2,14 @@
 
 ***
 
+For *Travel Model 1.5*, we will be using [NetworkWrangler](https://github.com/BayAreaMetro/NetworkWrangler) for network creation, pivoting from the [TM1_2015_Base_Network](https://github.com/BayAreaMetro/TM1_2015_Base_Network).
+
+[Network building documentation](http://bayareametro.github.io/travel-model-two/netbuild/) in Travel Model Two's Documentation is therefore relevant, and supplemental TM1.5 information will be added here shortly.
+
+
+_**The following information/pages are old and likely need to be updated but are left here for reference.**_
+
+---
 This page describes the MTC highway and transit network coding, as well as procedures to check the result. It does so by walking through the steps to create final project level networks for a model application. The sections are:
 
 ## 1. [Highway network coding procedures and relevant scripts](HighwayNetworkCoding)

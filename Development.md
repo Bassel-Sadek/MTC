@@ -32,7 +32,7 @@
 
 ## Travel Model One (v 0.6) - Released July 2016
 * [What is Travel Model One (v 0.6)?](TravelModelOneV06)
-* See Travel Model One v0.5 validation; Model year 2000-2010 results are unaffected.
+* See Travel Model One v0.5 validation; Model year 2000-2015 results are unaffected.
 
 ## Travel Model 1.5 - Under Development
 * [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate)

@@ -1,4 +1,4 @@
-[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[RunModel]] >> [[RunModelBatch]]
+[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[RunModel]] > [[RunModelBatch]]
 
 ***
 

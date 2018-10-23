@@ -19,10 +19,12 @@ Each of the above scripts has more detailed descriptions of the processess embed
 
 ## Step 2: Execute the choice models using CT-RAMP Java code
 
-The !MtcTourBasedModel Java class executes the choice model categories numbered 2 through 5 in the ModelSchematic. A single command line call to Java is used to execute the software; the following parameters, many of which are set in the SetupConfiguration page, are used in the call:
+The !MtcTourBasedModel Java class executes the choice model categories numbered 2 through 5 in the ModelSchematic. A single command line call to Java is used to execute the software; the following parameters, many of which are set in the [[SetupConfiguration]] page, are used in the call:
 
-<br />%TABLE{ sort="on" tableborder="1" cellpadding="4" cellspacing="3" headeralign="left,left" columnwidths="33%,50%" cellborder="0" headerbg="#FFFFFF" headercolor="#5d6662" databg="#CAD2CD, #E5F5EB" headerrows="1" footerrows="0" }% 
-| *Parameter* | *Purpose* |
+
+
+|  Parameter  |  Purpose  |
+|-------------|-----------|
 | showversion | Displays the Java version information |
 | Xmx6000m | Allow the Java virtual machine no more than 6 GB of RAM |
 | cp %CLASSPATH% | Set the Java classpath to the CLASSPATH environment variable (see RunModelBatch) |
@@ -35,11 +37,6 @@ The !MtcTourBasedModel Java class executes the choice model categories numbered 
 | sampleRate %SAMPLESHARE% | The share of the synthetic population whose behavior is simulated via the choice models |
 | sampleSeed %SEED% | Random number seed |
  
-
-The actual call is shown below:
-
-<font face="Courier New" size="2"> java -showversion -Xmx6000m -cp %CLASSPATH% -Dlog4j.configuration=log4j.xml -DJAVA_HOME_32="%JAVA_PATH_32%" -DJAVA_32_PORT=1181 -Djava.library.path=%RUNTIME% -Djppf.config=jppf-client.properties com.pb.mtc.ctramp.MtcTourBasedModel mtcTourBased -iteration %ITER% -sampleRate %SAMPLESHARE% -sampleSeed %SEED%<br /> if ERRORLEVEL 2 goto done<br /> </font>
-
 ## Step 3: Execute the internal/external and commercial vehicle models
 
 Representations of internal/external travel (i.e. travel that either starts or ends outside the nine county Bay Area) and commercial vehicle travel are generated outside the CT-RAMP software. The following scripts implement these models:
@@ -47,7 +44,7 @@ Representations of internal/external travel (i.e. travel that either starts or e
 1. **IxTimeOfDay.job** -- The internal/external model begins with fixed daily trip tables in production/attraction format; these tables are based on census commute flows and represent single-, double-, and three-or-more occupant private vehicles. In this script, the daily trip tables are segmented into time-of-day specific origin-destination matrices using diurnal factors developed for MTC's BAYCAST trip-based model.
 1. <strong>IxTollChoice.job </strong>-- Internal/external travelers are presented the option of paying a fee to use a high-occupancy toll. Here, a simple binary logit model is used to segment internal/external travelers by occupancy category into those willing to a pay a toll and those not willing to pay a toll.
 1. <strong>TruckTripGeneration.job </strong>-- Commercial vehicle travel is generated here, the first in a simple four step commercial vehicle model. Four truck classes are explicitly considered throughout the commercial vehicle model as follows: very small trucks (two-axle, four-tire), small trucks (two-axle, six tire), medium trucks (three-axle), and large or combination trucks (four or more axles).
-1. *TruckTripDistribution.job* -- Commercial vehicles are distributed using a gravity model. The gravity model uses travel time as the measure of impedance.
+1. **TruckTripDistribution.job** -- Commercial vehicles are distributed using a gravity model. The gravity model uses travel time as the measure of impedance.
 1. <strong>TruckTimeOfDay.job </strong>-- Fixed diurnal factors are used to translate the production/attraction matrices from the distribution model to time-of-day-specific origin/destination matrices.
 1. <strong>TruckTollChoice </strong>-- Similar to the *IxTollChoice.job* script, this script implements a simple binary logit model to segment trucks, by vehicle class, into those willing to pay a toll and those not willing to pay a toll.
 Please see the actual script files for more complete details about these processes. 

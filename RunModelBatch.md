@@ -21,7 +21,7 @@ The second step in the *RunModel.bat* file is to create the directory structure 
 1. <strong>nonres </strong>(non-residential inputs and outputs)
 1. <strong>main </strong>(choice model result outputs)
 1. <strong> logs </strong>(log files, temporary outputs)
-1. *database* (simplified skim database outputs)
+1. **database** (simplified skim database outputs)
 
 Next, the data stored in the INPUT folders is copied to this folder structure. Doing this allows the INPUT data to remain untouched during model execution. The actual instructions are below.
 
@@ -105,14 +105,14 @@ set SEED=0
 
 ## Step 6: Execute the RunIterationBatch file
 
-After setting the necessary parameters for an iteration through the model, the RunIterationBatch file performs all the travel model steps. The details of these steps are described on the RunIterationBatch file (the choice models depicted as items 2 through 5 on the ModelSchematic page are executed as part of a model iteration). The actual code is shown below.
+After setting the necessary parameters for an iteration through the model, the [[RunIterationBatch]] file performs all the travel model steps. The details of these steps are described on the [[RunIterationBatch]] file (the choice models depicted as items 2 through 5 on the [[ModelSchematic]] page are executed as part of a model iteration). The actual code is shown below.
 
 ```
 call CTRAMP\RunIteration.bat
 if ERRORLEVEL 2 goto done
 ```
 
-## Step 7: Prepare for iteration 1 and execute the RunIterationBatch file
+## Step 7: Prepare for iteration 1 and execute the [[RunIterationBatch]] file
 
 Using the congested speeds from the iteration 0 warm start exercise, an iteration of the model is now executed for the first full iteration. The steps in this process are as follows:
 
@@ -155,7 +155,7 @@ Using the congested speeds from the first iteration, a second full iteration of 
 1. Use the shadow prices from the first iteration usual workplace location sub-model run as the initial shadow prices for second iteration usual workplace location sub-model run;
 1. Set the maximum number of shadow pricing iterations in the usual workplace location sub-models to 2.
 
-The above steps are the same as those discussed in Step 7: Prepare for Iteration 1 and Execute the RunIterationBatch file. The one minor difference is that an input file is being read in to "warm start" the usual workplace location sub-model. Here, we start with the shadow prices from the first iteration and further refine the estimates with two additional iterations of the usual workplace location sub-model. The actual code to implement the above actions is shown below.
+The above steps are the same as those discussed in Step 7: Prepare for Iteration 1 and Execute the [[RunIterationBatch]] file. The one minor difference is that an input file is being read in to "warm start" the usual workplace location sub-model. Here, we start with the shadow prices from the first iteration and further refine the estimates with two additional iterations of the usual workplace location sub-model. The actual code to implement the above actions is shown below.
 
 ```
 set ITER=2
@@ -187,7 +187,7 @@ Using the congested speeds from the second iteration, a third full iteration of 
 1. Use the shadow prices from the second iteration usual workplace location sub-model run as the initial shadow prices for third iteration usual workplace location sub-model run;
 1. Set the maximum number of shadow pricing iterations in the usual workplace location sub-models to 2.
 
-The above steps are the same as those discussed in Step 8: Prepare for Iteration 1 and Execute the RunIterationBatch file. The actual code to implement the above actions is shown below.
+The above steps are the same as those discussed in Step 8: Prepare for Iteration 1 and Execute the [[RunIterationBatch]] ]file. The actual code to implement the above actions is shown below.
 
 ```
 set ITER=3
@@ -206,7 +206,7 @@ call CTRAMP\RunIteration.bat
 if ERRORLEVEL 2 goto done
 ```
 
-Please note that the RunModelBatch file can be configured to run any number of iterations of the travel model at any sampling rate. MTC does modify these parameters as the application needs change (this explanation is used to illustrate the how the model stream can be configured). For example, for a conformity run, MTC will perform a fourth iteration and use a 100 percent sampling rate. These changes can be made easily by modifying the RunModelBatch file and following the pattern of the previous iterations.
+Please note that the [[RunModelBatch]] file can be configured to run any number of iterations of the travel model at any sampling rate. MTC does modify these parameters as the application needs change (this explanation is used to illustrate the how the model stream can be configured). For example, for a conformity run, MTC will perform a fourth iteration and use a 100 percent sampling rate. These changes can be made easily by modifying the [[RunModelBatch]] file and following the pattern of the previous iterations.
 
 ## Step 10: Assign transit trips to the transit network
 
@@ -219,7 +219,7 @@ if ERRORLEVEL 2 goto done
 
 ## Step 11: Build simplified skim databases
 
-To facilitate analysis of travel outcomes using databases, MTC builds simplified, CSV databases from the more detailed and complete Cube skims. Details and specifications are described on the SimpleSkims page as well as in the <strong>SkimsDatabase.job </strong>script. The implementation code is shown below.
+To facilitate analysis of travel outcomes using databases, MTC builds simplified, CSV databases from the more detailed and complete Cube skims. Details and specifications are described on the [[SimpleSkims]] page as well as in the <strong>SkimsDatabase.job </strong>script. The implementation code is shown below.
 
 ```
 call CTRAMP\scripts\database\SkimsDatabase.job

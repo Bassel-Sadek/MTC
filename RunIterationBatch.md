@@ -1,3 +1,7 @@
+[[Home]] > [[TravelModel]] > [[UsersGuide]] > [[RunModel]] >> [[RunModelBatch]] >> [[RunIterationBatch]]
+
+***
+
 # Run Iteration Batch File: Details
 
 The *RunIteration.bat* file is called repeatedly by the RunModelBatch file during execution of the MTC travel model. This page explicates the steps incuded in the *RunIteration.bat* instructions. Please note that if RunModelBatch is on iteration 0, the first three steps in the process described below are skipped.

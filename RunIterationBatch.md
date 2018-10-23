@@ -15,19 +15,7 @@ Five separate Cube scripts are responsible for creating the highway and transit 
 1. <strong>BuildTransitNetworks.job </strong>-- Here, the following transit support links are created: (a) walk access links from zone centroids to bus stops (located on the highway network) and zone centroids to walk access funnel links for transit-only infrastructure; (b) drive access links are generated from zone centroids to park-and-ride facilities; (c) GAWK is used to use the access links to create egress links (transposing the A and B nodes); (d) transit transfer links are created and combined with the access and egress links; and, (e) GAWK is used to select the two best park-and-ride lots for each zone for each type of line haul facility that has park and ride lots.
 1. **TransitSkims.job** -- Transit level-of-service matrices are created from the transit networks. These skims are segmented by TimePeriods, access mode (walk or drive), egress mode (walk or drive), and path.
 1. <strong>Accessibility.job </strong>-- The Automobile Ownership model uses various measures of accessibility to assess the difficulty travelying by automobile, transit, or non-motorized (bicycle, walk) modes from each travel analysis zone.
-Each of the above scripts has more detailed descriptions of the processess embedded as comments in the script file. The actual implementation of these steps is as follows:
-
-```
-runtpp CTRAMP\scripts\skims\HwySkims.job
-if ERRORLEVEL 2 goto done
-runtpp CTRAMP\scripts\skims\PrepHwyNet.job
-if ERRORLEVEL 2 goto done
-runtpp CTRAMP\scripts\skims\BuildTransitNetworks.job if ERRORLEVEL 2 goto done
-runtpp CTRAMP\scripts\skims\TransitSkims.job
-if ERRORLEVEL 2 goto done
-runtpp CTRAMP\scripts\skims\Accessibility.job
-if ERRORLEVEL 2 goto done
-```
+Each of the above scripts has more detailed descriptions of the processess embedded as comments in the script file.
 
 ## Step 2: Execute the choice models using CT-RAMP Java code
 

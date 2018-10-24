@@ -2,7 +2,7 @@
 
 ---
 
-A "loaded" roadway network is the result of the travel model's systematic assignment of all vehicles to paths, or routes. The variables input to this process are described in the [[HighwayNetworkCoding]] section; variables output from this process are described below. Note that this single loaded network represents a conflation of five time-of-day specific networks. As such, certain time-of-day specific network parameters (such as the USE code) which are included in this network do not represent the condition of the network across all five times of day.
+A "loaded" roadway network is the result of the travel model's systematic assignment of all vehicles to paths, or routes. The variables input to this process are described in [[HighwayNetworkCoding]] and [[MasterNetworkLookupTables]]; variables output from this process are described below. Note that this single loaded network represents a conflation of five time-of-day specific networks. As such, certain time-of-day specific network parameters (such as the USE code) which are included in this network do not represent the condition of the network across all five times of day.
 
 The token **XX** in the variable names below represents a two-letter time-of-day string for which the variable is specific. Values of XX include "24hr", which identifies daily quantities as well as each of the travel model's [[TimePeriods]] two-letter codes.
 

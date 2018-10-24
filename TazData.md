@@ -2,7 +2,7 @@
 
 ***
 
-Identical CSV and DBF versions of this file are used by the travel model.
+Identical CSV and DBF versions of this file are used by the travel model.  See also [[InflationAssumptions]]
 
 | *Name* | *Definition* | *Scale* | *Join with &hellip;* |
 |--------|--------------|---------|----------------------|
@@ -16,10 +16,10 @@ Identical CSV and DBF versions of this file are used by the travel model.
 | EMPRES | Employed residents | Integer, 0 and up |   |
 | SFDU | Number of occupied single-family dwelling units | Integer, 0 and up |   |
 | MFDU | Number of occupied multi-family dwelling units | Integer, 0 and up |   |
-| HHINCQ1 | Households in the lowest income quartile (less than $30,000 annually in $1999) | Integer, 0 and up |   |
-| HHINCQ2 | Households in the second lowest income quartile (between $30,000 and $60,000 in $1999) | Integer, 0 and up |   |
-| HHINCQ3 | Households in the second highest income quartile (between $60,000 and $100,000 in $1999) | Integer, 0 and up |   |
-| HHINCQ4 | Households in the highest income quartile (more than $100,000 in $1999) | Integer, 0 and up |   |
+| HHINCQ1 | Households in the lowest income quartile (less than $30,000 annually in $2000) | Integer, 0 and up |   |
+| HHINCQ2 | Households in the second lowest income quartile (between $30,000 and $60,000 in $2000) | Integer, 0 and up |   |
+| HHINCQ3 | Households in the second highest income quartile (between $60,000 and $100,000 in $2000) | Integer, 0 and up |   |
+| HHINCQ4 | Households in the highest income quartile (more than $100,000 in $2000) | Integer, 0 and up |   |
 | TOTACRE | Total acres | Float, 0.0 and up |   |
 | RESACRE | Acres occupied by residential development | Integer, 0 and up |   |
 | CIACRE | Acres occupied by commercial or industrial development | Integer, 0 and up |   |

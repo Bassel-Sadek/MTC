@@ -23,16 +23,16 @@ Identical CSV and DBF versions of this file are used by the travel model.  See a
 | TOTACRE | Total acres | Float, 0.0 and up |   |
 | RESACRE | Acres occupied by residential development | Integer, 0 and up |   |
 | CIACRE | Acres occupied by commercial or industrial development | Integer, 0 and up |   |
-| !SHPOP62P | Share of the population age 62 or older | Float, 0.0 to 1.00 |   |
+| SHPOP62P | Share of the population age 62 or older | Float, 0.0 to 1.00 |   |
 | TOTEMP | Total employment | Integer, 0 and up |   |
 | AGE0004 | Persons age 0 to 4 | Integer, 0 and up |   |
 | AGE0519 | Persons age 5 to 19 | Integer, 0 and up |   |
 | AGE2044 | Persons age 20 to 44 | Integer, 0 and up |   |
 | AGE4564 | Persons age 45 to 64 | Integer, 0 and up |   |
-| !AGE65P | Persons age 65 and older | Integer, 0 and up |   |
+| AGE65P | Persons age 65 and older | Integer, 0 and up |   |
 | RETEMPN | Retail trade employment ([NAICS-based](http://www.census.gov/eos/www/naics/)) | Integer, 0 and up |   |
 | FPSEMPN | Financial and professional services employment (NAICS-based) | Integer, 0 and up |   |
-| HEREEMPN | Health, educational and recreational service employment (NAICS-based) | Integer, 0 and up |   |
+| HEREMPN | Health, educational and recreational service employment (NAICS-based) | Integer, 0 and up |   |
 | AGREMPN | Agricultural and natural resources employment (NAICS-based) | Integer, 0 and up |   |
 | MWTEMPN | Manufacturing, wholesale trade and transportation employment (NAICS-based) | Integer, 0 and up |   |
 | OTHEMPN | Other employment (NAICS-based) | Integer, 0 and up |   |

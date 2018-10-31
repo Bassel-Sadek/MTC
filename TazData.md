@@ -47,7 +47,7 @@ Identical CSV and DBF versions of this file are used by the travel model.  See a
 | ZERO | Placeholder (always zero) | Integer, 0 |   |
 | HHLDS | Repeat of the TOTHH variable with a different name for software compatibility | Integer, 0 and up |   |
 | SFTAZ | Repeat of the ZONE variable with a different name for software compatibility | Integer, 1 to 1454 |   |
-| GQPOP | Population living in group quarters rather than households | Integer, 0 and up |   |
+| GQPOP | Population living in non-institutional group quarters rather than households | Integer, 0 and up |   |
 
 
 -- Main.DavidOry - 04 Jan 2013

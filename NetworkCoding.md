@@ -30,7 +30,7 @@ Transit projects are more complicated.  Some example actions:
 | Adding a new line (including transfer links and funnel links) | CC_050025_EBart_to_Antioch |
 | Removing a line | Earthquake (to be coded) |
 | Rerouting a bus line | Earthquake (to be coded) |
-| Adding a stop to an existing line |  SOL030002_Fairfield_Vacaville_Stn (to be coded) |
+| Extending an existing line |  SOL030002_FairfieldVacaville_Stn |
 
 _**The following information/pages are old and likely need to be updated but are left here for reference.**_
 

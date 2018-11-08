@@ -33,7 +33,7 @@ Definition of variables included in the master network.
 | 1 | All vehicles may use the roadway |
 | 2 | High-occupancy vehicle (HOV) lane with a minimum of two persons per vehicle; combination trucks prohibited |
 | 3 | High-occupancy vehicle (HOV) lane with a minimum of three persons per vehicle; combination trucks prohibited |
-| 4 | Combination trucks prohibited |
+| 4 | Combination trucks prohibited (used for Express Lanes) |
 
 ## Toll Code (TOLLCLASS)
 

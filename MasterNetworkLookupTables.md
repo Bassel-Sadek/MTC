@@ -87,3 +87,6 @@ The formula is as follows:  (total population + 2.5 * total employment) / (deve
 |-----|------------|
 | 0 | Roadway segment does _not_ include a dedicated bus lane with full BRT treatments |
 | 1 | Roadway segment includes a dedicated bus lane with full BRT treatments |
+| 2 | Roadway segment includes reduced bus delays (e.g. transit signal priority) |
+
+The BRT attribute is used in [PrepHwyNet.job](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/skims/PrepHwyNet.job#L138)

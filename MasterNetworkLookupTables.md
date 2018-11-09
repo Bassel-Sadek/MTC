@@ -19,7 +19,7 @@ Definition of variables included in the master network.
 | 0 | Freeway is _not_ managed with ramp metering infrastructure |
 | 1 | Freeway is managed with ramp metering infrastructure |
 | 2 | Freeway is managed with ramp metering and other (tbd) infrastructure |
- 
+
 ## Arterial Signal Coordination (SIGCOR)
 
 | SIGCOR | Definition |

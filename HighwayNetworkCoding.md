@@ -24,8 +24,13 @@ Input network (freeflow.net) attributes:
 | FT2000 | Facility Type in Year 2000 | 2 |
 | GL | County Code | 4 |
 | LANES | Number of Lanes | 2 |
-| TOLLCLASS | Toll Class Type | 0 |
-| USE | User Class Type | 1 |
+| AT | [Area Type](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#area-type-at) | 2 |
+| FT | [Facility type](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#facility-type-ft)  | 2 |
+| TOLLCLASS | [Toll Code](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#toll-code-tollclass) | 0 |
+| USE | [Vehicle restrictions](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#vehicle-restrictions-use) | 1 |
+| BRT | [Bus Rapid Transit](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#bus-rapid-transit-brt) | 0 |
+| TOS | [Traffic Operations](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#traffic-operations-tos) | 0 |
+| SIGCOR | [Arterial Signal Coordination](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#arterial-signal-coordination-sigcor) | 0 |
 | OT | Observed Time for Toll Queuing Links | 0 |
 
 *Table 6 Highway Network Calculated Link Attributes*

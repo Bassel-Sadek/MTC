@@ -31,10 +31,10 @@ A complete list of transit modes.
 | AC Transit - Local | 30 | Local |   |
 | WHEELS - Local | 33 | Local |   |
 | Union City Transit | 38 | Local |   |
-| !AirBART | 40 | Local |   |
+| AirBART | 40 | Local |   |
 | County Connection (CCTA) - Local | 42 | Local |   |
 | Tri-Delta | 44 | Local |   |
-| !WestCAT - Local | 46 | Local |   |
+| WestCAT - Local | 46 | Local |   |
 | Vallejo Transit - Local | 49 | Local |   |
 | Fairfield And Suisun Transit - Local | 52 | Local |   |
 | American Canyon Transit | 55 | Local |   |
@@ -53,7 +53,7 @@ A complete list of transit modes.
 | County Connection - Express | 86 | Express |   |
 | Golden Gate Transit - Express San Francisco | 87 | Express |   |
 | Golden Gate Transit - Express Richmond | 88 | Express |   |
-| !WestCAT - Express | 90 | Express |   |
+| WestCAT - Express | 90 | Express |   |
 | Vallejo Transit - Express | 91 | Express |   |
 | Fairfield And Suisun Transit - Express | 92 | Express |   |
 | VINE - Express | 93 | Express |   |

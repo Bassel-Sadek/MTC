@@ -25,7 +25,7 @@ A complete list of transit modes.
 | San Leandro Links | 19 | Local |   |
 | MUNI Cable Cars | 20 | Local |   |
 | MUNI - Local | 21 | Local |   |
-| !SamTrans - Local | 24 | Local |   |
+| SamTrans - Local | 24 | Local |   |
 | Santa Clara VTA - Community bus | 27 | Local |   |
 | Santa Clara VTA - Local | 28 | Local |   |
 | AC Transit - Local | 30 | Local |   |
@@ -45,7 +45,7 @@ A complete list of transit modes.
 | Santa Rosa City Bus | 66 | Local |   |
 | Petaluma Transit | 68 | Local |   |
 | Golden Gate Transit - Local | 70 | Local |   |
-| !SamTrans - Express | 80 | Express |   |
+| SamTrans - Express | 80 | Express |   |
 | Santa Clara VTA - Express | 81 | Express |   |
 | Dumbarton Express | 82 | Express |   |
 | AC Transit - Transbay | 83 | Express |   |

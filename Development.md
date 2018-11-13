@@ -35,7 +35,8 @@
 * See Travel Model One v0.5 validation; Model year 2000-2015 results are unaffected.
 
 ## Travel Model 1.5 - Under Development
-* [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate)
+* [What is Travel Model 1.5?](TravelModel1.5)
+* [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate) - PDF of slides presented to CMAs on Oct 12, 2018
 
 # Useful and/or Interesting Maps
 * [Travel Analysis Zone and Super District Boundaries](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones)

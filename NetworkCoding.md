@@ -32,6 +32,17 @@ Transit projects are more complicated.  Some example actions:
 | Rerouting a bus line | Earthquake (to be coded) |
 | Extending an existing line |  SOL030002_FairfieldVacaville_Stn |
 
+Note: Cube UI will load the following:
+* transitLines.lin
+* transitLines.link
+* transitLines.zac
+* *.pnr
+* WALK_access.sup
+
+Cube UI will *not* load the following (since they're generic format):
+* transitLines.xfer
+* transitLines.access
+
 _**The following information/pages are old and likely need to be updated but are left here for reference.**_
 
 ---

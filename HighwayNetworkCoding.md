@@ -22,7 +22,7 @@ Input network (freeflow.net) attributes:
 | FFS | Free Flow Speed | 60 |
 | FFT | Free Flow Time | 14.1 |
 | FT2000 | Facility Type in Year 2000 | 2 |
-| GL | County Code | 4 |
+| GL | County Code. 1=San Francisco; 2=San Mateo; 3=Santa Clara; 4=Alameda; 5=Contra Costa; 6=Solano; 7= Napa; 8=Sonoma; 9=Marin | 4 |
 | LANES | Number of Lanes | 2 |
 | AT | [Area Type](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#area-type-at) | 2 |
 | FT | [Facility type](https://github.com/BayAreaMetro/modeling-website/wiki/MasterNetworkLookupTables#facility-type-ft)  | 2 |

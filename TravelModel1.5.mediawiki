@@ -18,5 +18,113 @@ To be added.
 To be added.
 
 == Autonomous Vehicles ==
-
-To be added.
+<p><span id="_Hlk531179289" class="anchor"></span>Several new components were introduced into the CT-RAMP model in TM1.5 to explicitly model the ownership and availability of autonomous vehicles (AVs). Because the level of private Autonomous Vehicle ownership and effects on total auto ownership, mode choice, destination choice, and congestion impacts are largely unknown, the approach that has been adopted is to provide the user with significant flexibility in how to represent the impacts of AVs. This type of modeling, called ‘scenario modeling’, requires the user to make some assumptions about how the future might look in terms of AV ownership, differences in perceived and/or actual time and cost of AVs versus human-controlled vehicles (HVs), and impacts on congestion. Then the user must translate those assumptions into model parameters so that the model outcomes reflect those assumptions. Typically, the model is run many times with systematically varied assumptions to test the effects of the ranges of assumptions on outcomes. This is typically referred to as ‘risk analysis’.</p>
+<p>The following changes were made to enable this type of scenario modeling in TM 1.5. First, the auto ownership model was extended to consider autonomous (AV) versus human-controlled (HV) vehicles. Second, a simulation model was added that determines for each AV-owning household whether an AV is available for each tour. Third, the tour and trip mode choice models were modified to introduce user-defined coefficients and alternative-specific constants to represent AV-scenario assumptions. Fourth, the software was modified to explicitly track whether an AV was chosen for each tour and trip and to provide the capability to assign AVs as a separate vehicle class.</p>
+<h3 id="auto-ownership-enhancements">Auto Ownership Enhancements</h3>
+<p>As shown in the figure below, the auto ownership model was extended to consider number of AVs versus HVs for each auto-owning choice. This provides the capability to test different private AV ownership levels on downstream choices such as mode choice, and to track AV trios in separate trip tables. The AV versus HV nesting coefficient was asserted to be 0.5. It is assumed that a household owning 4 vehicles would likely not own any autonomous vehicles and future scenarios that assume high levels of AV ownership would significantly reduce or even eliminate the share of 4+ vehicle owning households.</p>
+<p>The table below shows the coefficients added to the auto ownership model to capture likely socio-economic and mobility attributes related to AV ownership. The exponentiated values are also shown in order to illustrate the effect of the coefficient on the probability of AV ownership. These coefficients were adopted from recent AV scenario testing conducted by RSG using the Jacksonville DaySim model. They assume that younger and more wealthy households are more likely to own AVs, all else being equal. They also assume that households with longer work commutes would be more likely to own an AV. Although they are informed by current literature, there is no way to statistically estimate these variables since there are no AV-owning households currently.</p>
+<p>Autonomous Vehicle Ownership Coefficients</p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Coefficient</th>
+<th>exp(Coefficient)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Household Income under $50k</td>
+<td>-1.0000</td>
+<td>0.37</td>
+</tr>
+<tr class="even">
+<td>Household Income 100k+</td>
+<td>1.0000</td>
+<td>2.72</td>
+</tr>
+<tr class="odd">
+<td>Younger household (Number of persons 18 to 35 &gt;= Number of Persons 65+</td>
+<td>0.5000</td>
+<td>1.65</td>
+</tr>
+<tr class="even">
+<td>Older household (Number of persons 18 to 35 &lt; Number of Persons 65+</td>
+<td>-1.0000</td>
+<td>0.37</td>
+</tr>
+<tr class="odd">
+<td>Hours of travel by auto for work, summed across all workers in household</td>
+<td>0.2500</td>
+<td>1.28</td>
+</tr>
+</tbody>
+</table>
+<p>In addition to these variables, a set of alternative-specific constants can be applied and calibrated to reflect different levels of AV ownership according to scenario-specific targets. A spreadsheet was developed to calculate the target for each auto ownership choice based on a user-specified average vehicle ownership and a user-specified AV percentage of privately-owned vehicles. These constants have not yet been calibrated; the calibration would be performed for future-year scenarios. The application of the constants are controlled by setting a parameter in the params.properties file. The value of this parameter is used to apply a different set of alternative specific constants to reflect shares of vehicles by auto ownership category and AV versus HV split.</p>
+<p>Mobility.AV.Share = 0.0</p>
+<p>Another approach would be to change the magnitude of other parameters in the model. For example, under a TNC scenario, the auto accessibility parameter might play less of a role in determining car ownership levels (since TNCs might make private car ownership less important). Therefore one might try reducing the magnitude of the auto accessibility parameters in the auto ownership model and observe what the model predicted changes in auto ownership are. However, this would not affect the split between AVs and HVs within each auto ownership category, and judgement would need to be applied to determine if the effect is plausible.</p>
+<p><img src="media/image1.png" width="613" height="529" /></p>
+<p>Auto Ownership Model With AV Choice</p>
+<h3 id="av-tour-availability">AV Tour Availability</h3>
+<p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM2 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set “probability boosts” based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>
+<p>These parameters are specified in the params.properties file as follows:</p>
+<p>Mobility.AV.ProbabilityBoost.AutosLTDrivers = 1.2</p>
+<p>Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1</p>
+<h3 id="mode-choice-enhancements">Mode Choice Enhancements</h3>
+<p>If the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time. Their base values are shown in the table below. The in-vehicle time modifier is currently set to 0.5 to reflect the assumed increased comfort, productivity and reliability of driving in an AV. Parking cost is eliminated as it is assumed the vehicle would be sent to a free remote site for the duration of the activity or else sent home. Auto operating cost modifier is 0.5 to reflect the increased fuel efficiency of an AV, and terminal time is eliminated from the utility of driving since it is assumed that an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
+<p>AUTONOMOUS VEHICLE Coefficient Modifiers</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Coefficient</strong></th>
+<th><strong>Modifier</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>In-vehicle time</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Parking cost</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Auto operating cost</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Terminal time</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The parameters are user-defined in the params.properties file.</p>
+<p>Mobility.AV.IVTFactor = 0.5</p>
+<p>Mobility.AV.ParkingCostFactor = 0.0</p>
+<p>Mobility.AV.CostPerMileFactor = 0.5</p>
+<p>Mobility.AV.TerminalTimeFactor = 0.0</p>
+<h3 id="model-outputs-and-assignment">Model Outputs and Assignment</h3>
+<p>The tour and trip output files have an additional field (‘avAvailable’) which indicates whether an AV was available for the tour according to the AV Tour Availability Model. If the trip has an auto mode and an AV is available for the trip, it is assumed that the trip is an AV trip (since the AV coefficients were used to select the mode). The trip will then be placed into the AV\TNC trip tables for assignment. These trip tables are currently assigned to the value toll-eligible path within each occupancy class. They use a special set of Passenger Car Equivalent (PCE) factors that represent differences in equivalent cars for AVs. The PCE factors are specified in the params.properties file.</p>
+<p># AV impacts on road capacity - represented by adjusting passenger car equivalents (PCEs) by facility type</p>
+<p># AV_PCE_FAC is a factor between 0 and 1</p>
+<p># Facility type 1 = freeway-to-freeway ramp</p>
+<p># Facility type 2 = freeway</p>
+<p># Facility type 3 = expressway</p>
+<p># Facility type 4 = collector</p>
+<p># Facility type 5 = freeway ramp</p>
+<p># Facility type 6 = centroid connector/dummy link</p>
+<p># Facility type 7 = major arterial</p>
+<p># Facility type 8 = metered ramp</p>
+<p># Facility type 9 = freeways with ITS treatments and Golden Gate Bridge</p>
+<p># Facility type 10 = expressways and arterials with ITS treatments</p>
+<p>AV_PCE_FAC_FT01 = 1.00</p>
+<p>AV_PCE_FAC_FT02 = 1.00</p>
+<p>AV_PCE_FAC_FT03 = 1.00</p>
+<p>AV_PCE_FAC_FT04 = 1.00</p>
+<p>AV_PCE_FAC_FT05 = 1.00</p>
+<p>AV_PCE_FAC_FT06 = 1.00</p>
+<p>AV_PCE_FAC_FT07 = 1.00</p>
+<p>AV_PCE_FAC_FT08 = 1.00</p>
+<p>AV_PCE_FAC_FT09 = 1.00</p>
+<p>AV_PCE_FAC_FT10 = 1.00</p>

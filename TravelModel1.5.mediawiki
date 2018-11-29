@@ -367,24 +367,27 @@ Mobility.AV.TerminalTimeFactor = 0.0
 === Model Outputs and Assignment ===
 <p>The tour and trip output files have an additional field (‘avAvailable’) which indicates whether an AV was available for the tour according to the AV Tour Availability Model. If the trip has an auto mode and an AV is available for the trip, it is assumed that the trip is an AV trip (since the AV coefficients were used to select the mode). The trip will then be placed into the AV\TNC trip tables for assignment. These trip tables are currently assigned to the value toll-eligible path within each occupancy class. They use a special set of Passenger Car Equivalent (PCE) factors that represent differences in equivalent cars for AVs. The PCE factors are specified in the params.properties file.</p>
 <p># AV impacts on road capacity - represented by adjusting passenger car equivalents (PCEs) by facility type</p>
-<p># AV_PCE_FAC is a factor between 0 and 1</p>
-<p># Facility type 1 = freeway-to-freeway ramp</p>
-<p># Facility type 2 = freeway</p>
-<p># Facility type 3 = expressway</p>
-<p># Facility type 4 = collector</p>
-<p># Facility type 5 = freeway ramp</p>
-<p># Facility type 6 = centroid connector/dummy link</p>
-<p># Facility type 7 = major arterial</p>
-<p># Facility type 8 = metered ramp</p>
-<p># Facility type 9 = freeways with ITS treatments and Golden Gate Bridge</p>
-<p># Facility type 10 = expressways and arterials with ITS treatments</p>
-<p>AV_PCE_FAC_FT01 = 1.00</p>
-<p>AV_PCE_FAC_FT02 = 1.00</p>
-<p>AV_PCE_FAC_FT03 = 1.00</p>
-<p>AV_PCE_FAC_FT04 = 1.00</p>
-<p>AV_PCE_FAC_FT05 = 1.00</p>
-<p>AV_PCE_FAC_FT06 = 1.00</p>
-<p>AV_PCE_FAC_FT07 = 1.00</p>
-<p>AV_PCE_FAC_FT08 = 1.00</p>
-<p>AV_PCE_FAC_FT09 = 1.00</p>
-<p>AV_PCE_FAC_FT10 = 1.00</p>
+
+```
+# AV_PCE_FAC is a factor between 0 and 1
+# Facility type 1 = freeway-to-freeway ramp
+# Facility type 2 = freeway
+# Facility type 3 = expressway
+# Facility type 4 = collector
+# Facility type 5 = freeway ramp
+# Facility type 6 = centroid connector/dummy link
+# Facility type 7 = major arterial
+# Facility type 8 = metered ramp
+# Facility type 9 = freeways with ITS treatments and Golden Gate Bridge
+# Facility type 10 = expressways and arterials with ITS treatments
+AV_PCE_FAC_FT01 = 1.00
+AV_PCE_FAC_FT02 = 1.00
+AV_PCE_FAC_FT03 = 1.00
+AV_PCE_FAC_FT04 = 1.00
+AV_PCE_FAC_FT05 = 1.00
+AV_PCE_FAC_FT06 = 1.00
+AV_PCE_FAC_FT07 = 1.00
+AV_PCE_FAC_FT08 = 1.00
+AV_PCE_FAC_FT09 = 1.00
+AV_PCE_FAC_FT10 = 1.00
+```

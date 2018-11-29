@@ -15,9 +15,9 @@ Transit travelers are presented up to 10 path options when deciding how to get f
 | 1 | Drive alone (single-occupant vehicles), <em>not </em>eligibile to use value toll facilities | DA |
 | 2 | Drive alone (single-occupant), eligible to use value toll facilities | DATOLL |
 | 3 | Shared ride 2 (two-occupant vehicles), <em>not </em>eligibile to use value toll facilities | SR2 |
-| 4 | Shared ride 2 (two-occupant vehicles), eligible to use value toll facilities | !SR2TOLL |
+| 4 | Shared ride 2 (two-occupant vehicles), eligible to use value toll facilities | SR2TOLL |
 | 5 | Shared ride 3+ (three-or-more-occupant vehicles), <em>not </em>eligibile to use value toll facilities | SR3 |
-| 6 | Shared ride 3+ (three-of-more occupant vehicles), eligible to use value toll facilities | !SR3TOLL |
+| 6 | Shared ride 3+ (three-of-more occupant vehicles), eligible to use value toll facilities | SR3TOLL |
 | 7 | Walk the entire way (no transit, no bicycle) | WALK |
 | 8 | Bicycle the entire way (no transit) | BIKE |
 | 9 | Walk access, local bus, walk egress | WLK_LOC_WLK |
@@ -36,5 +36,28 @@ Transit travelers are presented up to 10 path options when deciding how to get f
 | 22 | Walk access, heavy rail, drive egress | WLK_HVY_DRV |
 | 23 | Walk access, commuter rail, drive egress | WLK_COM_DRV |
  
+## Tour Modes
 
--- Main.DavidOry - 27 Jan 2012
+| Number | Name |
+|---|----|
+| 1 | Drive alone (single-occupant vehicles), <em>not </em>eligibile to use value toll facilities |
+| 2 | Drive alone (single-occupant), eligible to use value toll facilities |
+| 3 | Shared ride 2 (two-occupant vehicles), <em>not </em>eligibile to use value toll facilities |
+| 4 | Shared ride 2 (two-occupant vehicles), eligible to use value toll facilities |
+| 5 | Shared ride 3+ (three-or-more-occupant vehicles), <em>not </em>eligibile to use value toll facilities |
+| 6 | Shared ride 3+ (three-of-more occupant vehicles), eligible to use value toll facilities |
+| 7 | Walk the entire way (no transit, no bicycle) |
+| 8 | Bicycle the entire way (no transit) |
+| 9 | Walk to local bus |
+| 10 | Walk to light rail or ferry |
+| 11 | Walk to express bus |
+| 12 | Walk to heavy rail |
+| 13 | Walk to commuter rail |
+| 14 | Drive to local bus |
+| 15 | Drive to light rail or ferry ||
+| 16 | Drive to express bus |
+| 17 | Drive to heavy rail |
+| 18 | Drive to commuter rail |
+| 19 | Taxi (added in [Travel Model 1.5](TravelModel1.5)) |
+| 20 | TNC (Transportation Network Company, or ride-hailing services) - Single party (added in [Travel Model 1.5](TravelModel1.5)) |
+| 21 | TNC - Shared e.g. sharing with strangers (added in [Travel Model 1.5](TravelModel1.5)) |

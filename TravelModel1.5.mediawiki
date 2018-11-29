@@ -15,7 +15,229 @@ The following changes were made to Travel Model One to transform it into Travel 
 To be added.
 
 == Ride-hailing and Taxi Modes ==
-To be added.
+<p>TM2 tour and trip-based mode choice models were modified to explicitly represent the choice of mobility-as-a-service modes. A new “Taxi\TNC” nest was added with sub-alternatives for traditional taxi versus new Transportation Networking Company (TNC) modes including single TNC (e.g. uberX) versus shared TNC (e.g. uberPOOL). These capabilities provide the analyst with the ability to represent different assumptions about taxi and TNC actual and/or perceived times and costs, and observe changes in mode shares related to these assumptions. The user may additionally need to specify alternative-specific constants related to ‘transformative mobility’ changes related to the introduction of AVs. This is particularly true if a future is envisioned in which auto ownership changes substantially due to the proliferation of AV technology and significantly greater availability of TNCs. For example, significantly increasing the number of 0-auto households would likely result in much higher shares of transit trips in the current model, since 0-auto households currently generate a significant proportion of transit trips. However, if the assumption is that auto ownership will decrease due to increased availability of private and/or TNC fleets of AVs, the mode choice model would also need to be calibrated to reflect this assumption. In such cases, the user may need to introduce alternative specific constants to reflect assumptions about changes in mode.</p>
+<p>The table below shows the utility components associated with Taxi and TNC modes.</p>
+<p>Taxi and TNC Utility Components</p>
+<table>
+<thead>
+<tr class="header">
+<th>Utility Component</th>
+<th>Variable - Taxi</th>
+<th>Variable - TNC</th>
+<th>Coefficient</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>In-vehicle time</td>
+<td>Shared-2 Toll/HOV time</td>
+<td>Shared-2 Toll/HOV time</td>
+<td>Generic in-vehicle coefficient</td>
+</tr>
+<tr class="even">
+<td>Wait time</td>
+<td>Simulated from distribution</td>
+<td>Simulated from distribution</td>
+<td>1.5 * IVT coefficient</td>
+</tr>
+<tr class="odd">
+<td>Tolls</td>
+<td>Shared-2 Toll/HOV toll (if any)</td>
+<td>Shared-2 Toll/HOV toll (if any)</td>
+<td>Generic cost coefficient</td>
+</tr>
+<tr class="even">
+<td>Bridge toll</td>
+<td>Shared-2 Toll/HOV bridge tolls (if any)</td>
+<td>Shared-2 Toll/HOV bridge tolls (if any)</td>
+<td>Generic cost coefficient</td>
+</tr>
+<tr class="odd">
+<td>Fare</td>
+<td>Initial cost + cost per mile * distance + cost per minute * time</td>
+<td>Max(minCost, Initial cost + cost per mile * distance + cost per minute * time)</td>
+<td>Generic cost coefficient</td>
+</tr>
+<tr class="even">
+<td>Alternative-specific constant</td>
+<td><p>Base year = calibrated</p>
+<p>Future-year = User-defined</p></td>
+<td><p>Base year = unavailable</p>
+<p>Future-year = User-defined</p></td>
+<td>N.A.</td>
+</tr>
+</tbody>
+</table>
+<p>Taxi and TNC mode wait times are simulated from distributions that were estimated based on a survey of actual taxi and TNC wait times conducted in the Portland region in 2015. The survey data was limited to call-initiated pickups (no pre-planned pickups were included). Lognormal distributions were estimated from this observed data for each mode according to the land-use density of the tour or trip origin. Density is defined as (population + employment)/area (sq. mi.). There are five categories of density from high to low with breakpoints at 15000, 5000, 2000, and 500.</p>
+<p>The wait time distributions for taxi trips and TNCs are shown in the figures below, with average wait times shown in the table. As shown in the figures and tables, the ranges of wait time and standard deviation for taxi are much higher for taxis than for TNCs. Even so, the average wait time for a TNC for trips starting in the lowest density bin was over 10 minutes in 2015. This wait time may decrease in the future as demand for TNCs increase. The wait times for Shared TNC were asserted since the Portland data does not split out Shared from Single ride TNCs.</p>
+<p>Link to taxi wait time distributions</p>
+<p>Taxi Wait Time Distributions</p>
+<p>Link to TNC wait time distributions</p>
+<p>TNC Wait Time Distributions</p>
+<p>Average Wait Times for Taxi and TNC by Density</p>
+<table>
+<thead>
+<tr class="header">
+<th>Density Range</th>
+<th>Average Wait Time (min)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>High</td>
+<td>Low</td>
+<td>Taxi</td>
+<td>TNC-Single</td>
+<td>TNC-Shared</td>
+</tr>
+<tr class="even">
+<td>100000000</td>
+<td>15000</td>
+<td>5.5</td>
+<td>4.7</td>
+<td>7.0</td>
+</tr>
+<tr class="odd">
+<td>15000</td>
+<td>5000</td>
+<td>9.5</td>
+<td>6.3</td>
+<td>8.0</td>
+</tr>
+<tr class="even">
+<td>5000</td>
+<td>2000</td>
+<td>13.3</td>
+<td>8.4</td>
+<td>11.0</td>
+</tr>
+<tr class="odd">
+<td>2000</td>
+<td>500</td>
+<td>17.3</td>
+<td>8.5</td>
+<td>15.0</td>
+</tr>
+<tr class="even">
+<td>500</td>
+<td>0</td>
+<td>26.5</td>
+<td>10.3</td>
+<td>15.0</td>
+</tr>
+</tbody>
+</table>
+<p>Since the average and standard deviation of each lognormal distribution could change in the future, they are user-defined properties in the params.properties file and can be varied with respect to specific scenarios.</p>
+<p>#Note: the following comma-separated value properties cannot have spaces between them, or else the RuntimeConfiguration.py code won't work</p>
+<p>TNC.single.waitTime.mean = 10.3,8.5,8.4,6.3,4.7</p>
+<p>TNC.single.waitTime.sd = 4.1,4.1,4.1,4.1,4.1</p>
+<p>TNC.shared.waitTime.mean = 15.0,15.0,11.0,8.0,7.0</p>
+<p>TNC.shared.waitTime.sd = 4.1,4.1,4.1,4.1,4.1</p>
+<p>Taxi.waitTime.mean = 26.5,17.3,13.3,9.5,5.5</p>
+<p>Taxi.waitTime.sd = 6.4,6.4,6.4,6.4,6.4</p>
+<p>TNC and taxi cost variables are also set in the params.properties file, with base-year values set based on publicly available data (link= http://uberestimate.com/). The base-year costs are shown in the table below. In future year AV scenarios, the TNC cost can be adjusted down to reflect the decrease in labor costs associated with driverless cars.</p>
+<p>Taxi and TNC Costs</p>
+<table>
+<thead>
+<tr class="header">
+<th>Cost Component</th>
+<th>Taxi</th>
+<th>TNC - Single</th>
+<th>TNC-Shared*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Base Fare</td>
+<td>$2.20</td>
+<td>$2.20</td>
+<td>$2.20</td>
+</tr>
+<tr class="even">
+<td>Cost per mile</td>
+<td>$2.30</td>
+<td>$1.33</td>
+<td>$1.33</td>
+</tr>
+<tr class="odd">
+<td>Cost per minute</td>
+<td>$0.10</td>
+<td>$0.24</td>
+<td>$0.24</td>
+</tr>
+<tr class="even">
+<td>Minimum cost per trip</td>
+<td>0</td>
+<td>$7.20</td>
+<td>$7.20</td>
+</tr>
+</tbody>
+</table>
+<p>taxi.baseFare = 2.20</p>
+<p>taxi.costPerMile = 2.30</p>
+<p>taxi.costPerMinute = 0.10</p>
+<p>TNC.single.baseFare = 2.20</p>
+<p>TNC.single.costPerMile = 1.33</p>
+<p>TNC.single.costPerMinute = 0.24</p>
+<p>TNC.single.costMinimum = 7.20</p>
+<p># use lower costs</p>
+<p>TNC.shared.baseFare = 2.20</p>
+<p>TNC.shared.costPerMile = 1.33</p>
+<p>TNC.shared.costPerMinute = 0.24</p>
+<p>TNC.shared.costMinimum = 7.20</p>
+<p>Note: Prices for TNC-Shared need to be set.</p>
+<p>The KNR-TNC mode uses the same cost and wait time distribution as shown above.</p>
+<p>In addition to the new modes, if the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time, and are user-defined in the TM2 properties file.</p>
+<p>Their base values are shown in the table below The in-vehicle time modifier is currently set to 0.5 to reflect the assumed increased comfort, productivity and reliability of driving in an AV. Parking cost is eliminated as it is assumed the vehicle would be sent to a free remote site for the duration of the activity or else sent home (the vehicle deadheading model reflects the actual decision). Auto operating cost modifier is 0.5 to reflect the increased fuel efficiency of an AV, and terminal time is eliminated from the utility of driving since it is assumed that an AV would provide curbside pickup/dropoff service. There is an additional in-vehicle time multiplier for Shared TNCs to reflect out-of-direction travel to pick-up or drop-off additional customers. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
+<p>Coefficient Modifiers</p>
+<table>
+<thead>
+<tr class="header">
+<th>Coefficient</th>
+<th>Modifier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>In-vehicle time</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Parking cost</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Auto operating cost</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Terminal time</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Shared TNC IVT factor</td>
+<td>1.5</td>
+</tr>
+</tbody>
+</table>
+<p>Mobility.AV.IVTFactor = 0.5</p>
+<p>Mobility.AV.ParkingCostFactor = 0.0</p>
+<p>Mobility.AV.CostPerMileFactor = 0.5</p>
+<p>Mobility.AV.TerminalTimeFactor = 0.0</p>
+<p>Mobility.TNC.shared.IVTFactor = 1.2</p>
+<h3 id="model-outputs">Model Outputs</h3>
+<p>Taxi, Single TNC, and Shared TNC are new modes in tour and trip output files (modes 19, 20, and 21 respectively). Taxi trips are currently allocated to drive-alone, shared-2, and shared 3+ modes according to a set of factors specified in the params.properties file. Single and Shared TNC trips are allocated to a combined set of additional AV and TNC trip tables according to a similar set of occupancy factors. These additional trip tables are then assigned separately using their respective value-toll eligible path, and a set of PCE factors that can be modified to reflect different passenger car equivalents for AVs versus HVs by facility type.</p>
+<p>The vehicle occupancy factors for taxis, single TNCs, and shared TNCs are shown below.</p>
+<p>Taxi.da.share = 0.0</p>
+<p>Taxi.s2.share = 0.9</p>
+<p>Taxi.s3.share = 0.1</p>
+<p>TNC.single.da.share = 0.0</p>
+<p>TNC.single.s2.share = 0.8</p>
+<p>TNC.single.s3.share = 0.2</p>
+<p>TNC.shared.da.share = 0.0</p>
+<p>TNC.shared.s2.share = 0.3</p>
+<p>TNC.shared.s3.share = 0.7</p>
+
 
 == Autonomous Vehicles ==
 <p><span id="_Hlk531179289" class="anchor"></span>Several new components were introduced into the CT-RAMP model in TM1.5 to explicitly model the ownership and availability of autonomous vehicles (AVs). Because the level of private Autonomous Vehicle ownership and effects on total auto ownership, mode choice, destination choice, and congestion impacts are largely unknown, the approach that has been adopted is to provide the user with significant flexibility in how to represent the impacts of AVs. This type of modeling, called ‘scenario modeling’, requires the user to make some assumptions about how the future might look in terms of AV ownership, differences in perceived and/or actual time and cost of AVs versus human-controlled vehicles (HVs), and impacts on congestion. Then the user must translate those assumptions into model parameters so that the model outcomes reflect those assumptions. Typically, the model is run many times with systematically varied assumptions to test the effects of the ranges of assumptions on outcomes. This is typically referred to as ‘risk analysis’.</p>

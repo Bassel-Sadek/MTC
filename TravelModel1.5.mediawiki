@@ -15,9 +15,12 @@ The following changes were made to Travel Model One to transform it into Travel 
 To be added.
 
 == Ride-hailing and Taxi Modes ==
-<p>TM2 tour and trip-based mode choice models were modified to explicitly represent the choice of mobility-as-a-service modes. A new ìTaxi\TNCî nest was added with sub-alternatives for traditional taxi versus new Transportation Networking Company (TNC) modes including single TNC (e.g. uberX) versus shared TNC (e.g. uberPOOL). These capabilities provide the analyst with the ability to represent different assumptions about taxi and TNC actual and/or perceived times and costs, and observe changes in mode shares related to these assumptions. The user may additionally need to specify alternative-specific constants related to ëtransformative mobilityí changes related to the introduction of AVs. This is particularly true if a future is envisioned in which auto ownership changes substantially due to the proliferation of AV technology and significantly greater availability of TNCs. For example, significantly increasing the number of 0-auto households would likely result in much higher shares of transit trips in the current model, since 0-auto households currently generate a significant proportion of transit trips. However, if the assumption is that auto ownership will decrease due to increased availability of private and/or TNC fleets of AVs, the mode choice model would also need to be calibrated to reflect this assumption. In such cases, the user may need to introduce alternative specific constants to reflect assumptions about changes in mode.</p>
-<p>The table below shows the utility components associated with Taxi and TNC modes.</p>
-<p>Taxi and TNC Utility Components</p>
+
+TM2 tour and trip-based mode choice models were modified to explicitly represent the choice of mobility-as-a-service modes. A new ‚ÄúTaxi\TNC‚Äù nest was added with sub-alternatives for traditional taxi versus new Transportation Networking Company (TNC) modes including single TNC (e.g. uberX) versus shared TNC (e.g. uberPOOL). These capabilities provide the analyst with the ability to represent different assumptions about taxi and TNC actual and/or perceived times and costs, and observe changes in mode shares related to these assumptions. The user may additionally need to specify alternative-specific constants related to ‚Äòtransformative mobility‚Äô changes related to the introduction of AVs. This is particularly true if a future is envisioned in which auto ownership changes substantially due to the proliferation of AV technology and significantly greater availability of TNCs. For example, significantly increasing the number of 0-auto households would likely result in much higher shares of transit trips in the current model, since 0-auto households currently generate a significant proportion of transit trips. However, if the assumption is that auto ownership will decrease due to increased availability of private and/or TNC fleets of AVs, the mode choice model would also need to be calibrated to reflect this assumption. In such cases, the user may need to introduce alternative specific constants to reflect assumptions about changes in mode.
+
+The table below shows the utility components associated with Taxi and TNC modes.
+
+=== Taxi and TNC Utility Components ===
 <table>
 <thead>
 <tr class="header">
@@ -60,26 +63,29 @@ To be added.
 </tr>
 <tr class="even">
 <td>Alternative-specific constant</td>
-<td><p>Base year = calibrated</p>
-<p>Future-year = User-defined</p></td>
-<td><p>Base year = unavailable</p>
-<p>Future-year = User-defined</p></td>
+<td>Base year = calibrated<br/>Future-year = User-defined</td>
+<td>Base year = unavailable<br/>Future-year = User-defined</td>
 <td>N.A.</td>
 </tr>
 </tbody>
 </table>
 <p>Taxi and TNC mode wait times are simulated from distributions that were estimated based on a survey of actual taxi and TNC wait times conducted in the Portland region in 2015. The survey data was limited to call-initiated pickups (no pre-planned pickups were included). Lognormal distributions were estimated from this observed data for each mode according to the land-use density of the tour or trip origin. Density is defined as (population + employment)/area (sq. mi.). There are five categories of density from high to low with breakpoints at 15000, 5000, 2000, and 500.</p>
 <p>The wait time distributions for taxi trips and TNCs are shown in the figures below, with average wait times shown in the table. As shown in the figures and tables, the ranges of wait time and standard deviation for taxi are much higher for taxis than for TNCs. Even so, the average wait time for a TNC for trips starting in the lowest density bin was over 10 minutes in 2015. This wait time may decrease in the future as demand for TNCs increase. The wait times for Shared TNC were asserted since the Portland data does not split out Shared from Single ride TNCs.</p>
-<p>Link to taxi wait time distributions</p>
-<p>Taxi Wait Time Distributions</p>
-<p>Link to TNC wait time distributions</p>
-<p>TNC Wait Time Distributions</p>
-<p>Average Wait Times for Taxi and TNC by Density</p>
+
+<div align="center">
+
+[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/taxi_wait_distributions.png|width=400px]]
+
+[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/tnc_wait_distributions.png|width=400px]]
+
+</div>
+
+=== Average Wait Times for Taxi and TNC by Density ===
 <table>
 <thead>
 <tr class="header">
-<th>Density Range</th>
-<th>Average Wait Time (min)</th>
+<th colspan=2>Density Range</th>
+<th colspan=3>Average Wait Time (min)</th>
 </tr>
 </thead>
 <tbody>
@@ -127,16 +133,22 @@ To be added.
 </tr>
 </tbody>
 </table>
+
 <p>Since the average and standard deviation of each lognormal distribution could change in the future, they are user-defined properties in the params.properties file and can be varied with respect to specific scenarios.</p>
 <p>#Note: the following comma-separated value properties cannot have spaces between them, or else the RuntimeConfiguration.py code won't work</p>
-<p>TNC.single.waitTime.mean = 10.3,8.5,8.4,6.3,4.7</p>
-<p>TNC.single.waitTime.sd = 4.1,4.1,4.1,4.1,4.1</p>
-<p>TNC.shared.waitTime.mean = 15.0,15.0,11.0,8.0,7.0</p>
-<p>TNC.shared.waitTime.sd = 4.1,4.1,4.1,4.1,4.1</p>
-<p>Taxi.waitTime.mean = 26.5,17.3,13.3,9.5,5.5</p>
-<p>Taxi.waitTime.sd = 6.4,6.4,6.4,6.4,6.4</p>
+
+```
+TNC.single.waitTime.mean = 10.3,8.5,8.4,6.3,4.7
+TNC.single.waitTime.sd = 4.1,4.1,4.1,4.1,4.1
+TNC.shared.waitTime.mean = 15.0,15.0,11.0,8.0,7.0
+TNC.shared.waitTime.sd = 4.1,4.1,4.1,4.1,4.1
+Taxi.waitTime.mean = 26.5,17.3,13.3,9.5,5.5
+Taxi.waitTime.sd = 6.4,6.4,6.4,6.4,6.4
+```
+
 <p>TNC and taxi cost variables are also set in the params.properties file, with base-year values set based on publicly available data (link= http://uberestimate.com/). The base-year costs are shown in the table below. In future year AV scenarios, the TNC cost can be adjusted down to reflect the decrease in labor costs associated with driverless cars.</p>
-<p>Taxi and TNC Costs</p>
+
+=== Taxi and TNC Costs ===
 <table>
 <thead>
 <tr class="header">
@@ -173,23 +185,28 @@ To be added.
 </tr>
 </tbody>
 </table>
-<p>taxi.baseFare = 2.20</p>
-<p>taxi.costPerMile = 2.30</p>
-<p>taxi.costPerMinute = 0.10</p>
-<p>TNC.single.baseFare = 2.20</p>
-<p>TNC.single.costPerMile = 1.33</p>
-<p>TNC.single.costPerMinute = 0.24</p>
-<p>TNC.single.costMinimum = 7.20</p>
-<p># use lower costs</p>
-<p>TNC.shared.baseFare = 2.20</p>
-<p>TNC.shared.costPerMile = 1.33</p>
-<p>TNC.shared.costPerMinute = 0.24</p>
-<p>TNC.shared.costMinimum = 7.20</p>
+
+```
+taxi.baseFare = 2.20
+taxi.costPerMile = 2.30
+taxi.costPerMinute = 0.10
+TNC.single.baseFare = 2.20
+TNC.single.costPerMile = 1.33
+TNC.single.costPerMinute = 0.24
+TNC.single.costMinimum = 7.20
+# use lower costs
+TNC.shared.baseFare = 2.20
+TNC.shared.costPerMile = 1.33
+TNC.shared.costPerMinute = 0.24
+TNC.shared.costMinimum = 7.20
+```
+
 <p>Note: Prices for TNC-Shared need to be set.</p>
 <p>The KNR-TNC mode uses the same cost and wait time distribution as shown above.</p>
 <p>In addition to the new modes, if the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time, and are user-defined in the TM2 properties file.</p>
 <p>Their base values are shown in the table below The in-vehicle time modifier is currently set to 0.5 to reflect the assumed increased comfort, productivity and reliability of driving in an AV. Parking cost is eliminated as it is assumed the vehicle would be sent to a free remote site for the duration of the activity or else sent home (the vehicle deadheading model reflects the actual decision). Auto operating cost modifier is 0.5 to reflect the increased fuel efficiency of an AV, and terminal time is eliminated from the utility of driving since it is assumed that an AV would provide curbside pickup/dropoff service. There is an additional in-vehicle time multiplier for Shared TNCs to reflect out-of-direction travel to pick-up or drop-off additional customers. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
-<p>Coefficient Modifiers</p>
+
+=== Coefficient Modifiers ===
 <table>
 <thead>
 <tr class="header">
@@ -220,32 +237,39 @@ To be added.
 </tr>
 </tbody>
 </table>
-<p>Mobility.AV.IVTFactor = 0.5</p>
-<p>Mobility.AV.ParkingCostFactor = 0.0</p>
-<p>Mobility.AV.CostPerMileFactor = 0.5</p>
-<p>Mobility.AV.TerminalTimeFactor = 0.0</p>
-<p>Mobility.TNC.shared.IVTFactor = 1.2</p>
-<h3 id="model-outputs">Model Outputs</h3>
+
+```
+Mobility.AV.IVTFactor = 0.5
+Mobility.AV.ParkingCostFactor = 0.0
+Mobility.AV.CostPerMileFactor = 0.5
+Mobility.AV.TerminalTimeFactor = 0.0
+Mobility.TNC.shared.IVTFactor = 1.2
+```
+
+=== Model Outputs ===
 <p>Taxi, Single TNC, and Shared TNC are new modes in tour and trip output files (modes 19, 20, and 21 respectively). Taxi trips are currently allocated to drive-alone, shared-2, and shared 3+ modes according to a set of factors specified in the params.properties file. Single and Shared TNC trips are allocated to a combined set of additional AV and TNC trip tables according to a similar set of occupancy factors. These additional trip tables are then assigned separately using their respective value-toll eligible path, and a set of PCE factors that can be modified to reflect different passenger car equivalents for AVs versus HVs by facility type.</p>
 <p>The vehicle occupancy factors for taxis, single TNCs, and shared TNCs are shown below.</p>
-<p>Taxi.da.share = 0.0</p>
-<p>Taxi.s2.share = 0.9</p>
-<p>Taxi.s3.share = 0.1</p>
-<p>TNC.single.da.share = 0.0</p>
-<p>TNC.single.s2.share = 0.8</p>
-<p>TNC.single.s3.share = 0.2</p>
-<p>TNC.shared.da.share = 0.0</p>
-<p>TNC.shared.s2.share = 0.3</p>
-<p>TNC.shared.s3.share = 0.7</p>
 
+```
+Taxi.da.share = 0.0
+Taxi.s2.share = 0.9
+Taxi.s3.share = 0.1
+TNC.single.da.share = 0.0
+TNC.single.s2.share = 0.8
+TNC.single.s3.share = 0.2
+TNC.shared.da.share = 0.0
+TNC.shared.s2.share = 0.3
+TNC.shared.s3.share = 0.7
+```
 
 == Autonomous Vehicles ==
-<p><span id="_Hlk531179289" class="anchor"></span>Several new components were introduced into the CT-RAMP model in TM1.5 to explicitly model the ownership and availability of autonomous vehicles (AVs). Because the level of private Autonomous Vehicle ownership and effects on total auto ownership, mode choice, destination choice, and congestion impacts are largely unknown, the approach that has been adopted is to provide the user with significant flexibility in how to represent the impacts of AVs. This type of modeling, called ëscenario modelingí, requires the user to make some assumptions about how the future might look in terms of AV ownership, differences in perceived and/or actual time and cost of AVs versus human-controlled vehicles (HVs), and impacts on congestion. Then the user must translate those assumptions into model parameters so that the model outcomes reflect those assumptions. Typically, the model is run many times with systematically varied assumptions to test the effects of the ranges of assumptions on outcomes. This is typically referred to as ërisk analysisí.</p>
+<p><span id="_Hlk531179289" class="anchor"></span>Several new components were introduced into the CT-RAMP model in TM1.5 to explicitly model the ownership and availability of autonomous vehicles (AVs). Because the level of private Autonomous Vehicle ownership and effects on total auto ownership, mode choice, destination choice, and congestion impacts are largely unknown, the approach that has been adopted is to provide the user with significant flexibility in how to represent the impacts of AVs. This type of modeling, called ‚Äòscenario modeling‚Äô, requires the user to make some assumptions about how the future might look in terms of AV ownership, differences in perceived and/or actual time and cost of AVs versus human-controlled vehicles (HVs), and impacts on congestion. Then the user must translate those assumptions into model parameters so that the model outcomes reflect those assumptions. Typically, the model is run many times with systematically varied assumptions to test the effects of the ranges of assumptions on outcomes. This is typically referred to as ‚Äòrisk analysis‚Äô.</p>
 <p>The following changes were made to enable this type of scenario modeling in TM 1.5. First, the auto ownership model was extended to consider autonomous (AV) versus human-controlled (HV) vehicles. Second, a simulation model was added that determines for each AV-owning household whether an AV is available for each tour. Third, the tour and trip mode choice models were modified to introduce user-defined coefficients and alternative-specific constants to represent AV-scenario assumptions. Fourth, the software was modified to explicitly track whether an AV was chosen for each tour and trip and to provide the capability to assign AVs as a separate vehicle class.</p>
 <h3 id="auto-ownership-enhancements">Auto Ownership Enhancements</h3>
 <p>As shown in the figure below, the auto ownership model was extended to consider number of AVs versus HVs for each auto-owning choice. This provides the capability to test different private AV ownership levels on downstream choices such as mode choice, and to track AV trios in separate trip tables. The AV versus HV nesting coefficient was asserted to be 0.5. It is assumed that a household owning 4 vehicles would likely not own any autonomous vehicles and future scenarios that assume high levels of AV ownership would significantly reduce or even eliminate the share of 4+ vehicle owning households.</p>
 <p>The table below shows the coefficients added to the auto ownership model to capture likely socio-economic and mobility attributes related to AV ownership. The exponentiated values are also shown in order to illustrate the effect of the coefficient on the probability of AV ownership. These coefficients were adopted from recent AV scenario testing conducted by RSG using the Jacksonville DaySim model. They assume that younger and more wealthy households are more likely to own AVs, all else being equal. They also assume that households with longer work commutes would be more likely to own an AV. Although they are informed by current literature, there is no way to statistically estimate these variables since there are no AV-owning households currently.</p>
-<p>Autonomous Vehicle Ownership Coefficients</p>
+
+=== Autonomous Vehicle Ownership Coefficients ===
 <table>
 <thead>
 <tr class="header">
@@ -285,15 +309,25 @@ To be added.
 <p>In addition to these variables, a set of alternative-specific constants can be applied and calibrated to reflect different levels of AV ownership according to scenario-specific targets. A spreadsheet was developed to calculate the target for each auto ownership choice based on a user-specified average vehicle ownership and a user-specified AV percentage of privately-owned vehicles. These constants have not yet been calibrated; the calibration would be performed for future-year scenarios. The application of the constants are controlled by setting a parameter in the params.properties file. The value of this parameter is used to apply a different set of alternative specific constants to reflect shares of vehicles by auto ownership category and AV versus HV split.</p>
 <p>Mobility.AV.Share = 0.0</p>
 <p>Another approach would be to change the magnitude of other parameters in the model. For example, under a TNC scenario, the auto accessibility parameter might play less of a role in determining car ownership levels (since TNCs might make private car ownership less important). Therefore one might try reducing the magnitude of the auto accessibility parameters in the auto ownership model and observe what the model predicted changes in auto ownership are. However, this would not affect the split between AVs and HVs within each auto ownership category, and judgement would need to be applied to determine if the effect is plausible.</p>
-<p>[[File:TM1.5AutoOwnership.png|link=https://github.com/BayAreaMetro/modeling-website/tree/master/foswiki_imgs]]</p>
-<p>Auto Ownership Model With AV Choice</p>
-<h3 id="av-tour-availability">AV Tour Availability</h3>
-<p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM2 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set ìprobability boostsî based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>
+
+<div align="center">
+[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png]]
+</div>
+
+=== Auto Ownership Model With AV Choice ===
+
+==== AV Tour Availability ====
+<p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM2 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set ‚Äúprobability boosts‚Äù based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>
 <p>These parameters are specified in the params.properties file as follows:</p>
-<p>Mobility.AV.ProbabilityBoost.AutosLTDrivers = 1.2</p>
-<p>Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1</p>
-<h3 id="mode-choice-enhancements">Mode Choice Enhancements</h3>
+```
+Mobility.AV.ProbabilityBoost.AutosLTDrivers = 1.2
+Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1
+```
+
+=== Mode Choice Enhancements ===
+
 <p>If the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time. Their base values are shown in the table below. The in-vehicle time modifier is currently set to 0.5 to reflect the assumed increased comfort, productivity and reliability of driving in an AV. Parking cost is eliminated as it is assumed the vehicle would be sent to a free remote site for the duration of the activity or else sent home. Auto operating cost modifier is 0.5 to reflect the increased fuel efficiency of an AV, and terminal time is eliminated from the utility of driving since it is assumed that an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
+
 <p>AUTONOMOUS VEHICLE Coefficient Modifiers</p>
 <table>
 <thead>
@@ -321,13 +355,17 @@ To be added.
 </tr>
 </tbody>
 </table>
+
 <p>The parameters are user-defined in the params.properties file.</p>
-<p>Mobility.AV.IVTFactor = 0.5</p>
-<p>Mobility.AV.ParkingCostFactor = 0.0</p>
-<p>Mobility.AV.CostPerMileFactor = 0.5</p>
-<p>Mobility.AV.TerminalTimeFactor = 0.0</p>
-<h3 id="model-outputs-and-assignment">Model Outputs and Assignment</h3>
-<p>The tour and trip output files have an additional field (ëavAvailableí) which indicates whether an AV was available for the tour according to the AV Tour Availability Model. If the trip has an auto mode and an AV is available for the trip, it is assumed that the trip is an AV trip (since the AV coefficients were used to select the mode). The trip will then be placed into the AV\TNC trip tables for assignment. These trip tables are currently assigned to the value toll-eligible path within each occupancy class. They use a special set of Passenger Car Equivalent (PCE) factors that represent differences in equivalent cars for AVs. The PCE factors are specified in the params.properties file.</p>
+```
+Mobility.AV.IVTFactor = 0.5
+Mobility.AV.ParkingCostFactor = 0.0
+Mobility.AV.CostPerMileFactor = 0.5
+Mobility.AV.TerminalTimeFactor = 0.0
+```
+
+=== Model Outputs and Assignment ===
+<p>The tour and trip output files have an additional field (‚ÄòavAvailable‚Äô) which indicates whether an AV was available for the tour according to the AV Tour Availability Model. If the trip has an auto mode and an AV is available for the trip, it is assumed that the trip is an AV trip (since the AV coefficients were used to select the mode). The trip will then be placed into the AV\TNC trip tables for assignment. These trip tables are currently assigned to the value toll-eligible path within each occupancy class. They use a special set of Passenger Car Equivalent (PCE) factors that represent differences in equivalent cars for AVs. The PCE factors are specified in the params.properties file.</p>
 <p># AV impacts on road capacity - represented by adjusting passenger car equivalents (PCEs) by facility type</p>
 <p># AV_PCE_FAC is a factor between 0 and 1</p>
 <p># Facility type 1 = freeway-to-freeway ramp</p>

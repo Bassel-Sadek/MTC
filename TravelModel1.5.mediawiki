@@ -307,11 +307,15 @@ TNC.shared.s3.share = 0.7
 </tbody>
 </table>
 <p>In addition to these variables, a set of alternative-specific constants can be applied and calibrated to reflect different levels of AV ownership according to scenario-specific targets. A spreadsheet was developed to calculate the target for each auto ownership choice based on a user-specified average vehicle ownership and a user-specified AV percentage of privately-owned vehicles. These constants have not yet been calibrated; the calibration would be performed for future-year scenarios. The application of the constants are controlled by setting a parameter in the params.properties file. The value of this parameter is used to apply a different set of alternative specific constants to reflect shares of vehicles by auto ownership category and AV versus HV split.</p>
-<p>Mobility.AV.Share = 0.0</p>
+
+```
+Mobility.AV.Share = 0.0
+```
+
 <p>Another approach would be to change the magnitude of other parameters in the model. For example, under a TNC scenario, the auto accessibility parameter might play less of a role in determining car ownership levels (since TNCs might make private car ownership less important). Therefore one might try reducing the magnitude of the auto accessibility parameters in the auto ownership model and observe what the model predicted changes in auto ownership are. However, this would not affect the split between AVs and HVs within each auto ownership category, and judgement would need to be applied to determine if the effect is plausible.</p>
 
 <div align="center">
-[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png]]
+[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png|width=400px]]
 </div>
 
 === Auto Ownership Model With AV Choice ===

@@ -49,7 +49,8 @@ A complete list of transit modes.
 | Santa Clara VTA - Express | 81 | Express |   |
 | Dumbarton Express | 82 | Express |   |
 | AC Transit - Transbay | 83 | Express |   |
-| AC Transit - Transbay | 84 | Express |   |
+| AC Transit - Transbay (Local travel allowed) | 84 | Express |   |
+| AC Transit - BRT      | 85 | BRT     |   |
 | County Connection - Express | 86 | Express |   |
 | Golden Gate Transit - Express San Francisco | 87 | Express |   |
 | Golden Gate Transit - Express Richmond | 88 | Express |   |

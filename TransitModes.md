@@ -54,6 +54,7 @@ A complete list of transit modes.
 | County Connection - Express | 86 | Express |   |
 | Golden Gate Transit - Express San Francisco | 87 | Express |   |
 | Golden Gate Transit - Express Richmond | 88 | Express |   |
+| MUNI BRT      | 89 | BRT     |   |
 | WestCAT - Express | 90 | Express |   |
 | Vallejo Transit - Express | 91 | Express |   |
 | Fairfield And Suisun Transit - Express | 92 | Express |   |
@@ -65,7 +66,7 @@ A complete list of transit modes.
 | Golden Gate Ferry - Sausalito | 102 | Ferry |   |
 | Tiburon Ferry | 103 | Ferry |   |
 | Vallejo Baylink Ferry | 104 | Ferry |   |
-| South City Ferry | 105 | Ferry |   |
+| South San Francisco Ferry | 105 | Ferry |   |
 | MUNI Metro | 110 | Light Rail |   |
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
 | BART | 120 | Heavy Rail |   |

@@ -6,8 +6,6 @@
 
 The population synthesizer generates this household file and a [person file](PopSynPerson). Variables below in UPPER CASE are drawn directly from PUMS records; variables in lower case are derived from PUMS variables.
  
-### Used in Travel Model 1.0 and Travel Model 1.5
-
 | *Name* | *Definition* | *Scale* | *Join with &hellip;* |
 |--------|--------------|---------|----------------------|
 | HHID | Unique household ID number | Integer, any value | All model files |
@@ -19,7 +17,8 @@ The population synthesizer generates this household file and a [person file](Pop
 | VEHICL | Number of vehicles available | Integer, 1 - one vehicle; 2 - two vehicles; 3 - three vehicles; 4 - four vehicles; 5 - five vehicles; 6 - six or more vehicles |   |
 | hinccat1 | Household income categorization number 1 | Integer, 1 - 0 to 20k(-); 2 - 20 to 50k; 3 - 50 to 100k; 4 - more than 100k |   |
 
-### Used in Travel Model 1.0 and dropped from Travel Model 1.5
+### Included in Travel Model 1.0 Files (Dropped from Travel Model 1.5 Files)
+
 | *Name* | *Definition* | *Scale* | *Join with &hellip;* |
 |--------|--------------|---------|----------------------|
 | SERIALNO | PUMA serial number | Long integer, any value |   |

@@ -6,8 +6,6 @@
 
 The population synthesizer generates a [household file](PopSynHousehold) and this person file. Variables below in UPPER CASE are drawn directly from PUMS records; variables in lower case are derived from PUMS variables.
 
-### Used in Travel Model 1.0 and Travel Model 1.5
-
 | Name | Definition | Scale | Join with &hellip; |
 |------|------------|-------|--------------|
 | HHID | Unique household ID number | Integer, any value | All model files, [synthetic population household file](PopSynHousehold) |
@@ -18,7 +16,7 @@ The population synthesizer generates a [household file](PopSynHousehold) and thi
 | pstudent | Student status | Integer, 1 - pre-school through grade 12 student; 2 - university/professional school student; 3 - non-student | |
 | ptype | Person type | Integer, 1 - full-time worker; 2 - part-time worker; 3 - college student; 4 - non-working adult; 5 - retired; 6 - driving-age student; 7 - non-driving age student; 8 - child too young for school | |
 
-### Used in Travel Model 1.0 and dropped from Travel Model 1.5
+### Included in Travel Model 1.0 Files (Dropped from Travel Model 1.5)
 
 | Name | Definition | Scale | Join with &hellip; |
 |------|------------|-------|--------------|

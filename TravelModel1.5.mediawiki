@@ -169,19 +169,19 @@ Taxi.waitTime.sd = 6.4,6.4,6.4,6.4,6.4
 <td>Cost per mile</td>
 <td>$2.30</td>
 <td>$1.33</td>
-<td>$1.33</td>
+<td>$0.44</td>
 </tr>
 <tr class="odd">
 <td>Cost per minute</td>
 <td>$0.10</td>
 <td>$0.24</td>
-<td>$0.24</td>
+<td>$0.08</td>
 </tr>
 <tr class="even">
 <td>Minimum cost per trip</td>
 <td>0</td>
 <td>$7.20</td>
-<td>$7.20</td>
+<td>$3.00</td>
 </tr>
 </tbody>
 </table>
@@ -201,6 +201,11 @@ TNC.shared.costPerMinute = 0.08
 TNC.shared.costMinimum = 3.00
 ```
 
+Additionally, there is an in-vehicle time multiplier for Shared TNCs to reflect out-of-direction travel to pick-up or drop-off additional customers.
+
+```
+Mobility.TNC.shared.IVTFactor = 1.2
+```
 <p>Note: Prices for TNC-Shared need to be set.</p>
 <p>The KNR-TNC mode uses the same cost and wait time distribution as shown above.</p>
 <p>In addition to the new modes, if the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time, and are user-defined in the TM2 properties file.</p>

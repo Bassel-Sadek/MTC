@@ -194,11 +194,11 @@ TNC.single.baseFare = 2.20
 TNC.single.costPerMile = 1.33
 TNC.single.costPerMinute = 0.24
 TNC.single.costMinimum = 7.20
-# use lower costs
+# use lower costs for TNC shared
 TNC.shared.baseFare = 2.20
-TNC.shared.costPerMile = 1.33
-TNC.shared.costPerMinute = 0.24
-TNC.shared.costMinimum = 7.20
+TNC.shared.costPerMile = 0.44
+TNC.shared.costPerMinute = 0.08
+TNC.shared.costMinimum = 3.00
 ```
 
 <p>Note: Prices for TNC-Shared need to be set.</p>

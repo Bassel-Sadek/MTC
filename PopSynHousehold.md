@@ -5,7 +5,7 @@
 ## Household file from Population Synthesizer
 
 The population synthesizer generates this household file and a [person file](PopSynPerson). Variables below in UPPER CASE are drawn directly from PUMS records; variables in lower case are derived from PUMS variables.
- 
+
 | *Name* | *Definition* | *Scale* | *Join with &hellip;* |
 |--------|--------------|---------|----------------------|
 | HHID | Unique household ID number | Integer, any value | All model files |

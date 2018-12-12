@@ -209,8 +209,7 @@ Mobility.TNC.shared.IVTFactor = 1.2
 
 <p>The KNR-TNC mode uses the same cost and wait time distribution as shown above.</p>
 
-=== Model Outputs ===
-<p>Taxi, Single TNC, and Shared TNC are new modes in tour and trip output files (modes 19, 20, and 21 respectively). Taxi trips are currently allocated to drive-alone, shared-2, and shared 3+ modes according to a set of factors specified in the params.properties file. Single and Shared TNC trips are allocated to a combined set of additional AV and TNC trip tables according to a similar set of occupancy factors. These additional trip tables are then assigned separately using their respective value-toll eligible path, and a set of PCE factors that can be modified to reflect different passenger car equivalents for AVs versus HVs by facility type.</p>
+=== Vehicle Occupancy Factors ===
 <p>The vehicle occupancy factors for taxis, single TNCs, and shared TNCs are shown below.</p>
 
 ```
@@ -224,6 +223,8 @@ TNC.shared.da.share = 0.0
 TNC.shared.s2.share = 0.3
 TNC.shared.s3.share = 0.7
 ```
+=== Model Outputs ===
+<p>Taxi, Single TNC, and Shared TNC are new modes in tour and trip output files (modes 19, 20, and 21 respectively). Taxi trips are currently allocated to drive-alone, shared-2, and shared 3+ modes according to a set of factors specified in the params.properties file. Single and Shared TNC trips are allocated to a combined set of additional AV and TNC trip tables according to a similar set of occupancy factors. These additional trip tables are then assigned separately using their respective value-toll eligible path, and a set of PCE factors that can be modified to reflect different passenger car equivalents for AVs versus HVs by facility type.</p>
 
 == Autonomous Vehicles ==
 <p><span id="_Hlk531179289" class="anchor"></span>Several new components were introduced into the CT-RAMP model in TM1.5 to explicitly model the ownership and availability of autonomous vehicles (AVs). Because the level of private Autonomous Vehicle ownership and effects on total auto ownership, mode choice, destination choice, and congestion impacts are largely unknown, the approach that has been adopted is to provide the user with significant flexibility in how to represent the impacts of AVs. This type of modeling, called ‘scenario modeling’, requires the user to make some assumptions about how the future might look in terms of AV ownership, differences in perceived and/or actual time and cost of AVs versus human-controlled vehicles (HVs), and impacts on congestion. Then the user must translate those assumptions into model parameters so that the model outcomes reflect those assumptions. Typically, the model is run many times with systematically varied assumptions to test the effects of the ranges of assumptions on outcomes. This is typically referred to as ‘risk analysis’.</p>

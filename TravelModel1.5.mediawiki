@@ -284,7 +284,7 @@ Mobility.AV.Share = 0.0
 === Auto Ownership Model With AV Choice ===
 
 ==== AV Tour Availability ====
-<p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM2 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set “probability boosts” based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>
+<p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM1.5 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set “probability boosts” based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>
 <p>These parameters are specified in the params.properties file as follows:</p>
 ```
 Mobility.AV.ProbabilityBoost.AutosLTDrivers = 1.2
@@ -293,7 +293,7 @@ Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1
 
 === Mode Choice Enhancements ===
 
-<p>If the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time. Their base values are shown in the table below. The in-vehicle time modifier is currently set to 0.5 to reflect the assumed increased comfort, productivity and reliability of driving in an AV. Parking cost is eliminated as it is assumed the vehicle would be sent to a free remote site for the duration of the activity or else sent home. Auto operating cost modifier is 0.5 to reflect the increased fuel efficiency of an AV, and terminal time is eliminated from the utility of driving since it is assumed that an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
+<p>If the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient/model input modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time coefficient, auto operating cost, parking cost, and terminal time. Their base values are shown in the table below. The in-vehicle time coefficient can be modified in scenarios in which travel would be perceived as less onerous than now because one would be able to use the travel time productively or for leisure. Parking cost can be reduced or even eliminated in scenarios in which the vehicle would be sent home, sent to a low-cost/free remote site for parking, or cruise on the street for the duration of the activity. Auto operating cost can be modified to reflect the increased fuel efficiency of AVs in some scenarios Terminal time can be reduced or even eliminated from the utility of driving since in some scenarios it is assumed that an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
 
 <p>AUTONOMOUS VEHICLE Coefficient Modifiers</p>
 <table>
@@ -306,7 +306,7 @@ Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1
 <tbody>
 <tr class="odd">
 <td>In-vehicle time</td>
-<td>0.5</td>
+<td>TBD</td>
 </tr>
 <tr class="even">
 <td>Parking cost</td>
@@ -314,21 +314,21 @@ Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1
 </tr>
 <tr class="odd">
 <td>Auto operating cost</td>
-<td>0.5</td>
+<td>TBD</td>
 </tr>
 <tr class="even">
 <td>Terminal time</td>
-<td>0</td>
+<td>TBD</td>
 </tr>
 </tbody>
 </table>
 
 <p>The parameters are user-defined in the params.properties file.</p>
 ```
-Mobility.AV.IVTFactor = 0.5
-Mobility.AV.ParkingCostFactor = 0.0
-Mobility.AV.CostPerMileFactor = 0.5
-Mobility.AV.TerminalTimeFactor = 0.0
+Mobility.AV.IVTFactor = TBD
+Mobility.AV.ParkingCostFactor = TBD
+Mobility.AV.CostPerMileFactor = TBD
+Mobility.AV.TerminalTimeFactor = TBD
 ```
 
 === Model Outputs and Assignment ===

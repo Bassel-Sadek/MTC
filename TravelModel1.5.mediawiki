@@ -208,8 +208,8 @@ Mobility.TNC.shared.IVTFactor = 1.2
 ```
 <p>Note: Prices for TNC-Shared need to be set.</p>
 <p>The KNR-TNC mode uses the same cost and wait time distribution as shown above.</p>
-<p>In addition to the new modes, if the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time, and are user-defined in the TM2 properties file.</p>
-<p>Their base values are shown in the table below The in-vehicle time modifier is currently set to 0.5 to reflect the assumed increased comfort, productivity and reliability of driving in an AV. Parking cost is eliminated as it is assumed the vehicle would be sent to a free remote site for the duration of the activity or else sent home (the vehicle deadheading model reflects the actual decision). Auto operating cost modifier is 0.5 to reflect the increased fuel efficiency of an AV, and terminal time is eliminated from the utility of driving since it is assumed that an AV would provide curbside pickup/dropoff service. There is an additional in-vehicle time multiplier for Shared TNCs to reflect out-of-direction travel to pick-up or drop-off additional customers. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
+<p>In addition to the new modes, if the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient modifiers are applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time, auto operating cost, parking cost, and terminal time, and are user-defined in the TM1.5 properties file.</p>
+<p>Their base values are shown in the table below The in-vehicle time modifier could be set to less than 1 in a scenario to reflect the increased comfort and productivity of traveling in an AV. Parking cost could be eliminated or reduced as the vehicle could be sent home, sent to a free remote site, or cruise on the road for the duration of the activity (the vehicle deadheading model reflects this decision). Auto operating cost could be modified to reflect the assumed increased fuel efficiency of an AV in some scenarios. Terminal time could be eliminated or reduced from the utility of driving in scenarios in which an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the analyst to test the effect of different assumptions regarding the operation and use of AVs.</p>
 
 === Coefficient Modifiers ===
 <table>
@@ -222,23 +222,19 @@ Mobility.TNC.shared.IVTFactor = 1.2
 <tbody>
 <tr class="odd">
 <td>In-vehicle time</td>
-<td>0.5</td>
+<td>TBD</td>
 </tr>
 <tr class="even">
 <td>Parking cost</td>
-<td>0</td>
+<td>TBD</td>
 </tr>
 <tr class="odd">
 <td>Auto operating cost</td>
-<td>0.5</td>
+<td>TBD</td>
 </tr>
 <tr class="even">
 <td>Terminal time</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>Shared TNC IVT factor</td>
-<td>1.5</td>
+<td>TBD</td>
 </tr>
 </tbody>
 </table>

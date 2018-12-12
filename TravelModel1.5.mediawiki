@@ -293,7 +293,7 @@ Mobility.AV.ProbabilityBoost.AutosGEDrivers = 1.1
 
 === Mode Choice Enhancements ===
 
-<p>If the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient/model input modifiers can be applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time coefficient, auto operating cost, parking cost, and terminal time. Their base values are shown in the table below. The in-vehicle time coefficient can be modified in scenarios in which in-vehicle travel time would be perceived as less onerous than now because one would be able to use the travel time productively or for leisure. Parking cost can be reduced or even eliminated in scenarios in which the vehicle would be sent home, sent to a low-cost/free remote site for parking, or cruise on the street for the duration of the activity. Auto operating cost can be modified to reflect the possible increased fuel efficiency of AVs in some scenarios. Terminal time can be reduced or even eliminated from the utility of driving since in some scenarios it is assumed that an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
+<p>If the AV Tour Availability model indicates that an AV is available for the tour, a set of coefficient/model input modifiers can be applied to reflect differences in the actual or perceived travel time and cost of driving. These modifiers are specified for in-vehicle time coefficient, auto operating cost, parking cost, and terminal time. Their base values are shown in the table below. The in-vehicle time coefficient can be modified in scenarios in which in-vehicle travel time would be perceived as less onerous than now because one would be able to spend the time productively or for leisure. Parking cost can be reduced or even eliminated in scenarios in which the vehicle would be sent home, sent to a low-cost/free remote site for parking, or cruise on the street for the duration of the activity. Auto operating cost can be modified to reflect the possible increased fuel efficiency of AVs in some scenarios. Terminal time can be reduced or even eliminated from the utility of driving since in some scenarios it is assumed that an AV would provide curbside pickup/dropoff service. All of these parameters can be modified by the user to test the effect of different assumptions regarding the operation and use of AVs.</p>
 
 <p>AUTONOMOUS VEHICLE Coefficient Modifiers</p>
 <table>
@@ -333,9 +333,9 @@ Mobility.AV.TerminalTimeFactor = TBD
 
 === Model Outputs and Assignment ===
 <p>The tour and trip output files have an additional field (‘avAvailable’) which indicates whether an AV was available for the tour according to the AV Tour Availability Model. If the trip has an auto mode and an AV is available for the trip, it is assumed that the trip is an AV trip (since the AV coefficients were used to select the mode). The trip will then be placed into the AV\TNC trip tables for assignment. These trip tables are currently assigned to the value toll-eligible path within each occupancy class. They use a special set of Passenger Car Equivalent (PCE) factors that represent differences in equivalent cars for AVs. The PCE factors are specified in the params.properties file.</p>
-<p># AV impacts on road capacity - represented by adjusting passenger car equivalents (PCEs) by facility type</p>
 
 ```
+# AV impacts on road capacity - represented by adjusting passenger car equivalents (PCEs) by facility type
 # AV_PCE_FAC is a factor between 0 and 1
 # Facility type 1 = freeway-to-freeway ramp
 # Facility type 2 = freeway

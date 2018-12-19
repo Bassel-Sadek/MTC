@@ -19,7 +19,7 @@ Simulation results specific to individual tour decisions.
 | dest_walk_segment | Walk to transit destination sub-zone (not located in space) | Integer, 0 - cannot walk to transit; 1 - short-walk to transit; 2 - long-walk to transit |   |
 | start_hour | Start time of the tour | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |
 | end_hour | End time of the tour | Integer, 5 to 23, where 5 is the hour from 5 am to 6 am and 23 is the hour from 11 pm to midnight |   |
-| tour_mode | Primary (though not necessarily used) travel mode for the tour | Integer, 1 - Drive alone free; 2 - Drive alone pay; 3 - Shared ride 2 free; 4 - Shared ride 2 pay; 5 - Shared ride 3+ free; 6 - Shared ride 3+ pay; 7 - Walk; 8 - Bike; 9 - Walk to local bus; 10 - Walk to light rail or ferry; 11 - Walk to express bus; 12 - Walk to BART; 13 - Walk to commuter rail; 14 - Drive to local bus; 15 - Drive to light rail or ferry; 16 - Drive to express bus; 17 - Drive to BART; 18 - Drive to commuter rail |   |
+| tour_mode | Primary (though not necessarily used) travel mode for the tour | Integer, see [[TravelModes#tour-and-trip-modes]] |   |
 | atWork_freq | Number of at work sub-tours (non-zero only for work tours) | Integer |   |
 | num_ob_stops | Number of out-bound stops on the tour (from home for all tours except at work; from work for at work tours) | Integer |   |
 | num_ib_stops | Number of in-bound stops on the tour (to home for all tours except at work; to work for at work tours) | Integer |   |

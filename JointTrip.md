@@ -22,7 +22,7 @@ Simulation results specific to joint trip decisions. Joint travel is defined in 
 | trip_mode | Travel mode for the trip | Integer, see [[TravelModes#tour-and-trip-modes]] |   |
 | num_participants | Number of participants on the tour | Integer, 2 and up |   |
 | tour_mode | Primary (though not necessarily used) travel mode for the tour | Integer, see [[TravelModes#tour-and-trip-modes]] |   |
-| tour_category | Tour category<span style="white-space: pre;"> </span> | String, "JOINT_NON_MANDATORY" |   |
+| tour_category | Tour category | String, "JOINT_NON_MANDATORY" |   |
  
 
 

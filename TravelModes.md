@@ -36,7 +36,7 @@ Transit travelers are presented up to 10 path options when deciding how to get f
 | 22 | Walk access, heavy rail, drive egress | WLK_HVY_DRV |
 | 23 | Walk access, commuter rail, drive egress | WLK_COM_DRV |
  
-## Tour Modes
+## Tour and Trip Modes
 
 | Number | Name |
 |---|----|

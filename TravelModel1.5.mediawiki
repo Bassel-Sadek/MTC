@@ -69,7 +69,7 @@ The table below shows the utility components associated with Taxi and TNC modes.
 </tr>
 </tbody>
 </table>
-<p>Taxi and TNC mode wait times are simulated from distributions that were estimated based on a survey of actual taxi and TNC wait times conducted in the Portland region in 2015. The survey data was limited to call-initiated pickups (no pre-planned pickups were included). Lognormal distributions were estimated from this observed data for each mode according to the land-use density of the tour or trip origin. Density is defined as (population + employment)/area (sq. mi.). There are five categories of density from high to low with breakpoints at 15000, 5000, 2000, and 500.</p>
+<p>Taxi and TNC mode wait times are simulated from distributions that were estimated based on a survey of actual taxi and TNC wait times conducted in the Portland region in 2015 [[https://www.portlandmercury.com/images/blogimages/2015/07/10/1436550157-uber_taxi_report.pdf]]. The survey data was limited to call-initiated pickups (no pre-planned pickups were included). Lognormal distributions were estimated from this observed data for each mode according to the land-use density of the tour or trip origin. Density is defined as (population + employment)/area (sq. mi.). There are five categories of density from high to low with breakpoints at 15000, 5000, 2000, and 500.</p>
 <p>The wait time distributions for taxi trips and TNCs are shown in the figures below, with average wait times shown in the table. As shown in the figures and tables, the ranges of wait time and standard deviation for taxi are much higher for taxis than for TNCs. Even so, the average wait time for a TNC for trips starting in the lowest density bin was over 10 minutes in 2015. This wait time may decrease in the future as demand for TNCs increase. The wait times for Shared TNC were asserted since the Portland data does not split out Shared from Single ride TNCs.</p>
 
 <div align="center">
@@ -207,10 +207,8 @@ Additionally, there is an in-vehicle time multiplier for Shared TNCs to reflect 
 Mobility.TNC.shared.IVTFactor = 1.2
 ```
 
-<p>The KNR-TNC mode uses the same cost and wait time distribution as shown above.</p>
-
 === Vehicle Occupancy Factors ===
-<p>The vehicle occupancy factors for taxis, single TNCs, and shared TNCs are shown below.</p>
+The vehicle occupancy factors for taxis, single TNCs, and shared TNCs are shown below. These factors add up to 1.0 across all occupancies (da = drive alone, s2 = shared-ride 2 occupant, s3 = shared-ride 3+ occupant). They are multiplied by the total trips in each mode to determine trips by mode and occupancy.
 
 ```
 Taxi.da.share = 0.0

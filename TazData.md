@@ -13,7 +13,7 @@ Identical CSV and DBF versions of this file are used by the travel model.  See a
 | TOTHH | Total households | Integer, 0 and up |   |
 | HHPOP | Population living in households (as opposed to group quarters) | Integer, 0 and up |   |
 | TOTPOP | Total population | Integer, 0 and up |   |
-| EMPRES | Employed residents | Integer, 0 and up |   |
+| EMPRES | Employed residents (household and group quarters) | Integer, 0 and up |   |
 | SFDU | Number of occupied single-family dwelling units | Integer, 0 and up |   |
 | MFDU | Number of occupied multi-family dwelling units | Integer, 0 and up |   |
 | HHINCQ1 | Households in the lowest income quartile (less than $30,000 annually in $2000) | Integer, 0 and up |   |

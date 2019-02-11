@@ -16,4 +16,4 @@ This is the documentation website for Bay Area Metro's Travel Model, also known 
 
 [[InteractiveData]] - Interactive data summaries
 
-[[Scripts/Code]] - https://github.com/BayAreaMetro/travel-model-one
+Scripts/Code - https://github.com/BayAreaMetro/travel-model-one

@@ -35,6 +35,12 @@ Transit travelers are presented up to 10 path options when deciding how to get f
 | 21 | Walk access, express bus, drive egress | WLK_EXP_DRV |
 | 22 | Walk access, heavy rail, drive egress | WLK_HVY_DRV |
 | 23 | Walk access, commuter rail, drive egress | WLK_COM_DRV |
+| 24 | Drive alone, TNC | da_tnc |
+| 25 | Shared ride 2, TNC | sr2_tnc |
+| 26 | Shared ride 3+, TNC | sr3_tnc |
+| 27 | Drive alone, owned autonomous vehicle (AV) | da_av |
+| 28 | Shared ride 2, owned autonomous vehicle (AV) | sr2_av |
+| 29 | Shared ride 3+, owned autonomous vehicle (AV) | sr3_av |
  
 ## Tour and Trip Modes
 

@@ -71,13 +71,13 @@ A complete list of transit modes.
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
 | BART | 120 | Heavy Rail |   |
 | Oakland Airport Connector | 121 | Heavy Rail |   |
+| E-BART | 122 | Commuter Rail |   |
 | Caltrain | 130 | Commuter Rail |   |
 | Amtrak - Capitol Corridor | 131 | Commuter Rail |   |
 | Amtrak - San Joaquin | 132 | Commuter Rail |   |
 | ACE | 133 | Commuter Rail |   |
 | Dumbarton Rail | 134 | Commuter Rail |   |
 | SMART | 135 | Commuter Rail |   |
-| E-BART | 136 | Commuter Rail |   |
 | High-Speed Rail | 137 | Commuter Rail |   |
 
 -- Main.DavidOry - 30 Dec 2016

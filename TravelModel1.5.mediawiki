@@ -230,7 +230,7 @@ TNC.shared.s3.share = 0.7
 
 <p>The table below shows the coefficients added to the auto ownership model to capture likely socio-economic and mobility attributes related to AV ownership. The exponentiated values are also shown in order to illustrate the effect of the coefficient on the probability of AV ownership. These coefficients were adopted from recent AV scenario testing conducted by RSG using the Jacksonville DaySim model. They assume that younger and more wealthy households are more likely to own AVs, all else being equal. They also assume that households with longer work commutes would be more likely to own an AV. Although they are informed by current literature, there is no way to statistically estimate these variables since there are no AV-owning households currently.</p>
 
-=== Autonomous Vehicle Ownership Coefficients ===
+==== Autonomous Vehicle Ownership Coefficients ====
 <table>
 <thead>
 <tr class="header">
@@ -278,8 +278,6 @@ Mobility.AV.Share = 0.0
 <div align="center">
 [[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png|width=400px]]
 </div>
-
-=== Auto Ownership Model With AV Choice ===
 
 ==== AV Tour Availability ====
 <p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM1.5 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set “probability boosts” based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>

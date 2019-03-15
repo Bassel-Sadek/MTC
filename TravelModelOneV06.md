@@ -4,7 +4,7 @@
 
 # What is Travel Model One (v 0.6)?
 
-Travel Model One v0.6 differes from [Travel Model One v0.5](TravelModelOneV05) in that it adds trips to and from Bay Area High Speed Rail (HSR) stations based on output from the California HSR Business Plan Model-Version 3.
+Travel Model One v0.6 differes from [Travel Model One v0.5](TravelModelOneV05) in that it adds trips to and from Bay Area High Speed Rail (HSR) stations based on output from the California HSR Business Plan Model-Version 3 (February 2016).
 
 # Inputs
 * California HSR trip tables relevant for the Bay Area HSR stations are now required, for the HSR model years (2025, 2029, and 2040).

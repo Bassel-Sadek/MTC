@@ -200,7 +200,8 @@ TNC.shared.costMinimum = 3.00
 Additionally, there is an in-vehicle time multiplier for Shared TNCs to reflect out-of-direction travel to pick-up or drop-off additional customers.
 
 ```
-Mobility.TNC.shared.IVTFactor = 1.2
+# Based on data collected in Chicago between Nov 2017 to Mar 2018 (Schwieterman and Livingston, 2018)
+Mobility.TNC.shared.IVTFactor = 1.5
 ```
 
 === Vehicle Occupancy Factors ===

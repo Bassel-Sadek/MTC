@@ -229,6 +229,10 @@ TNC.shared.s3.share = 0.7
 === Auto Ownership Enhancements ===
 <p>As shown in the figure below, the auto ownership model was extended to consider the number of AVs versus HVs for each auto-owning choice. This provides the capability to test different private AV ownership levels on downstream choices such as mode choice, and to track AV trios in separate trip tables. The AV versus HV nesting coefficient was asserted to be 0.5. It is assumed that a household owning 4 vehicles would likely not own any autonomous vehicles and future scenarios that assume high levels of AV ownership would significantly reduce or even eliminate the share of 4+ vehicle owning households.</p>
 
+<div align="center">
+[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png|width=500px]]
+</div>
+
 <p>The table below shows the coefficients added to the auto ownership model to capture likely socio-economic and mobility attributes related to AV ownership. The exponentiated values are also shown in order to illustrate the effect of the coefficient on the probability of AV ownership. These coefficients were adopted from recent AV scenario testing conducted by RSG using the Jacksonville DaySim model. They assume that younger and more wealthy households are more likely to own AVs, all else being equal. They also assume that households with longer work commutes would be more likely to own an AV. Although they are informed by current literature, there is no way to statistically estimate these variables since there are no AV-owning households currently.</p>
 
 ==== Autonomous Vehicle Ownership Coefficients ====
@@ -275,10 +279,6 @@ Mobility.AV.Share = 0.0
 ```
 
 <p>Another approach would be to change the magnitude of other parameters in the model. For example, under a TNC scenario, the auto accessibility parameter might play less of a role in determining car ownership levels (since TNCs might make private car ownership less important). Therefore one might try reducing the magnitude of the auto accessibility parameters in the auto ownership model and observe what the model predicted changes in auto ownership are. However, this would not affect the split between AVs and HVs within each auto ownership category, and judgement would need to be applied to determine if the effect is plausible.</p>
-
-<div align="center">
-[[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png|width=400px]]
-</div>
 
 ==== AV Tour Availability ====
 <p>Households that own at least one of each type of vehicle (HV and AV) have a choice of which vehicle to use for each tour, which is taken into account not only when auto is the chosen mode but also when evaluating other modal options (walk, bike, transit, etc.). TM1.5 was enhanced to make this decision explicit, without introducing a full vehicle allocation model that would result in a much more complicated system. Instead, the AV availability model assumes that the starting point for the probability of an AV being available for the tour is equal to the share of AVs to total vehicles owned by the household. Since it is likely that the probability of an AV might be higher than the proportion of AVs owned by the household due to the flexibility offered by AVs in terms of repositioning, the user can set “probability boosts” based on the ratio of autos to drivers. Currently the probability boost is set to 1.2 (20% higher) when autos is less than drivers and 1.1 (10% higher) when autos is greater than or equal to drivers.</p>

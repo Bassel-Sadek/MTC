@@ -233,7 +233,7 @@ TNC.shared.s3.share = 0.7
 [[https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/TM1.5AutoOwnership.png|width=500px]]
 </div>
 
-<p>The table below shows the coefficients added to the auto ownership model to capture likely socio-economic and mobility attributes related to AV ownership. The exponentiated values are also shown in order to illustrate the effect of the coefficient on the probability of AV ownership. These coefficients were adopted from recent AV scenario testing conducted by RSG using the Jacksonville DaySim model. They assume that younger and more wealthy households are more likely to own AVs, all else being equal. They also assume that households with longer work commutes would be more likely to own an AV. Although they are informed by current literature, there is no way to statistically estimate these variables since there are no AV-owning households currently.</p>
+<p>The table below shows the coefficients added to the auto ownership model to capture likely socio-economic and mobility attributes related to AV ownership. The exponentiated values are also shown in order to illustrate the effect of the coefficient on the probability of AV ownership. These coefficients were adopted from recent AV scenario testing conducted by RSG using the Jacksonville DaySim model. They assume that younger and more wealthy households are more likely to own AVs, all else being equal; however, after discussion with partner agencies, MTC dropped age-related AV terms from the auto ownership mode.. They also assume that households with longer work commutes would be more likely to own an AV. Although they are informed by current literature, there is no way to statistically estimate these variables since there are no AV-owning households currently.</p>
 
 ==== Autonomous Vehicle Ownership Coefficients ====
 <table>
@@ -254,16 +254,6 @@ TNC.shared.s3.share = 0.7
 <td>Household Income 100k+</td>
 <td>1.0000</td>
 <td>2.72</td>
-</tr>
-<tr class="odd">
-<td>Younger household (Number of persons 18 to 35 &gt;= Number of Persons 65+</td>
-<td>0.5000</td>
-<td>1.65</td>
-</tr>
-<tr class="even">
-<td>Older household (Number of persons 18 to 35 &lt; Number of Persons 65+</td>
-<td>-1.0000</td>
-<td>0.37</td>
 </tr>
 <tr class="odd">
 <td>Hours of travel by auto for work, summed across all workers in household</td>

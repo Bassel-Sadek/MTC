@@ -2,6 +2,6 @@
 
 ***
 
-[PopSyn3](https://github.com/BayAreaMetro/popsyn3) - New population synthesizer
+[populationsim](https://github.com/BayAreaMetro/populationsim) - Travel Model 1.5 population synthesizer (used with Horizon)
 
-PopSyn2 - Current population synthesizer
+PopSyn2 - Travel Model One population synthesizer (used with RTP 2017, RTP 2021)

@@ -7,7 +7,7 @@
 * <a href="http://mtcgis.mtc.ca.gov/foswiki/pub/Main/Presentations/2010_11_10_In-progress_Validation.pps" target="_blank" title="In-progress Validation Technical Presentation"> In-progress Validation Technical Presentation</a> - Interim results
 * <a href="http://mtcgis.mtc.ca.gov/foswiki/pub/Main/Documents/2011_04_28_Draft_Calibration_and_Validation.pdf" target="_blank" title="Draft Calibration and Validation Technical Report">*DRAFT* Calibration and Validation Technical Report</a> - Draft final results
 * <a href="http://mtcgis.mtc.ca.gov/foswiki/pub/Main/Documents/2011_10_20_RELEASE_Comparison_to_Trip_Based_Model.pdf" target="_blank" title="Comparison to Legacy Trip-based Model Technical Paper">Comparison to Legacy Trip-based Model Technical Paper</a> - <em>Travel Model One </em>and _BAYCAST_
-* <a href="http://mtcgis.mtc.ca.gov/foswiki/pub/Main/Documents/2012_03_06_RELEASE_Volume_delay_functions.pdf" target="_blank" title="Initial Examination of Volume Delay Functions using Caltrans Performance Measurement System Data"> Development Memorandum</a> - Initial Examination of <em>Travel Model One </em>Volume Delay Functions using PeMS data
+* <a href="https://mtcdrive.box.com/s/l0r5g5s1rgd3vmoa3ro6qizdzu9z3636" target="_blank" title="Initial Examination of Volume Delay Functions using Caltrans Performance Measurement System Data"> Development Memorandum</a> - Initial Examination of <em>Travel Model One </em>Volume Delay Functions using PeMS data
 
 ## Travel Model One (v 0.3) - Released April 2012
 * [Calibration and Validation Technical Report](https://mtcdrive.box.com/s/7crr7bwhromi2au42jnpp11fqe5l24xq)

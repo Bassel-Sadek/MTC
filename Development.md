@@ -33,7 +33,6 @@
 ## Travel Model One (v 0.6) - Released July 2016
 * [What is Travel Model One (v 0.6)?](TravelModelOneV06)
 * See Travel Model One v0.5 validation; Model year 2000-2015 results are unaffected.
-* [Travel Modeling Supplemental Report for Plan Bay Area 2040](http://2040.planbayarea.org/cdn/farfuture/Bl73dAbC5YbYZRWLj-VRWqnTn0b-W5UfUctA98nVI7M/1500007740/sites/default/files/2017-07/Travel_Modeling_PBA2040_Supplemental%20Report_7-2017_0.pdf)
 
 ## Travel Model 1.5 - Under Development
 * [What is Travel Model 1.5?](TravelModel1.5)

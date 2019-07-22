@@ -26,6 +26,7 @@ A complete list of transit modes.
 | MUNI Cable Cars | 20 | Local |   |
 | MUNI - Local | 21 | Local |   |
 | SamTrans - Local | 24 | Local |   |
+| South SF Ferry Shuttles (PPA Project) - Local | 25 | Local |   |
 | Santa Clara VTA - Community bus | 27 | Local |   |
 | Santa Clara VTA - Local | 28 | Local |   |
 | AC Transit - Local | 30 | Local |   |
@@ -43,7 +44,9 @@ A complete list of transit modes.
 | Sonoma County Transit - Local | 63 | Local |   |
 | Santa Rosa City Bus | 66 | Local |   |
 | Petaluma Transit | 68 | Local |   |
+| North Bay Shuttles (PPA Project) | 69 | Local |   |
 | Golden Gate Transit - Local | 70 | Local |   |
+| Regional Express ReX Link Routes (PPA Project) - Local | 78 | Local |   |
 | SamTrans - Express | 80 | Express |   |
 | Santa Clara VTA - Express | 81 | Express |   |
 | Dumbarton Express | 82 | Express |   |
@@ -60,6 +63,7 @@ A complete list of transit modes.
 | VINE - Express | 93 | Express |   |
 | SMART - Temporary Express | 94 | Express |
 | VINE - Express | 95 | Express |   |
+| Regional Express ReX Express Routes (PPA Project) - Express | 98 | Local |   |
 | East Bay Ferries | 100 | Ferry |   |
 | Golden Gate Ferry - Larkspur | 101 | Ferry |   |
 | Golden Gate Ferry - Sausalito | 102 | Ferry |   |
@@ -68,7 +72,9 @@ A complete list of transit modes.
 | South San Francisco Ferry | 105 | Ferry |   |
 | MUNI Metro | 110 | Light Rail |   |
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
-| Oakland/Alameda Gondola | 113 | Light Rail |   |
+| Oakland/Alameda Gondola (PPA Project) | 113 | Light Rail |   |
+| Cupertino-Mountain View-San Jose Maglev Rail Loop (PPA Project) | 113 | Light Rail |   |
+| SR-85 LRT (PPA Project) | 113 | Light Rail |   |
 | BART & E-BART| 120 | Heavy Rail |   |
 | Oakland Airport Connector | 121 | Heavy Rail |   |
 | Caltrain | 130 | Commuter Rail |   |
@@ -77,6 +83,7 @@ A complete list of transit modes.
 | ACE | 133 | Commuter Rail |   |
 | Dumbarton Rail | 134 | Commuter Rail |   |
 | SMART | 135 | Commuter Rail |   |
+| Valley Link | 136 | Commuter Rail |   | 
 | High-Speed Rail | 137 | Commuter Rail |   |
 
 -- Main.DavidOry - 30 Dec 2016

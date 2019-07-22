@@ -68,6 +68,7 @@ A complete list of transit modes.
 | South San Francisco Ferry | 105 | Ferry |   |
 | MUNI Metro | 110 | Light Rail |   |
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
+| Oakland/Alameda Gondola | 113 | Light Rail |   |
 | BART & E-BART| 120 | Heavy Rail |   |
 | Oakland Airport Connector | 121 | Heavy Rail |   |
 | Caltrain | 130 | Commuter Rail |   |

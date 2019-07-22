@@ -63,7 +63,7 @@ A complete list of transit modes.
 | VINE - Express | 93 | Express |   |
 | SMART - Temporary Express | 94 | Express |
 | VINE - Express | 95 | Express |   |
-| Regional Express ReX Express Routes (PPA Project) - Express | 98 | Local |   |
+| Regional Express ReX Express Routes (PPA Project) - Express | 98 | Express |   |
 | East Bay Ferries | 100 | Ferry |   |
 | Golden Gate Ferry - Larkspur | 101 | Ferry |   |
 | Golden Gate Ferry - Sausalito | 102 | Ferry |   |

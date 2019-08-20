@@ -73,8 +73,8 @@ A complete list of transit modes.
 | MUNI Metro | 110 | Light Rail |   |
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
 | Oakland/Alameda Gondola (PPA Project) | 113 | Light Rail |   |
-| Cupertino-Mountain View-San Jose Maglev Rail Loop (PPA Project) | 113 | Light Rail |   |
-| SR-85 LRT (PPA Project) | 113 | Light Rail |   |
+| Cupertino-Mountain View-San Jose Maglev Rail Loop (PPA Project) | 114 | Light Rail |   |
+| SR-85 LRT (PPA Project) | 115 | Light Rail |   |
 | BART & E-BART| 120 | Heavy Rail |   |
 | Oakland Airport Connector | 121 | Heavy Rail |   |
 | Caltrain | 130 | Commuter Rail |   |

@@ -26,7 +26,6 @@ A complete list of transit modes.
 | MUNI Cable Cars | 20 | Local |   |
 | MUNI - Local | 21 | Local |   |
 | SamTrans - Local | 24 | Local |   |
-| South SF Ferry Shuttles (PPA Project) | 25 | Local |   |
 | Santa Clara VTA - Community bus | 27 | Local |   |
 | Santa Clara VTA - Local | 28 | Local |   |
 | AC Transit - Local | 30 | Local |   |

@@ -50,4 +50,15 @@ Identical CSV and DBF versions of this file are used by the travel model.  See a
 | GQPOP | Population living in non-institutional group quarters rather than households | Integer, 0 and up |   |
 
 
--- Main.DavidOry - 04 Jan 2013
+## TAZ1454 by county
+| *County Code* | *County Name* | *TAZ 1454 range* |
+|--------|--------------|---------|
+| 1 | San Francisco | 1-190 |
+| 2 | San Mateo | 191-346 |
+| 3 | Santa Clara | 347-714 |
+| 4 | Alameda | 715-1039 |
+| 5 | Contra Costa | 1040-1210 |
+| 6 | Solano | 1211-1290 |
+| 7 | Napa | 1291-1317 |
+| 8 | Sonoma | 1318-1403 |
+| 9 | Marin | 1404-1454 |

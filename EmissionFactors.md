@@ -194,193 +194,70 @@ The output of this script is a unique file for each county, by vehicle populatio
 
 Instructions for generating emission estimates using California Air Resources Board's EMFAC software and <em>Travel Model One </em>activity data.
 
-1) Start EMFAC by selecting the "EMFAC2007" item on the Start/Programs menu (Windows XP) or Start/Run (Windows 2000), or by double-clicking the "EMFAC2007" icon on the desktop.
+1. Start EMFAC by selecting the "EMFAC2007" item on the Start/Programs menu (Windows XP) or Start/Run (Windows 2000), or by double-clicking the "EMFAC2007" icon on the desktop.
 
-2) In this example we will be creating a "New" file. Select <u>"File New"</u>
+2. In this example we will be creating a "New" file. Select <u>"File New"</u> 
 
-<img alt="EMFAC_Screenshots_1.png" height="411" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/EMFAC_Screenshots_1.png" title="EMFAC_Screenshots_1.png" width="508" />
+3. Then select <u>"Add New Scenario"</u>
 
-3) Then select <u>"Add New Scenario"</u>
+4. Next select <u>"Air Basin"</u> Geographic Area
 
-4) Next select <u>"Air Basin"</u> Geographic Area
+5. Select "Air Basin" as the Area Type and select &rdquo;San Francisco&rdquo; from the choices of Air Basin in the <u>"Drop Down Box".</u>
 
- 
-<p align="left">5) Select "Air Basin" as the Area Type and select &rdquo;San Francisco&rdquo; from the choices of Air Basin in the <u>"Drop Down Box".</u></p> <p align="left"> </p> <p align="left">6) Select "Calculation Method" as the Calculation Method and select &rdquo;By Sub-Area&rdquo; from the choices in the <u>"Drop Down Box".</u></p> <p align="left"> </p> <p align="left">7) Next input the <u>"Calendar Year and Season or Month"</u></p> <p align="left">In this example we will use 2015 and summer. Select the links below for the correct analysis years and seasons.</p> <p align="left">8) Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the next input 2 steps.</p> <p align="left"><img alt="Slide7.PNG" height="430" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide7.PNG" title="Slide7.PNG" width="532" /></p>
+6. Select "Calculation Method" as the Calculation Method and select &rdquo;By Sub-Area&rdquo; from the choices in the <u>"Drop Down Box".</u>
 
- 
+7. Next input the <u>"Calendar Year and Season or Month"</u>. In this example we will use 2015 and summer. Select the links below for the correct analysis years and seasons.</p> 
 
- 
+8. Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the next input 2 steps.
 
- 
+9. Edit the "<u>Title</u>" (it is recommended to include a title). Click "Next".
 
- 
+10.  Leave steps/buttons 5, 6 and 7 in the &ldquo;<u>All</u>&rdquo;, &ldquo;<u>All</u>&rdquo; and &ldquo;<u>Default</u>&rdquo; settings. Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the mode and output steps.</p> 
 
-9) Edit the "<u>Title</u>" (it is recommended to include a title)
-<p align="left"><img alt="Slide8.PNG" height="395" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide8.PNG" title="Slide8.PNG" width="501" /></p>
+11. Select "<u>Burden &ndash; Area planning inventory</u>" as the operation mode and select &rdquo;Detailed Planning Inventories (CSV)&rdquo; as the BURDEN Inventory Files and Reports format. Leave all other boxes in the BURDEN Inventory Files and Reports section UNCHECKED.
 
- 
+12. For Output Frequency, select &ldquo;<u>Day</u>&rdquo;. For Output Particulate As&hellip;., select &ldquo;<u>PM2.5</u>&rdquo; (in this example). For Output Hydrocarbons As&hellip;., select &ldquo;<u>ROG</u>&rdquo;  Click on the &ldquo;<u>Edit Program Constants</u>&rdquo; button to move onto the Tech/IM steps
 
- 
+13. Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the CYr Basis (year) step.
 
- 
+14. Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the Pop/Accrual steps and then click on "<u>Population</u>".
 
- 
+15.  The Total Population by sub-area for the San Francisco Air Basin will start alphabetically with &ldquo;Alameda (SF)&rdquo; county tab. Click on the &ldquo;<u>By Vehicle and Fuel</u>&rdquo; editing mode button. 
 
-Click "Next".
+16. Click on and highlight the data array table by vehicle class and fuel.
 
-10) Leave steps/buttons 5, 6 and 7 in the &ldquo;<u>All</u>&rdquo;, &ldquo;<u>All</u>&rdquo; and &ldquo;<u>Default</u>&rdquo; settings.
-<p align="left"><img alt="Slide9.PNG" height="395" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide9.PNG" title="Slide9.PNG" width="597" /></p> <p align="left">Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the mode and output steps.</p> <p align="left"><img alt="Slide10.PNG" height="418" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide10.PNG" title="Slide10.PNG" width="508" /></p> <p align="left">11) Select "<u>Burden &ndash; Area planning inventory</u>" as the operation mode and select &rdquo;Detailed Planning Inventories (CSV)&rdquo; as the BURDEN Inventory Files and Reports format. Leave all other boxes in the BURDEN Inventory Files and Reports section UNCHECKED.</p> <p align="left"><img alt="Slide11.PNG" height="396" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide11.PNG" title="Slide11.PNG" width="503" /></p> <p align="left">12) For Output Frequency, select &ldquo;<u>Day</u>&rdquo;. For Output Particulate As&hellip;., select &ldquo;<u>PM2.5</u>&rdquo; (in this example). For Output Hydrocarbons As&hellip;., select &ldquo;<u>ROG</u>&rdquo;</p> <p align="left"><img alt="Slide12.PNG" height="398" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide12.PNG" title="Slide12.PNG" width="504" /></p> <p align="left">Click on the &ldquo;<u>Edit Program Constants</u>&rdquo; button to move onto the Tech/IM steps.</p> <p align="left"><img alt="Slide13.PNG" height="397" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide13.PNG" title="Slide13.PNG" width="579" /></p> <p align="left">13) Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the CYr Basis (year) step.</p> <p align="left"><img alt="Slide14.PNG" height="392" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide14.PNG" title="Slide14.PNG" width="522" /></p>
+17. Copy and Paste in update vehicle population (by county) values by clicking the &ldquo;<u>Paste Data Only</u>&rdquo; button.
 
- 
+18.  Once all vehicle population data is entered for all counties (with Sonoma (SF) county), click the &ldquo;<u>Done</u>&rdquo; button.
 
- 
+19. Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the VMT/Trips steps and then click on "<u>VMT</u>"
 
- 
+20. The Total VMT by sub-area for the San Francisco Air Basin will start alphabetically with &ldquo;Alameda (SF)&rdquo; county tab. Click on the &ldquo;<u>By Vehicle/Fuel/Hour</u>&rdquo; editing mode button. The &ldquo;Fuel Type&rdquo; tab (on the right hand side) will start with &ldquo;Gas&rdquo; at the top.
 
- 
+21. Click on and highlight the data array table by vehicle class/fuel/hour (for the gas fuel type).
 
-14) Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the Pop/Accrual steps and then click on "<u>Population</u>".
-<p align="left"><img alt="Slide15.PNG" height="383" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide15.PNG" title="Slide15.PNG" width="526" /></p> <p align="left"> </p> <p align="left"><img alt="Slide16.PNG" height="352" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide16.PNG" title="Slide16.PNG" width="529" /></p> <p align="left">15) The Total Population by sub-area for the San Francisco Air Basin will start alphabetically with &ldquo;Alameda (SF)&rdquo; county tab. Click on the &ldquo;<u>By Vehicle and Fuel</u>&rdquo; editing mode button.</p> <p align="left"><img alt="Slide17.PNG" height="347" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide17.PNG" title="Slide17.PNG" width="511" /></p>
+22. Copy and Paste in updated VMT (by county) values by clicking the &ldquo;<u>Paste Data Only</u>&rdquo; button. For each individual county, paste in updated VMT for the diesel and electric fuel types also.
 
- 
+23. For each individual county, paste in updated VMT for the diesel and electric fuel types also.
 
- 
+24. Once all VMT data is entered for all counties (with the Electric fuel type for Sonoma (SF) county), click the &ldquo;<u>Done</u>&rdquo; button.
 
- 
+25. Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the Profiles/Speed steps and then click on "<u>Speed Fractions</u>"
 
- 
+26. The Speed Fractions by Scenario Year, Vehicle Class and sub-area for the San Francisco Air Basin will start alphabetically with &ldquo;Alameda (SF)&rdquo; county tab. Click on the &ldquo;<u>5 MPH</u>&rdquo; Basis button.
 
-16) Click on and highlight the data array table by vehicle class and fuel.
-<p align="left"><img alt="Slide18.PNG" height="373" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide18.PNG" title="Slide18.PNG" width="572" /></p>
+27. Click on and highlight the data array table by speed bin and hour (for the gas fuel type).
 
- 
+28. Copy and Paste in updated speed distribution (by county) values by clicking the &ldquo;<u>Paste Data Only</u>&rdquo; button.
 
- 
+29. Click the &ldquo;<u>Apply to Others</u>&rdquo; button and check the &ldquo;<u>Vehicle Class</u>&rdquo; in the parameters box and click &ldquo;<u>OK</u>&rdquo;.
 
- 
+30. Click on and highlight the &ldquo;Light-duty Trucks (T1)&rdquo;, &ldquo;Light-duty Trucks (T2)&rdquo;, &ldquo;Medium-duty Trucks (T3)&rdquo; and &ldquo;Motorcycles&rdquo; vehicle classes and click the to the right-arrow box.
 
- 
+31. Once the five passenger vehicle types have been moved to the &ldquo;Apply To:&rdquo; column, click the &ldquo;<u>OK</u>&rdquo; box.
 
-17) Copy and Paste in update vehicle population (by county) values by clicking the &ldquo;<u>Paste Data Only</u>&rdquo; button.
-<p align="left"><img alt="Slide19.PNG" height="370" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide19.PNG" title="Slide19.PNG" width="573" /></p>
+32. Once all speed distribution data is entered for all counties (with Sonoma (SF) county), click the &ldquo;<u>Done</u>&rdquo; button.
 
- 
+33. On the Profiles/Speed tab window, click the &ldquo;<u>Finish</u>&rdquo; button.
 
- 
-
- 
-
- 
-
-18) Once all vehicle population data is entered for all counties (with Sonoma (SF) county), click the &ldquo;<u>Done</u>&rdquo; button.
-<p align="left"><img alt="Slide20.PNG" height="378" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide20.PNG" title="Slide20.PNG" width="474" /></p> <p align="left">19) Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the VMT/Trips steps and then click on "<u>VMT</u>"</p> <p align="left"><img alt="Slide21.PNG" height="410" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/Slide21.PNG" title="Slide21.PNG" width="501" /></p> <p align="left"> </p> <p align="left"><img alt="S1.PNG" height="385" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S1.PNG" title="S1.PNG" width="575" /></p> <p align="left">20) The Total VMT by sub-area for the San Francisco Air Basin will start alphabetically with &ldquo;Alameda (SF)&rdquo; county tab. Click on the &ldquo;<u>By Vehicle/Fuel/Hour</u>&rdquo; editing mode button. The &ldquo;Fuel Type&rdquo; tab (on the right hand side) will start with &ldquo;Gas&rdquo; at the top.</p> <p align="left"><img alt="S2.PNG" height="395" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S2.PNG" title="S2.PNG" width="434" /></p> <p align="left">21) Click on and highlight the data array table by vehicle class/fuel/hour (for the gas fuel type).</p> <p align="left"><img alt="S3.PNG" height="400" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S3.PNG" title="S3.PNG" width="527" /></p>
-
- 
-
- 
-
- 
-
- 
-
-22) Copy and Paste in updated VMT (by county) values by clicking the &ldquo;<u>Paste Data Only</u>&rdquo; button. For each individual county, paste in updated VMT for the diesel and electric fuel types also.
-<p align="left"><img alt="S4.PNG" height="383" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S4.PNG" title="S4.PNG" width="517" /></p>
-
- 
-
- 
-
- 
-
- 
-
-23) For each individual county, paste in updated VMT for the diesel and electric fuel types also.
-<p align="left"><img alt="S5.PNG" height="352" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S5.PNG" title="S5.PNG" width="441" /></p> <p align="left"><img alt="S6.PNG" height="363" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S6.PNG" title="S6.PNG" width="459" /></p>
-
- 
-
- 
-
- 
-
- 
-
-24) Once all VMT data is entered for all counties (with the Electric fuel type for Sonoma (SF) county), click the &ldquo;<u>Done</u>&rdquo; button.
-<p align="left"><img alt="S7.PNG" height="374" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S7.PNG" title="S7.PNG" width="464" /></p> <p align="left">25) Click on the &ldquo;<u>Next</u>&rdquo; button to move onto the Profiles/Speed steps and then click on "<u>Speed Fractions</u>"</p> <p align="left"><img alt="S8.PNG" height="410" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S8.PNG" title="S8.PNG" width="516" /></p> <p align="left"><img alt="S9.PNG" height="346" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S9.PNG" title="S9.PNG" width="445" /></p> <p align="left">26) The Speed Fractions by Scenario Year, Vehicle Class and sub-area for the San Francisco Air Basin will start alphabetically with &ldquo;Alameda (SF)&rdquo; county tab. Click on the &ldquo;<u>5 MPH</u>&rdquo; Basis button.</p> <p align="left"><img alt="S10.PNG" height="405" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S10.PNG" title="S10.PNG" width="482" /></p>
-
- 
-
- 
-
- 
-
- 
-
-27) Click on and highlight the data array table by speed bin and hour (for the gas fuel type).
-<p align="left"><img alt="S11.PNG" height="380" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S11.PNG" title="S11.PNG" width="603" /></p>
-
- 
-
- 
-
- 
-
- 
-
-28) Copy and Paste in updated speed distribution (by county) values by clicking the &ldquo;<u>Paste Data Only</u>&rdquo; button.
-<p align="left"><img alt="S12.PNG" height="384" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S12.PNG" title="S12.PNG" width="602" /></p> <p align="left">29) Click the &ldquo;<u>Apply to Others</u>&rdquo; button and check the &ldquo;<u>Vehicle Class</u>&rdquo; in the parameters box and click &ldquo;<u>OK</u>&rdquo;.</p> <p align="left"><img alt="S13.PNG" height="415" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S13.PNG" title="S13.PNG" width="522" /></p> <p align="left"><img alt="S14.PNG" height="435" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S14.PNG" title="S14.PNG" width="505" /></p>
-
- 
-
- 
-
- 
-
- 
-
-30) Click on and highlight the &ldquo;Light-duty Trucks (T1)&rdquo;, &ldquo;Light-duty Trucks (T2)&rdquo;, &ldquo;Medium-duty Trucks (T3)&rdquo; and &ldquo;Motorcycles&rdquo; vehicle classes and click the to the right-arrow box.
-<p align="left"><img alt="S15.PNG" height="394" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S15.PNG" title="S15.PNG" width="532" /></p>
-
- 
-
- 
-
- 
-
- 
-
-31) Once the five passenger vehicle types have been moved to the &ldquo;Apply To:&rdquo; column, click the &ldquo;<u>OK</u>&rdquo; box.
-<p align="left"><img alt="S16.PNG" height="380" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S16.PNG" title="S16.PNG" width="558" /></p>
-
- 
-
- 
-
- 
-
- 
-
-32) Once all speed distribution data is entered for all counties (with Sonoma (SF) county), click the &ldquo;<u>Done</u>&rdquo; button.
-<p align="left"><img alt="S17.PNG" height="416" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S17.PNG" title="S17.PNG" width="620" /></p>
-
- 
-
- 
-
- 
-
- 
-
-33) On the Profiles/Speed tab window, click the &ldquo;<u>Finish</u>&rdquo; button.
-<p align="left"><img alt="S18.PNG" height="421" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S18.PNG" title="S18.PNG" width="515" /></p>
-
- 
-
- 
-
- 
-
- 
-
-34) Click the &ldquo;<u>Save As&hellip;</u>&rdquo; button and give this input file a filename and click &ldquo;<u>Save</u>&rdquo;.
-<p align="left"><img alt="S19.PNG" height="418" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S19.PNG" title="S19.PNG" width="527" /></p> <p align="left"><img alt="S20.PNG" height="421" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S20.PNG" title="S20.PNG" width="535" /></p> <p align="left"><img alt="S21.PNG" height="392" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S21.PNG" title="S21.PNG" width="554" /></p> <p align="left"><img alt="S22.PNG" height="411" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S22.PNG" title="S22.PNG" width="520" /></p> <p align="left"><img alt="S23.PNG" height="409" src="http://analytics.mtc.ca.gov/foswiki/pub/Main/EmissionFactors/S23.PNG" title="S23.PNG" width="524" /></p> <p align="left">-- Main.HaroldBrazil - 08 Jul 2011</p>
+34. Click the &ldquo;<u>Save As&hellip;</u>&rdquo; button and give this input file a filename and click &ldquo;<u>Save</u>&rdquo;.

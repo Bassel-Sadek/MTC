@@ -187,6 +187,7 @@ The output of this script is a unique file for each county, by vehicle populatio
 ![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc2_4.png)
 ![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc2_4b.png)
 ![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc2_5.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc2_7.png)
 
 
 *Air Quality Emission Inventory Modeling Procedures (for the San Francisco Bay Area)*

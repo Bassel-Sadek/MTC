@@ -56,6 +56,29 @@ Step (3) / Script (3) <em><u>SumSpeedBins1.awk</u></em>
 
 This step sums EMFAC output for two csv files 1) travel between zones and 2) travel within zones by county and the 13 ARB speed cohorts. The output of this script is two files: 1) a file with the sum of the two inputs; 2) the share of each speed bin relative to county totals; and 3) the total VMT values collapsed to county and hourly bins.
 
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_1.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_2.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_3.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_A_L.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_A.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_B.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_C.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_D.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_E.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_F.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_G.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_H.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_I.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_J.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_K.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_L.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_L2.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_L3.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_L4.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_L5.png)
+![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc_L6.png)
+
+
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
 
  

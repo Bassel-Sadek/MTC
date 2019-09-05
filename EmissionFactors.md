@@ -190,7 +190,7 @@ The output of this script is a unique file for each county, by vehicle populatio
 ![Schematic](https://github.com/BayAreaMetro/modeling-website/raw/master/foswiki_imgs/Emissions_doc2_7.png)
 
 
-*Air Quality Emission Inventory Modeling Procedures (for the San Francisco Bay Area)*
+## Air Quality Emission Inventory Modeling Procedures (for the San Francisco Bay Area)
 
 Instructions for generating emission estimates using California Air Resources Board's EMFAC software and <em>Travel Model One </em>activity data.
 

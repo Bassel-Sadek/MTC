@@ -69,6 +69,7 @@ A complete list of transit modes.
 | Tiburon Ferry | 103 | Ferry |   |
 | Vallejo Baylink Ferry | 104 | Ferry |   |
 | South San Francisco Ferry | 105 | Ferry |   |
+| Regional Hovercraft (PPA) | 105 | Ferry |   |
 | MUNI Metro | 110 | Light Rail |   |
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
 | Oakland/Alameda Gondola (PPA Project) | 113 | Light Rail |   |

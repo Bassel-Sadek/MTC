@@ -34,7 +34,7 @@
 * [What is Travel Model One (v 0.6)?](TravelModelOneV06)
 * See Travel Model One v0.5 validation; Model year 2000-2015 results are unaffected.
 
-## Travel Model 1.5 - Under Development
+## Travel Model 1.5 - [Released March 2019](https://github.com/BayAreaMetro/travel-model-one/releases)
 * [What is Travel Model 1.5?](TravelModel1.5)
 * [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate) - PDF of slides presented to CMAs on Oct 12, 2018
 

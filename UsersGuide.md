@@ -2,7 +2,7 @@
 
 ***
 
-_Model Version 0.5_
+_Model Version 0.5 - 1.5_
 
 [[ComputingEnvironment]] - Description of the hardware and software used by the model
 
@@ -25,7 +25,3 @@ _Model Version 0.5_
 [[DataDictionary]] - Definitions of variables in key files
 
 [[EmissionFactors]] - Instructions for estimating emissions from the travel model's activity data
-
- 
-
--- Main.DavidOry - 16 May 2014

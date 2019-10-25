@@ -77,7 +77,7 @@ A complete list of transit modes.
 | Cupertino-Mountain View-San Jose Maglev Rail Loop (PPA Project) | 114 | Light Rail | PPA 2019 |
 | SR-85 LRT (PPA Project) | 115 | Light Rail | PPA 2019 |
 | Mountain View AVN (PPA) | 116 | Light Rail | PPA 2019 |
-| Contra Costa Gondolas (PPA !-680 Multimodal Project) | 117 | Light Rail | PPA 2019 |
+| Contra Costa Gondolas (PPA I-680 Multimodal Project) | 117 | Light Rail | PPA 2019 |
 | BART & E-BART| 120 | Heavy Rail |   |
 | Oakland Airport Connector | 121 | Heavy Rail |   |
 | Caltrain | 130 | Commuter Rail |   |

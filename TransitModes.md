@@ -45,7 +45,8 @@ A complete list of transit modes.
 | Petaluma Transit | 68 | Local |   |
 | North Bay Shuttles (PPA Project) | 69 | Local |   |
 | Golden Gate Transit - Local | 70 | Local |   |
-| Regional Express ReX Link Routes (PPA Project) - Local | 78 | Local |   |
+| Contra Costa AV (PPA) | 75 | Local | PPA 2019 |
+| Regional Express ReX Link Routes (PPA Project) - Local | 78 | Local | PPA 2019 |
 | SamTrans - Express | 80 | Express |   |
 | Santa Clara VTA - Express | 81 | Express |   |
 | Dumbarton Express | 82 | Express |   |
@@ -69,21 +70,23 @@ A complete list of transit modes.
 | Tiburon Ferry | 103 | Ferry |   |
 | Vallejo Baylink Ferry | 104 | Ferry |   |
 | South San Francisco Ferry | 105 | Ferry |   |
-| Regional Hovercraft (PPA) | 106 | Ferry |   |
+| Regional Hovercraft (PPA) | 106 | Ferry | PPA 2019 |
 | MUNI Metro | 110 | Light Rail |   |
 | Santa Clara VTA - LRT | 111 | Light Rail |   |
-| Oakland/Alameda Gondola (PPA Project) | 113 | Light Rail |   |
-| Cupertino-Mountain View-San Jose Maglev Rail Loop (PPA Project) | 114 | Light Rail |   |
-| SR-85 LRT (PPA Project) | 115 | Light Rail |   |
+| Oakland/Alameda Gondola (PPA Project) | 113 | Light Rail | PPA 2019 |
+| Cupertino-Mountain View-San Jose Maglev Rail Loop (PPA Project) | 114 | Light Rail | PPA 2019 |
+| SR-85 LRT (PPA Project) | 115 | Light Rail | PPA 2019 |
+| Mountain View AVN (PPA) | 116 | Light Rail | PPA 2019 |
+| Contra Costa Gondolas (PPA !-680 Multimodal Project) | 117 | Light Rail | PPA 2019 |
 | BART & E-BART| 120 | Heavy Rail |   |
 | Oakland Airport Connector | 121 | Heavy Rail |   |
 | Caltrain | 130 | Commuter Rail |   |
 | Amtrak - Capitol Corridor | 131 | Commuter Rail |   |
 | Amtrak - San Joaquin | 132 | Commuter Rail |   |
 | ACE | 133 | Commuter Rail |   |
-| Dumbarton Rail | 134 | Commuter Rail |   |
+| Dumbarton Rail | 134 | Commuter Rail | PPA 2019 |
 | SMART | 135 | Commuter Rail |   |
-| Valley Link | 136 | Commuter Rail |   | 
+| Valley Link | 136 | Commuter Rail | PPA 2019 | 
 | High-Speed Rail | 137 | Commuter Rail |   |
 
 -- Main.DavidOry - 30 Dec 2016

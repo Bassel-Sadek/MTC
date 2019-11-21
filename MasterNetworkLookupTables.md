@@ -51,7 +51,7 @@ Definition of variables included in the master network.
 | 11 and higher | Codes specific to high-occupancy toll (HOT) roadway segments and/or cordon tolls | | |
 | 231 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - SR237 - US101 Interchange to I-880 Interchange - EB | Mar 2012 | 2015 Base |
 | 232 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - SR237 - US101 Interchange to I-880 Interchange - WB | Mar 2012 | 2015 Base |
-| 690 | I-680 ALA - SCL County Line to SR84 - SB | ? | 2015 Base |
+| 690 | [I-680 Sunol Express Lane](https://511.org/driving/express-lanes/i-680-sunol-express-lane) - I-680 ALA - SCL County Line to SR84 - SB | Sep 2010 | 2015 Base |
 | 887 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - I-880 SCL - SR237 to SR262 Mission Blvd - NB (last segment after TOLLCLASS 231) | Mar 2012 | 2015 Base |
 | 888 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - I-880 SCL - SR237 to SR262 Mission Blvd - SB (first segment before TOLLCLASS 232) | Mar 2012 | 2015 Base |
 

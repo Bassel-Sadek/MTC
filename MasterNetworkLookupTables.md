@@ -49,11 +49,11 @@ Definition of variables included in the master network.
 | 7 | Code specific to the Dumbarton Bridge | [1927](https://en.wikipedia.org/wiki/Dumbarton_Bridge_(California)#Historical_toll_rates) | 2015 Base |
 | 8 | Code specific to the Antioch Bridge | [1978](https://en.wikipedia.org/wiki/Antioch_Bridge#Historical_toll_rates) | 2015 Base |
 | 11 and higher | Codes specific to high-occupancy toll (HOT) roadway segments and/or cordon tolls | | |
-| 231 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - SR237 - US101 Interchange to I-880 Interchange - EB | ? | 2015 Base |
-| 232 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - SR237 - US101 Interchange to I-880 Interchange - WB | ? | 2015 Base |
+| 231 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - SR237 - US101 Interchange to I-880 Interchange - EB | Mar 2012 | 2015 Base |
+| 232 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - SR237 - US101 Interchange to I-880 Interchange - WB | Mar 2012 | 2015 Base |
 | 690 | I-680 ALA - SCL County Line to SR84 - SB | ? | 2015 Base |
-| 887 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - I-880 SCL - SR237 to SR262 Mission Blvd - NB (last segment after TOLLCLASS 231) | ? | 2015 Base |
-| 888 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - I-880 SCL - SR237 to SR262 Mission Blvd - SB (first segment before TOLLCLASS 232) | ? | 2015 Base |
+| 887 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - I-880 SCL - SR237 to SR262 Mission Blvd - NB (last segment after TOLLCLASS 231) | Mar 2012 | 2015 Base |
+| 888 | [SR-237 Express Lanes Phase 1](https://511.org/driving/express-lanes/b-sr-237-express-lanes) - I-880 SCL - SR237 to SR262 Mission Blvd - SB (first segment before TOLLCLASS 232) | Mar 2012 | 2015 Base |
 
 ## Facility Type (FT)
 

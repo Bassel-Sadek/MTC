@@ -37,6 +37,6 @@ Household-specific results from the travel model simulation.
 | awmc_rn | Random number for at-work mode choice model | Integer, any value |   |
 | stf_rn | Random number for stop frequency model | Integer, any value |   |
 | stl_rn | Random number for stop location choice model | Integer, any value |   |
-
+| humanVehicles | Household automobiles, human-driven. [(New in TM1.5)](https://github.com/BayAreaMetro/modeling-website/wiki/TravelModel1.5#Model_Outputs) | Integer, 0 and up | |
+| autonomousVehicles | Household automobiles, autonomous. [(New in TM1.5)](https://github.com/BayAreaMetro/modeling-website/wiki/TravelModel1.5#Model_Outputs) | Integer, 0 and up | |
  
--- Main.DavidOry - 07 Jun 2011

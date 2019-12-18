@@ -343,3 +343,7 @@ AV_PCE_FAC_FT08 = 1.00
 AV_PCE_FAC_FT09 = 1.00
 AV_PCE_FAC_FT10 = 1.00
 ```
+
+== Pavement Quality / Transit Delays removed ==
+
+In order to simplify TM1.5, the State of Good Repair (SGR) code (added in [https://github.com/BayAreaMetro/modeling-website/wiki/TravelModelOneV05 Travel Model One v0.5]) was removed.  That is, the auto operating costs were simplified to their previous state -- so they are no longer based on pavement quality.  Pavement quality by city and transit delays by transit mode are no longer inputs to Travel Model 1.5.  

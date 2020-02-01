@@ -12,3 +12,4 @@
 ## Project Performance Assessment
 
 * [Project Performance Assessment Website](https://mtc.ca.gov/our-work/plans-projects/horizon/project-performance-assessment)
+* [Horizon/Plan Bay Area 2050: Revised Project Performance Assessment Methodology](https://mtc.ca.gov/sites/default/files/ProjectPerformance_Methodology.pdf)

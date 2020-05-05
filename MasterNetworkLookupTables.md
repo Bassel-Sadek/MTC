@@ -82,7 +82,7 @@ The formula is as follows:  (total population + 2.5 * total employment) / (deve
 | 3 | Urban | 30 to 55 |
 | 4 | Suburban | 6 to 30 |
 | 5 | Rural | &lt; 6 |
-
+| 6 | Special I280 in TM1.5| NA |
  
 ## Bus Rapid Transit (BRT)
 

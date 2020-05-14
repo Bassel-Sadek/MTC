@@ -17,3 +17,5 @@ There are a number of practices I've found useful over the years in creating cod
   * [`.DS_Store`](https://en.wikipedia.org/wiki/.DS_Store)
   * `.RData`
 
+* **Include file versions in commits**: For files in a repository that get updated, it can be very difficult to track which file is currently being used without storing some information about where it came from and its version. When an updated file is committed, a good place to store that information is in its commit. If the file came from another repository (eg regional_forecast, travel model, BAUS) you can link to the commit or location where that file was added to its source repository. 
+

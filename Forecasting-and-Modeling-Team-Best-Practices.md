@@ -9,11 +9,11 @@ There are a number of practices I've found useful over the years in creating cod
 
 # Source Control 
 
-* *Clear commit comments*: `update scripts` or `code cleanup` are not useful commit messages because if someone is trying to find a revision before a particular change was made, they would need to read the entire commit/diff to understand the effect of the change.  The commit comment should be more specific -- what's the effect of the update or cleanup?  Does it change results?  And ideally, the diff should be helpful too -- so when making a bunch of functional changes, I think it can be helpful to do one functional change, and commit it once it's working, and then the next in another commit.
+* **Communicate effects of commit in the commit comment**: `update scripts` or `code cleanup` are not useful commit messages because if someone is trying to find a revision before a particular change was made, they would need to read the entire commit/diff to understand the effect of the change.  The commit comment should be more specific -- what's the effect of the update or cleanup?  Does it change results?  And ideally, the diff should be helpful too -- so when making a bunch of functional changes, I think it can be helpful to do one functional change, and commit it once it's working, and then the next in another commit.
 
-* *Commit before sharing output*: When multiple people are working on a project at the script change is good enough to post the results in a common location (e.g. Box or a shared drive or wherever the shared outputs get posted), then the script update should be committed.  Otherwise, people may be looking at output that is out of sync with their version of the script/code, which is confusing.
+* **Commit before sharing output**: When multiple people are working on a project at the script change is good enough to post the results in a common location (e.g. Box or a shared drive or wherever the shared outputs get posted), then the script update should be committed.  Otherwise, people may be looking at output that is out of sync with their version of the script/code, which is confusing.
 
-* *Don't accidentally commit files*. E.g. Use `.gitignore` to remove files that shouldn't be committed, e.g.
+* **Use `.gitignore` to ignore files that shouldn't be committed** e.g.
   * [`.DS_Store`](https://en.wikipedia.org/wiki/.DS_Store)
   * `.RData`
 

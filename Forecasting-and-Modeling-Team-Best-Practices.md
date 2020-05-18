@@ -19,3 +19,7 @@ There are a number of practices I've found useful over the years in creating cod
 
 * **Include file versions in commits**: For files in a repository that get updated, it can be very difficult to track which file is currently being used without storing some information about where it came from and its version. When an updated file is committed, a good place to store that information is in its commit. If the file came from another repository (eg regional_forecast, travel model, BAUS) you can link to the commit or location where that file was added to its source repository. 
 
+# Workflow
+
+* **Always use branches to make changes**: Branches allow work to be done without changing the master version of a repository. Using a branch makes it so that changes to the model for a specific purpose can be tracked, but they can also be reviewed this way. With multiple contributors on a project (or model), different streams of work need to be reviewed to ensure that many moving parts work together. By using branches and pull requests this can happen, which also creates a history of the work done in a particular area (becomes very important in understanding what has been done to the model). In addition, it ensures that any contributor can branch off of master as needed, and the model will be functioning as needed. 
+

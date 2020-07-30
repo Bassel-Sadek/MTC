@@ -15,6 +15,7 @@ MTC uses a single server with the following characteristics:
 ## Software
 
 The following software are required to execute the MTC travel model.
+Paths are set in [SetPath.bat](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/runtime/SetPath.bat)
 
 ### Citilabs Cube Voyager
 The travel model currently uses version 6.4.4 of [Citilabs](http://citilabs.com/) Cube software. The Cube software is used to build skims, manipulate networks, manipulate matrices, and perform assignments.

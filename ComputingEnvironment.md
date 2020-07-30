@@ -23,6 +23,8 @@ The travel model currently uses version 6.4.4 of [Citilabs](http://citilabs.com/
 ### Citilabs Cube Cluster
 The Cube Cluster software allows for the Cube scripts to be multi-threaded. In the current approach, the travel model uses 48 computing nodes. However, the Cube scripts can be manipulated to use any number of computing nodes across any number of machines, provided each machine has, at a minimum, a Cube Voyager node license. Cube Cluster is not strictly necessary, as the Cube scripts can be modified to use only a single computing node. Such an approach would dramatically increase run times.
 
+The COMMPATH environment variable for use with Cube Cluster is set in [SetPath.bat](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/runtime/SetPath.bat).
+
 ### Java and CT-RAMP
 
 MTC's travel model operates on the open-source Coordinated Travel - Regional Activity-based Modeling Platform (or CT-RAMP) developed by [Parsons Brinckerhoff](http://pbworld.com/). The software is written in the [Java](http://java.com/en/) programming language. Because the CT-RAMP software compiles code "on-the-fly", the 64-bit Java Development Kit (version 1.8) must be installed on each computer running the CT-RAMP software. The Java Development Kit includes the Java Runtime Environment. The 64-bit version of the software allows CT-RAMP to take advantage of larger memory addresses.

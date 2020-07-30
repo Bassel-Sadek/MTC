@@ -12,6 +12,8 @@ MTC uses a single server with the following characteristics:
 * Processors: Two Intel Xeon E5-2680 v3 @ 2.50 GHz (24 cores, 48 logical processors);
 * Memory (RAM): 256.0 GB
 
+We have also successfully run the Travel Model on Amazon EC2 instances (m4.10xlarge) using custom images from Citilabs with Cube pre-installed.
+
 ## Software
 
 The following software are required to execute the MTC travel model.

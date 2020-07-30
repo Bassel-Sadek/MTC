@@ -4,7 +4,7 @@
 
 = What is Travel Model 1.5? =
 
-Travel Model 1.5 is a major update to MTC's Activity-Based Travel Model One.  It is being developed for the [http://mtc.ca.gov/our-work/plans-projects/horizon Horizon initiative], so it adds representation for:
+Travel Model 1.5 is a major update to MTC's Activity-Based Travel Model One.  It was developed for the [http://mtc.ca.gov/our-work/plans-projects/horizon Horizon initiative], so it added representation for:
 * ride-hailing (or Transportation Network Company - TNC) and taxi modes
 * autonomous vehicles
 

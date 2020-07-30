@@ -77,7 +77,7 @@ xlwt            1.0.0
 ```
 Some of these packages are pulled in by other packages.  We have found it sufficient to install the following packages: Shapely, numpy, pandas, SimpleParse, xlrd, xlwt, xlutils, dbfpy, pywin32, and rpy2.
 
-Please note that a variety of model utility scripts also use R and Tableau.
+Please note that a variety of model utility scripts also use R and Tableau, but these are used for creating output summaries so they're not required for the normal course of a model run.
 
 #### Tips for Setup
 We typically run python from the Windows command line (See [How to Run a Python Script via a File or the Shell](https://www.pythoncentral.io/execute-python-script-file-shell/)).  We typically use 64-bit python 2.7

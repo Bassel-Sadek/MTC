@@ -42,7 +42,7 @@ The CT-RAMP software allows discrete choice models to be specified via so-called
 [Python 2.7](https://www.python.org/)(64-bit) is used to execute a variety of utility scripts.  The following python modules are installed on MTC modeling servers:
 
 ```bat
-E:\Model2D-Share\Projects>pip list
+E:\Model2D-Share\Projects>pip lis
 Package         Version
 --------------- ----------------
 certifi         2019.11.28
@@ -56,11 +56,13 @@ pip             10.0.1
 PySAL           1.11.0
 python-dateutil 2.8.0
 pytz            2015.4
+pywin32         224
 requests        2.23.0
 rpy2            2.7.4
 Rtree           0.8.3
 scipy           0.17.0
 setuptools      16.0
+Shapely         1.5.16
 SimpleParse     2.2.0
 singledispatch  3.4.0.3
 six             1.9.0
@@ -71,24 +73,11 @@ XlsxWriter      0.7.7
 xlutils         1.7.1
 xlwt            1.0.0
 ```
+Some of these packages are pulled in by other packages.  We have found it sufficient to install the following packages: Shapely, numpy, pandas, SimpleParse, xlrd, xlwt, xlutils, dbfpy, pywin32, and rpy2.
 
 Please note that a variety of model utility scripts also use R and Tableau.
 
 #### Tips for Setup
 We typically run python from the Windows command line (See [How to Run a Python Script via a File or the Shell](https://www.pythoncentral.io/execute-python-script-file-shell/)).  We typically use 64-bit python 2.7
 
-* This involves setting your `PATH` environment variable so the command line knows where the python executable is located.  For example, if your `python.exe` is installed in `C:\Python27\`, then the command line will execute python when the `PATH` includes the path of the executable:
-
-```bat
-    C:\temp>set PATH=unset
-    C:\temp>python
-    'python' is not recognized as an internal or external command,
-    operable program or batch file.
-
-    C:\temp>set PATH=C:\Python27
-    C:\temp>python
-    Python 2.7.8 (default, Jun 30 2014, 16:08:48) [MSC v.1500 64 bit (AMD64)] on win32
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> quit()
-```
-* It also likely involves installing python packages, such as pandas, numpy, etc.  We recommend downloading the versions compiled for Windows from [Christoph Gohlke's Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/).  These modules are downloadable as .whl files, which are installable using the [pip](https://pip.pypa.io/en/stable/installing/) command.  Note that you'll want to download the appropriate .whl file for your python installation. So if you're using 64-bit python 2.7, you'd want to install the .whl file that includes the string `cp27 `for python 2.7, and the string `win_amd64` for 64-bit.  You may need to [install the module as an administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
+* In order to install the required python packages, we recommend downloading the versions compiled for Windows from [Christoph Gohlke's Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/).  These modules are downloadable as .whl files, which are installable using the [pip](https://pip.pypa.io/en/stable/installing/) command.  Note that you'll want to download the appropriate .whl file for your python installation. So if you're using 64-bit python 2.7, you'd want to install the .whl file that includes the string `cp27 `for python 2.7, and the string `win_amd64` for 64-bit.  You may need to [install the module as an administrator](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).

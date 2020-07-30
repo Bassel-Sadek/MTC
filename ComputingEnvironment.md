@@ -75,7 +75,7 @@ XlsxWriter      0.7.7
 xlutils         1.7.1
 xlwt            1.0.0
 ```
-Some of these packages are pulled in by other packages.  We have found it sufficient to install the following packages: Shapely, numpy, pandas, SimpleParse, xlrd, xlwt, xlutils, dbfpy, pywin32, and rpy2.
+Some of these packages are pulled in by other packages.  **We have found it sufficient to install the following packages: Shapely, numpy, pandas, SimpleParse, xlrd, xlwt, xlutils, dbfpy, pywin32, and rpy2.**
 
 Please note that a variety of model utility scripts also use R and Tableau, but these are used for creating output summaries so they're not required for the normal course of a model run.
 

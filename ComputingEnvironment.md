@@ -37,7 +37,38 @@ The CT-RAMP software allows discrete choice models to be specified via so-called
 
 ### Python
 
-[Python 2.7](https://www.python.org/) is used to execute a variety of utility functions. Please see the MTC GitHub repo [here](https://github.com/MetropolitanTransportationCommission/travel-model-one/blob/master/utilities/python-install/go_go_python.bat) for the Python packages used in Version 0.5 of the model.
+[Python 2.7](https://www.python.org/)(64-bit) is used to execute a variety of utility scripts.  The following python modules are installed on MTC modeling servers:
+
+```bat
+E:\Model2D-Share\Projects>pip list
+Package         Version
+--------------- ----------------
+certifi         2019.11.28
+chardet         3.0.4
+DataExtract     8300.15.308.1149
+dbfpy           2.3.1
+idna            2.9
+numpy           1.15.4+mkl
+pandas          0.24.1
+pip             10.0.1
+PySAL           1.11.0
+python-dateutil 2.8.0
+pytz            2015.4
+requests        2.23.0
+rpy2            2.7.4
+Rtree           0.8.3
+scipy           0.17.0
+setuptools      16.0
+SimpleParse     2.2.0
+singledispatch  3.4.0.3
+six             1.9.0
+TableauSDK      10200.17.328.755
+urllib3         1.25.8
+xlrd            0.9.3
+XlsxWriter      0.7.7
+xlutils         1.7.1
+xlwt            1.0.0
+```
 
 Please note that a variety of model utility scripts also use R and Tableau.
 

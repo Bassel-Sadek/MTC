@@ -2,9 +2,9 @@
 
 ***
 
-For *Travel Model 1.5*, we will be using [NetworkWrangler](https://github.com/BayAreaMetro/NetworkWrangler) for network creation, pivoting from the [TM1_2015_Base_Network](https://github.com/BayAreaMetro/TM1_2015_Base_Network).
+For *Travel Model 1.5*, we use [NetworkWrangler](https://github.com/BayAreaMetro/NetworkWrangler) for network creation, pivoting from the [TM1_2015_Base_Network](https://github.com/BayAreaMetro/TM1_2015_Base_Network).
 
-[Network building documentation](http://bayareametro.github.io/travel-model-two/netbuild/) in Travel Model Two's Documentation is therefore relevant, and supplemental TM1.5 information will be added here shortly.
+## 0. [Network Building with NetworkWrangler](Network-Building-with-NetworkWrangler)
 
 ## Roadway Project Examples
 
@@ -18,8 +18,6 @@ Roadway projects can take basically (one or more of) six actions:
 | Create new links | To be created |
 | Modify attributes for links | Earthquake |
 | Delete links | Earthquake|
-
-More documentation to be filled in.
 
 ## Transit Project Examples
 
@@ -42,13 +40,6 @@ Note: Cube UI will load the following:
 Cube UI will *not* load the following (since they're generic format):
 * transitLines.xfer
 * transitLines.access
-
-_**The following information/pages are old and likely need to be updated but are left here for reference.**_
-
----
-This page describes the MTC highway and transit network coding, as well as procedures to check the result. It does so by walking through the steps to create final project level networks for a model application. The sections are:
-
-## 0. [Network Building with NetworkWrangler](Network-Building-with-NetworkWrangler)
 
 ## 1. [Roadway Network Coding](HighwayNetworkCoding)
 

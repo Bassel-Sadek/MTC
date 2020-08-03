@@ -346,9 +346,11 @@ ENDRUN
 
 ### Coding a Transit Project
 
-More documentation here on what comprises a transit network, in addition to the Wrangler aspect.
+Transit projects are more complicated.  Some example actions:
 
-
-### Checks
-The script currently doesn’t check whether Cube successfully runs. But users can check the .prn file in the subdirectory Wrangler_tmp_ xxxxx\[test name] to confirm this.
-(this check perhaps be incorporated the script in the future)
+| Action | Example Project |
+|--------|-----------------|
+| Adding a new line (including transfer links and funnel links) | CC_050025_EBart_to_Antioch |
+| Removing a line | Earthquake (to be coded) |
+| Rerouting a bus line | Earthquake (to be coded) |
+| Extending an existing line |  SOL030002_FairfieldVacaville_Stn |

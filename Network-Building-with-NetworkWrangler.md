@@ -1,6 +1,5 @@
-# Network Building Guide
 
-This is a step-by-step guide for Travel Model Two users who want to build or modify the roadway and transit networks using the tool [NetworkWrangler](https://github.com/BayAreaMetro/NetworkWrangler).
+This is a step-by-step guide for Travel Model 1.5 users who want to build or modify the roadway and transit networks using the tool [NetworkWrangler](https://github.com/BayAreaMetro/NetworkWrangler).
 
 The basic premise is that we start with a base network (representing 2015), layer network projects on top of that, and output networks representing future years.
 

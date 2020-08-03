@@ -48,13 +48,11 @@ _**The following information/pages are old and likely need to be updated but are
 ---
 This page describes the MTC highway and transit network coding, as well as procedures to check the result. It does so by walking through the steps to create final project level networks for a model application. The sections are:
 
-## 1. [Highway network coding procedures and relevant scripts](HighwayNetworkCoding)
+## 0. [Network Building with NetworkWrangler](Network-Building-with-NetworkWrangler)
 
-The MTC highway network is coded and maintained as a comprehensive highway network file, commonly referred to as the master highway network. The file consists of network links that represent the roadways. A project highway network file is developed in three stages from the master highway network file and consists of roadway links classified by functional class, zone connector links, and a few other additional links to support transit modeling.
+## 1. [Roadway Network Coding](HighwayNetworkCoding)
 
-## 2. [Transit network coding procedures and relevant scripts](TransitNetworkCoding)
-
-The transit network consists of the following types of files: transit lines, access/egress/transfer links, and fares. The transit network is created from these files plus the transit background network that is created from the highway network.
+## 2. [Transit network Coding](TransitNetworkCoding)
 
 ## 3. [Transit network check procedures](TransitNetworkCheck)
 

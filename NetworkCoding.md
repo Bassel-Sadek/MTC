@@ -6,41 +6,6 @@ For *Travel Model 1.5*, we use [NetworkWrangler](https://github.com/BayAreaMetro
 
 ## 0. [Network Building with NetworkWrangler](Network-Building-with-NetworkWrangler)
 
-## Roadway Project Examples
-
-Roadway projects can take basically (one or more of) six actions:
-
-| Action | Example Project |
-|--------|-----------------|
-| Create new nodes | No example project yet |
-| Modify attributes for nodes | No example project yet |
-| Delete nodes | None yet and this may not ever be necessary |
-| Create new links | To be created |
-| Modify attributes for links | Earthquake |
-| Delete links | Earthquake|
-
-## Transit Project Examples
-
-Transit projects are more complicated.  Some example actions:
-
-| Action | Example Project |
-|--------|-----------------|
-| Adding a new line (including transfer links and funnel links) | CC_050025_EBart_to_Antioch |
-| Removing a line | Earthquake (to be coded) |
-| Rerouting a bus line | Earthquake (to be coded) |
-| Extending an existing line |  SOL030002_FairfieldVacaville_Stn |
-
-Note: Cube UI will load the following:
-* transitLines.lin
-* transitLines.link
-* transitLines.zac
-* *.pnr
-* WALK_access.sup
-
-Cube UI will *not* load the following (since they're generic format):
-* transitLines.xfer
-* transitLines.access
-
 ## 1. [Roadway Network Coding](HighwayNetworkCoding)
 
 ## 2. [Transit network Coding](TransitNetworkCoding)

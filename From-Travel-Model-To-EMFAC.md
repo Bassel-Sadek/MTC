@@ -4,5 +4,4 @@
 
 This flowchart is work in progress. 
 
-![](![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/emfac_flow_chart.drawio))
-![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/emfac_flow_chart.xml)
+![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/emfac_flow_chart.png)

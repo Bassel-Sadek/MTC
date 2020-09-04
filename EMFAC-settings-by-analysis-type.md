@@ -8,6 +8,7 @@ Related documentation that exists now: https://github.com/BayAreaMetro/modeling-
 
 EMFAC settings for different types of analysis for MTC:
 |EMFAC GUI Screen |   Selection category |   Options |   Type of analysis |    |    |   
+|----------|-------------|---------|
 | |    |    |   SB375 emfac prep |   AQ conformity |   EIR |   RTP Development
 |1 |   Run Mode |   Emissions |   x |   x |   x |   x
 | |    |   Emissions Rates |    |    |    |   x

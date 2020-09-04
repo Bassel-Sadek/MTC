@@ -7,6 +7,31 @@ This document is work in progress.
 Related documentation that exists now: https://github.com/BayAreaMetro/modeling-website/wiki/EmissionFactors
 
 EMFAC settings for different types of analysis for MTC:
+
+| EMFAC GUI Screen | Selection category             | Options                           | Type of analysis                             |                                                                                    |                                                                                    |                                              |
+|------------------|--------------------------------|-----------------------------------|----------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------|
+|                  |                                |                                   | SB375 emfac prep                             | AQ conformity                                                                      | EIR                                                                                | RTP Development                              |
+| 1                | Run Mode                       | Emissions                         | x                                            | x                                                                                  | x                                                                                  | x                                            |
+|                  |                                | Emissions Rates                   |                                              |                                                                                    |                                                                                    | x                                            |
+|                  | Run Type                       | Default Activity                  |                                              |                                                                                    |                                                                                    |                                              |
+|                  |                                | Custom Activity                   | x                                            | x                                                                                  | x                                                                                  | x                                            |
+|                  | Generate template or load file | Generate Custom Activity Template | x                                            | x                                                                                  | x                                                                                  | x                                            |
+|                  |                                | Load Custom Activity File         | x                                            | x                                                                                  | x                                                                                  |                                              |
+|                  |                                | Input Emission Rate Parameters    |                                              |                                                                                    |                                                                                    | x                                            |
+| 2                | Area                           | Sub-Area                          | Includes the entire 9 counties in the region | Nonattainment Area/SF Air Basin only [excludes northern Sonoma and eastern Solano] | Nonattainment Area/SF Air Basin only [excludes northern Sonoma and eastern Solano] | Includes the entire 9 counties in the region |
+| 3                | Calendar Year                  | 2000 to 2050                      | pick the analysis year                       | Horizon year of RTP plus interim years [no more than 10 years apart]               | Horizon year of RTP plus Base year                                                 | Horizon year of RTP plus Base year           |
+|                  | Season/ Month                  | Season                            | Annual                                       | Summer and Winter                                                                  | Summer, Winter and Annual                                                          | Summer, Winter and Annual                    |
+|                  |                                | Month                             | N/A                                          | N/A                                                                                | N/A                                                                                | N/A                                          |
+| 4                | VMT Data Type                  | Total Daily VMT                   |                                              | x                                                                                  | x                                                                                  | x                                            |
+|                  |                                | VMT by Vehicle and Fuel Type      | x                                            |                                                                                    |                                                                                    |                                              |
+|                  |                                | Custom Hourly Speed Fractions     | x                                            | x                                                                                  | x                                                                                  | x                                            |
+
+
+
+
+
+
+
 |EMFAC GUI Screen |   Selection category |   Options |   Type of analysis |    |    |   
 |----------|-------------|---------|
 | |    |    |   SB375 emfac prep |   AQ conformity |   EIR |   RTP Development
@@ -24,9 +49,6 @@ EMFAC settings for different types of analysis for MTC:
 |4 |   VMT Data Type |   Total Daily VMT |    |   x |   x |   x
 | |    |   VMT by Vehicle and Fuel Type |   x |    |    |   
 | |    |   Custom Hourly Speed Fractions |   x |   x |   x |   x
-
-
-
 
 
 | Variable | Description | Example |

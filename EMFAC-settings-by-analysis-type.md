@@ -6,7 +6,7 @@ This document is work in progress.
 
 Related documentation that exists now: https://github.com/BayAreaMetro/modeling-website/wiki/EmissionFactors
 
-Input network (freeflow.net) attributes:
+EMFAC settings for different types of analysis for MTC:
 
 | Variable | Description | Example |
 |----------|-------------|---------|

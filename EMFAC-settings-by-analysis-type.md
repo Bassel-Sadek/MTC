@@ -2,9 +2,9 @@
 
 ***
 
-This document is in need of update.  See old version at [[HighwayNetworkCoding_Old]]
+This document is work in progress. 
 
-Also see https://github.com/BayAreaMetro/travel-model-one/tree/master/utilities/check-network
+Related documentation that exists now: https://github.com/BayAreaMetro/modeling-website/wiki/EmissionFactors
 
 Input network (freeflow.net) attributes:
 

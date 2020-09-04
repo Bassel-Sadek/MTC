@@ -7,6 +7,7 @@ This document is work in progress.
 Related documentation that exists now: https://github.com/BayAreaMetro/modeling-website/wiki/EmissionFactors
 
 EMFAC settings for different types of analysis for MTC:
+
 (Note that the setting below applies to emfac2014 and emfac2017 only.)
 
 | EMFAC GUI Screen | Selection category             | Options                           | Type of analysis                             |                                                                                    |                                                                                    |                                              |

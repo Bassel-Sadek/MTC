@@ -4,9 +4,6 @@
 
 This flowchart is work in progress.
 
-Test flowchart 2: 
-![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/emfac_flow_chart.pdf)
-
 Test flowchart 1:
 ![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/emfac_flow_chart.png)
 

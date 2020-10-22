@@ -24,5 +24,8 @@ Simulation results specific to individual trip decisions.
 | trip_mode | Travel mode for the trip | Integer, see [[TravelModes#tour-and-trip-modes]] |   |
 | tour_mode | Primary (though not necessarily used) travel mode for the tour | Integer, see [[TravelModes#tour-and-trip-modes]] |   |
 | tour_category | The type of tour for which this trip is a part | String, "AT_WORK", "INDIVIDUAL_NON_MANDATORY", "MANDATORY", |   |
-
--- Main.DavidOry - 07 Jun 2011
+| avAvailable | Does the household have an autonomous vehicle available for this tour? | |
+| sampleRate | This household represents 1/sampleRate households | Float | 
+| taxiWait | TBD | Float |
+| singleTNCWait | TBD | Float |
+| sharedTNCWait | TBD | Float |

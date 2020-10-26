@@ -24,6 +24,7 @@
 * [[LoadedHighway]] - Model simulation results specific to roadway usage
 * [[LoadedTransit]] - Model simulation results specific to transit routes
 * [[ShadowPrice]] - Implementation details of destination choice shadow pricing
+* [CoreSummaries](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/core_summaries/Readme.md) - Core Summaries tables
 
 ## Definitions of key parameters
 

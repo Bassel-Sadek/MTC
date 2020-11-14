@@ -58,7 +58,7 @@ A complete list of transit modes.
 | Golden Gate Transit - Express Richmond | 88 | Express |   |
 | MUNI BRT      | 89 | BRT     |   |
 | WestCAT - Express | 90 | Express |   |
-| Vallejo Transit - Express | 91 | Express |   |
+| SolTrans - Express | 91 | Express |   |
 | Fairfield And Suisun Transit - Express | 92 | Express |   |
 | VINE - Express | 93 | Express |   |
 | SMART - Temporary Express | 94 | Express |

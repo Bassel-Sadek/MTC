@@ -30,4 +30,4 @@ EMFAC settings for different types of analysis for MTC:
 |                  |                                | Custom Hourly Speed Fractions     | x                                            | x                                                                                  | x                                                                                  | x                                            |
 
 Notes:
-* Note that emfac_prep will calculate the total VMT for Sonoma (SF) and Solano (SF) (as part of Sonoma and Solano are not in the SF air basin)
+* Note that the script [emfac_prep](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/emfac_prep.py) will calculate the total VMT for Sonoma (SF) and Solano (SF) (as part of Sonoma and Solano are not in the SF air basin)

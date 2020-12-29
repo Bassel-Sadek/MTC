@@ -4,8 +4,6 @@
 
 This is the documentation website for Bay Area Metro's Travel Model, also known as **Travel Model One**.
 
-[[Projects]] - Travel model applications
-
 [[Development]] - Travel model development and improvement efforts
 
 [[UsersGuide]] - _Travel Model One_ User's Guide

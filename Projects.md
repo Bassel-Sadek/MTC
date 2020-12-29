@@ -1,4 +1,4 @@
-[[Home]] > [[TravelModel]] > [[Projects]]
+[[Home]] > [[Projects]]
 
 ***
 

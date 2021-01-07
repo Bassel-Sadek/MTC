@@ -10,9 +10,12 @@ The hardware and software MTC uses to execute _Travel Model One_ are described o
 MTC uses a single server with the following characteristics:
 * Operating system: Microsoft Windows Server 2012 R2 Standard, 64-bit;
 * Processors: Two Intel Xeon E5-2680 v3 @ 2.50 GHz (24 cores, 48 logical processors);
-* Memory (RAM): 256.0 GB
+* Memory: 256.0 GB RAM
 
-We have also successfully run the Travel Model on Amazon EC2 instances (m4.10xlarge) using custom images from Citilabs with Cube pre-installed.
+We have also successfully run the Travel Model on Amazon EC2 instances (hundreds of runs!) using custom images from Citilabs with Cube pre-installed.  Details:
+* General purpose, *m4.10xlarge* as defined in June 2019
+* 40 vCPUs
+* Memory: 160GB RAM 
 
 ## Software
 

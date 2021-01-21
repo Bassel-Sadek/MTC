@@ -30,6 +30,10 @@ For a clickable version of the flowchart below, [view it in diagrams.net](https:
 ![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/wiki_images/emfac_flow_chart.png)
 
 
+
+
+
+
 ## How to generate a regional level summary after EMFAC is done
 To obtain a concise summary of the EMFAC results at a regional level, the emfac_postproc.py script can be run. The steps to run it are as follows:
 

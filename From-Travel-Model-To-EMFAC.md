@@ -30,4 +30,27 @@ For a clickable version of the flowchart below, [view it in diagrams.net](https:
 ![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/wiki_images/emfac_flow_chart.png)
 
 
+## How to generate a regional level summary after EMFAC is done
+To obtain a concise summary of the EMFAC results at a regional level, the emfac_postproc.py script can be run. The steps to run it are as follows:
+
+###Step 1: Open command prompt and go to the model run directory, e.g. 
+```dosbatch
+C:\> cd /d A:\Projects\2050_TM152_FBP_PlusCrossing_16
+```
+###Step 2: Set M_DIR according to the path in setupmodel.bat, so the output will get copied to the right place on the M drive
+      e.g. set M_DIR=M:\Application\Model One\RTP2021\Blueprint\2050_TM152_FBP_PlusCrossing_16
+###Step 3: If python is not already on the path by default, you’ll need to:
+```dosbatch
+C:\>set PATH=%PATH%;C:\Python27
+```
+###Step 4: Run this script, with SB375 or EIR as an argument
+```dosbatch
+      e.g. python ctramp/scripts/emfac/emfac_postproc.py SB375
+```
+This script takes only a couple of seconds to run, and the output will be copied to two locations:
+-	emfac_prep\emfac_ghg.csv within the full model run directory, and
+-	the M drive
+
+
+
 

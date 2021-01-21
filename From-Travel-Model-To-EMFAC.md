@@ -15,7 +15,7 @@ While RunModel.bat will continue to run the scripts for producing logsums, core 
 
 To run EMFAC, the analyst can follow the on-screen instructions or the instructions on the "Run EMFAC" page. (Here: https://github.com/BayAreaMetro/modeling-website/wiki/Run-EMFAC)
 
-On the MTC server Mainmodel (add machine specs), EMFAC takes about 1.5 to complete.
+On the MTC server Mainmodel (add machine specs), EMFAC takes about 1.5 hours to complete.
 
 
 Footnotes:

@@ -35,7 +35,7 @@ For a clickable version of the flowchart below, [view it in diagrams.net](https:
 
 
 ## How to generate a regional level summary after EMFAC is done
-To obtain a concise summary of the EMFAC results at a regional level, the emfac_postproc.py script can be run. This script can be run from any machine with Python 2.7 installed. The steps to run it are as follows:
+To obtain a concise summary of the EMFAC results at a regional level, the emfac_postproc.py script can be run. This script can be run from any machine that has Python 2.7 installed. The steps to run it are as follows:
 
 #### Step 1: Open command prompt and go to the model run directory, e.g. 
 ```dosbatch

@@ -9,9 +9,9 @@ The flowchart below shows the detailed workflow from the Travel Model to EMFAC; 
 ## How to run EMFAC
 
 Soon after the third iteration of a model run is completed, the batch script RunPrepareEmfac.bat will be automatically run as part of RunModel.bat.
-(See: https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/RunModel.bat#L354). A “custom activity template” with hourly distributions of VMT by speed bin, vehicle technology<sup>[1](#myfootnote1)</sup>, and by subarea<sup>[2](#myfootnote2)</sup> from the Travel Model would be generated as a result. It will be named as “ready4emfac_[run_id].xlsx.
+(See: https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/RunModel.bat#L354). A “custom activity template” with hourly distributions of VMT by speed bin, vehicle technology<sup>[1](#myfootnote1)</sup> and subarea<sup>[2](#myfootnote2)</sup> from the Travel Model would be generated as a result. It will be named as “ready4emfac_[run_id].xlsx.
 
-While RunModel.bat will continue to run the scripts for producing logsums, core summaries, and metrics, the analyst can proceed to run EMFAC in parallel on a different server. At MTC we typically use the server Mainmodel for EMFAC runs, as it has EMFAC2014 and EMFAC2017 installed.
+While RunModel.bat will continue to run the scripts for producing logsums, core summaries and metrics, the analyst can proceed to run EMFAC in parallel on a different server. At MTC we typically use the server Mainmodel for EMFAC runs, as it has EMFAC2014 and EMFAC2017 installed.
 
 To run EMFAC, the analyst can follow the on-screen instructions or the instructions on the "Run EMFAC" page. (Here: https://github.com/BayAreaMetro/modeling-website/wiki/Run-EMFAC)
 

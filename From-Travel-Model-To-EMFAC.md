@@ -17,6 +17,7 @@ To run EMFAC, the analyst can follow the on-screen instructions or the instructi
 
 On the MTC server Mainmodel (add machine specs), EMFAC takes about 1.5 to complete.
 
+
 Footnotes:
 
 <a name="myfootnote1">1</a>: Note that the Travel Model does not simulate the detailed vehicle technology categories that are in EMFAC. Thus, the same hourly distributions from the Travel Model are assumed for each subarea-hour combination. Additionally, the hourly distributions from the Travel Model are applied only to the passenger vehicle technologies included in SB375 analyses. The nine vehicle technology are: LDA - Dsl, LDA – Gas, LDT1 – Dsl, LDT1 – Gas, LDT2 – Dsl, LDT2 – Gas, MCY – Gas, MDV – Dsl, MDV – Gas). For all other vehicles types, the default hourly distributions from CARB are kept.

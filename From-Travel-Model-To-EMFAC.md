@@ -4,7 +4,7 @@
 
 As part of MTC’s work on Plan Bay Area 2050, our analysts updated and created several new scripts to automate some of the steps for feeding Travel Model outputs into EMFAC. This page describes which steps are automated and which steps are still to be done manually.
 
-The flowchart below shows the detailed workflow from the Travel Model to EMFAC; and the paragraphs below describes the steps to be undertaken by the analyst in order to run EMFAC.
+The flowchart below shows the detailed workflow from the Travel Model to EMFAC; and the paragraphs below describe the steps to be undertaken by the analyst in order to run EMFAC.
 
 ## How to run EMFAC
 

@@ -3,7 +3,7 @@
 ***
 This page describes how we run the EMFAC14 for SB375 using the graphical user interface.
 
-After launching EMFAC2014, on the first screen select “Emissions”, “Custom Activity (SG)” and “Load Custom Activity File”
+After launching EMFAC2014, on the first screen select “Emissions”, “Custom Activity (SG)” and “Load Custom Activity File”. Click "Start".
 ![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/wiki_images/1.emfac_start_a_new_run.PNG)
 
 On the second screen, EMFAC2014 Custom Activity File will be pre-selected by default. Users only need to click “Load Custom Activity”.

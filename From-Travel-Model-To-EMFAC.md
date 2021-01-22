@@ -20,7 +20,19 @@ On the MTC server Mainmodel (add machine specs), EMFAC takes about 1.5 hours to 
 
 Footnotes:
 
-<a name="myfootnote1">1</a>: Note that the Travel Model does not simulate the detailed vehicle technology categories that are in EMFAC. Thus, the same hourly distributions from the Travel Model are assumed for each subarea-hour combination. Additionally, the hourly distributions from the Travel Model are applied only to the passenger vehicle technologies included in SB375 analyses. The nine vehicle technology are: LDA - Dsl, LDA – Gas, LDT1 – Dsl, LDT1 – Gas, LDT2 – Dsl, LDT2 – Gas, MCY – Gas, MDV – Dsl, MDV – Gas). For all other vehicles types, the default hourly distributions from CARB are kept.
+<a name="myfootnote1">1</a>: Note that the Travel Model does not simulate the detailed vehicle technology categories that are in EMFAC. Thus, the same hourly distributions from the Travel Model are assumed for each subarea-hour combination. Additionally, the hourly distributions from the Travel Model are applied only to the nine vehicle technologies included in SB375 analyses. For all other vehicles types, the default hourly distributions from CARB are kept.
+
+The nine vehicle technology are: 
+- Passenger cars – diesel (LDA – Dsl)
+- Passenger cars – gasoline (LDA – Gas) 
+- Light-Duty Trucks, with GVWR < 6000 lbs and ETW <=3750 lbs – diesel (LDT1 – Dsl)
+- Light-Duty Trucks, with GVWR < 6000 lbs and ETW <=3750 lbs – gasoline (LDT1 – Gas)
+- Light-Duty Trucks, with GVWR < 6000 lbs and ETW 3751-5750 lbs – diesel (LDT2 – Dsl)
+- Light-Duty Trucks, with GVWR < 6000 lbs and ETW 3751-5750 lbs – gasoline (LDT2 – Gas)
+- Motorcycles – gasoline (MCY – Gas)
+- Medium-Duty Trucks, with GVWR 6000 and 8500 lbs – diesel (MDV – Dsl)
+- Medium-Duty Trucks, with GVWR 6000 and 8500 lbs – gasoline (MDV – Gas)
+For more details, see appendix 4 in the EMFAC2017 user guide (https://ww3.arb.ca.gov/msei/downloads/emfac2017-volume-i-users-guide.pdf).
 
 <a name="myfootnote2">2</a>: There are 11 subareas (in the Bay Area, there are nine counties but Solano and Sonoma have two air basins). They are: Alameda (SF); Contra Costa (SF); Marin (SF); Napa (SF); San Francisco (SF); San Mateo (SF); Santa Clara (SF); Solano (SF); Solano (SV); Sonoma (SF); and Sonoma (NC).
 

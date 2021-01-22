@@ -15,5 +15,5 @@ After that, a file explorer will pop up. Navigate to and select the “ready4emf
 It can take a couple of minutes for EMFAC to load the Custom Activity file. When it is ready, a confirmation message will be generated. Click "OK" and "Next".
 ![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/wiki_images/4.emfac_imported.PNG)
 
-Click "Run".
+On the final screen, click "Run".
 ![](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/emfac/wiki_images/5.emfac_run.PNG)

@@ -32,6 +32,7 @@ The nine vehicle technology are:
 - Motorcycles – gasoline (MCY – Gas)
 - Medium-Duty Trucks, with GVWR 6000 and 8500 lbs – diesel (MDV – Dsl)
 - Medium-Duty Trucks, with GVWR 6000 and 8500 lbs – gasoline (MDV – Gas)
+
 For more details, see appendix 4 in the EMFAC2017 user guide (https://ww3.arb.ca.gov/msei/downloads/emfac2017-volume-i-users-guide.pdf).
 
 <a name="myfootnote2">2</a>: There are 11 subareas (in the Bay Area, there are nine counties but Solano and Sonoma have two air basins). They are: Alameda (SF); Contra Costa (SF); Marin (SF); Napa (SF); San Francisco (SF); San Mateo (SF); Santa Clara (SF); Solano (SF); Solano (SV); Sonoma (SF); and Sonoma (NC).

@@ -56,7 +56,9 @@ To obtain a concise summary of the EMFAC results at a regional level, the emfac_
 C:\>cd /d A:\Projects\2050_TM152_FBP_PlusCrossing_16
 ```
 #### Step 2: Set M_DIR according to the path in setupmodel.bat, so the output will get copied to the right place on the M drive, e.g.
+```dosbatch
 C:\>set M_DIR=M:\Application\Model One\RTP2021\Blueprint\2050_TM152_FBP_PlusCrossing_16
+```
 #### Step 3: If python is not already on the path by default, you’ll need to:
 ```dosbatch
 C:\>set PATH=%PATH%;C:\Python27

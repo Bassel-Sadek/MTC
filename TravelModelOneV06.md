@@ -8,6 +8,7 @@ Travel Model One v0.6 differes from [Travel Model One v0.5](TravelModelOneV05) 
 
 # Inputs
 * California HSR trip tables relevant for the Bay Area HSR stations are now required, for the HSR model years (2025, 2029, and 2040).
+* [Updated in November 2020](https://github.com/BayAreaMetro/travel-model-one/commit/588383f05907ba18fe770d20258eeaa354246ffa) to delay schedule by 10 years; tables are now used in 2035, 2039 and 2050. 
 
 # Process
 * Preprocessing: Create HSR trip tables to/from Bay Area stations based on Model Year and HSR model output

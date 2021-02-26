@@ -1,4 +1,4 @@
-# MTC ABAG Analytical Forecasting & Modeling Wiki
+# MTC ABAG Forecasting & Modeling Wiki
 
 The old MTC ABAG Analytical Modeling Wiki (http://analytics.mtc.ca.gov/foswiki/Main/WebHome) began having problems so it was moved here in October 2017.
 

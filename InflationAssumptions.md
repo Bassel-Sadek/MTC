@@ -43,4 +43,6 @@ Price indices assumed in the MTC Travel Model (Source:  [Bureau of Labor Statis
 | 2016 | 266.34 | 1.48 |
 | 2017 | 274.92 | 1.53 |
 | 2018 | 285.55 | 1.58 |
-| 2019 (first half) | 293.15 | 1.63 |
+| 2019 | 295.00 | 1.64 |
+| 2020 | 300.08 | 1.67 |
+| 2021 (Data for February only) | 304.387 | 1.69 |

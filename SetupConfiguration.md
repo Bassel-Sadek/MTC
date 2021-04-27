@@ -37,7 +37,7 @@ Prior to executing a model run, the files controlling the CTRAMP and JPPF servic
 
 ### SetPath.bat
 
-Variables common to each of these scripts are described in the table below and specified in the [https://github.com/MetropolitanTransportationCommission/travel-model-one/blob/master/model-files/runtime/SetPath.bat SetPath.bat] file, with the MTC setup provided as an example.
+Variables common to each of these scripts are described in the table below and specified in the [ SetPath.bat](https://github.com/MetropolitanTransportationCommission/travel-model-one/blob/master/model-files/runtime/SetPath.bat) file, with the MTC setup provided as an example.
 
 
 Specify the 64-bit Java path; the JDK path is needed to compile code "on-the-fly"; version 1.7.X must be used 

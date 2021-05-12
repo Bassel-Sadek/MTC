@@ -23,8 +23,6 @@ MTC runs the model by calling a series of commands stored in an MS-DOS batch fil
    * Executes the CT-RAMP choice models;
    * Executes the freight models;
    * Performs highway assignment;
-   * Sets the parameters for iteration 2 and calls the **RunIteration.bat** file ([[RunIterationBatch]]);
-   * Sets the parameters for iteration 3 and calls the **RunIteration.bat** file ([[RunIterationBatch]]);
    * Performs transit assignment
    * Notifies our slack channel that the iteration is complete
 * Create destination choice logsums

@@ -14,7 +14,7 @@ The table below contains brief descriptions of the input files required to execu
 | truckkfact. k22.z1454.mat | "K-factors" for the commercial vehicle distribution models | nonres\ | [Citilabs Cube](http://citilabs.com/products/cube) | [[TruckDistribution]] |
 | ixDailyx4.tpp | Internal-external fixed trip table | nonres\ | [Citilabs Cube](http://citilabs.com/products/cube) | [[FixedDemand]] |
 | tripsAirPax**XX**.tpp | Airport passenger fixed trip table (**XX** is the [[TimePeriods]] code) | nonres\ | [Citilabs Cube](http://citilabs.com/products/cube) | [[FixedDemand]] |
-| ixex_config.dbf | Interregional commercial travel assumptions | nonres\ | DBF | [[TazData]] |
+| ixex_config.dbf | Interregional commercial travel assumptions | nonres\ | DBF | Exit TAZs only |
 | hhFile. **XXXX**.**YYYY**.csv | Synthetic population household file (**XXXX** denotes the forecast series from which the data is derived; **YYYY** denotes the forecast year) | popsyn\ | CSV | [[PopSynHousehold]] |
 | personFile. **XXXX**.**YYYY**.csv | Synthetic population person file (**XXXX** denotes the forecast series from which the data is derived; **YYYY** denotes the forecast year) | popsyn\ | CSV | [[PopSynPerson]] |
 | Various | Myriad transit files used to define the transit network and service | trn\ | Various | [[TransitNetworkCoding]] |

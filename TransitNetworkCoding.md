@@ -313,7 +313,7 @@ The "XFAR.FAR" file is cumbersome to develop/edit in Cube or a text editor. To m
 1. 2015 Fares Conv
 1. XFARE Table
 
-The tab "2005 Fares" lists both the initial and transfer fares among all modes in 2005 year cents. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2005 Fares Conv" converts all the fares from 2005 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".
+The tab "2015 Fares" lists both the initial and transfer fares among all modes in 2015 year cents. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2015 Fares Conv" converts all the fares from 2015 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".
 
  
 ### 4.2 Transfer Fares

@@ -308,7 +308,7 @@ The transfer fares are explained in the [Transfer Fares](TransitNetworkCoding#42
 
 ![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xls](MODES_&amp;_FARES_2016.xls) Excel file with the following three tabs:
+The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xls](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/transit_fares/MODES_%26_FARES_2016.xls) Excel file with the following three tabs:
 1. 2015 Fares
 1. 2015 Fares Conv
 1. XFARE Table

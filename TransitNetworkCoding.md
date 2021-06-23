@@ -313,7 +313,7 @@ The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/mast
 1. 2015 Fares Conv
 1. XFARE Table
 
-The tab "2015 Fares" lists both the initial and transfer fares among all modes in 2015 year cents. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2015 Fares Conv" converts all the fares from 2015 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".
+The tab "2015 Fares" lists both the initial and transfer fares among all modes in 2016 year cents. The fares were reviewed for 2016, but the tab names were not updated. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2015 Fares Conv" converts all the fares from 2016 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".
 
  
 ### 4.2 Transfer Fares

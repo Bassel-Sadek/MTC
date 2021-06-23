@@ -308,9 +308,9 @@ The transfer fares are explained in the [Transfer Fares](TransitNetworkCoding#42
 
 ![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The "XFAR.FAR" file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the ModesAndFares2005.xls Excel file with the following three tabs:
-1. 2005 Fares
-1. 2005 Fares Conv
+The "XFAR.FAR" file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xls](MODES_&amp;_FARES_2016.xls) Excel file with the following three tabs:
+1. 2015 Fares
+1. 2015 Fares Conv
 1. XFARE Table
 
 The tab "2005 Fares" lists both the initial and transfer fares among all modes in 2005 year cents. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2005 Fares Conv" converts all the fares from 2005 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".

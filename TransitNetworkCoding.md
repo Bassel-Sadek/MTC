@@ -308,7 +308,7 @@ The transfer fares are explained in the [Transfer Fares](TransitNetworkCoding#42
 
 ![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The "XFAR.FAR" file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xls](MODES_&amp;_FARES_2016.xls) Excel file with the following three tabs:
+The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xls](MODES_&amp;_FARES_2016.xls) Excel file with the following three tabs:
 1. 2015 Fares
 1. 2015 Fares Conv
 1. XFARE Table
@@ -318,12 +318,12 @@ The tab "2015 Fares" lists both the initial and transfer fares among all modes i
  
 ### 4.2 Transfer Fares
 
-The transfer fares are fares that are charged when a transfer from one transit line to another occurs. These fares are also specified in the same "XFARE.FAR" file. The transfer fares between the same premium transit mode (modes 100-109 and 120-137) are specified as zero since the station-to-station fares actually count these transfer fares. Additional transfer fare files are specified to represent a county-to-county transit system transfer, which are described in detail in the [Link Based Fares](TransitNetworkCoding#44-link-based-fares) section.
+The transfer fares are fares that are charged when a transfer from one transit line to another occurs. These fares are also specified in the same ["XFARE.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file. The transfer fares between the same premium transit mode (modes 100-109 and 120-137) are specified as zero since the station-to-station fares actually count these transfer fares. Additional transfer fare files are specified to represent a county-to-county transit system transfer, which are described in detail in the [Link Based Fares](TransitNetworkCoding#44-link-based-fares) section.
 
  
 ### 4.3 Station-to-Station Fares
 
-The premium transit lines (modes 100-109 and 120 -137) charge fares between stations. These fares are specified in the &lt;operator&gt;.FAR files. For example, the BART.FAR file consists of fares between all BART stations. Figure 13 shows a sample station-to-station fare file.
+The premium transit lines (modes 100-109 and 120 -137) charge fares between stations. These fares are specified in the [&lt;operator&gt;.FAR](https://github.com/BayAreaMetro/TM1_2015_Base_Network/tree/master/trn) files. For example, the BART.FAR file consists of fares between all BART stations. Figure 13 shows a sample station-to-station fare file.
 
 *Figure 13 Transit Station-to-Station Fare File (&lt;Operator&gt;.FAR)*
 
@@ -332,7 +332,7 @@ The premium transit lines (modes 100-109 and 120 -137) charge fares between stat
 
 ### 4.4 Link Based Fares
 
-Some fare structures are provided between zones. Many times is hard to capture the exact fare using the methods explained above. In those cases we use the command FARELINK. This command adds a specific amount indicated in the FARELINK command to the basic fare as a link is traversed in a path. These links are included in the FARELINKS.FAR file.
+Some fare structures are provided between zones. Many times is hard to capture the exact fare using the methods explained above. In those cases we use the command FARELINK. This command adds a specific amount indicated in the FARELINK command to the basic fare as a link is traversed in a path. These links are included in the [FARELINKS.FAR](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/Farelinks.far) file.
 
 *Figure 14 Transit Link Based Fare File (FARELINKS.FAR)*
 

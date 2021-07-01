@@ -308,17 +308,16 @@ The transfer fares are explained in the [Transfer Fares](TransitNetworkCoding#42
 
 ![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xls](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/transit_fares/MODES_%26_FARES_2016.xls) Excel file with the following three tabs:
+The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xlsx](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/transit_fares/MODES_%26_FARES_2016.xlsx) Excel file with the following three tabs:
 1. 2015 Fares
 1. 2015 Fares Conv
-1. XFARE Table
+1. xfare table
 
-The tab "2015 Fares" lists both the initial and transfer fares among all modes in 2016 year cents. The fares were reviewed for 2016, but the tab names were not updated. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2015 Fares Conv" converts all the fares from 2016 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as "XFARE.FAR".
+The tab "2015 Fares" lists both the initial and transfer fares among all modes in 2016 year cents. The fares were reviewed for 2016, but the tab names were not updated. In this file some of the premium modes (modes 100-109 and 120-137) are specified with a zero initial and transfer fare between the same mode. However, the transfer fare between the different premium modes is listed here since the station-to-station files apply only the transfer fares between the same modes. The tab "2015 Fares Conv" converts all the fares from 2016 to 2000 year cents by applying the consumer price index (CPI) factor. The tab "XFARE Table" reads the 2000 fares and formats them into a Cube readable file. This tab is then saved as [xfare.far](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far).
 
- 
 ### 4.2 Transfer Fares
 
-The transfer fares are fares that are charged when a transfer from one transit line to another occurs. These fares are also specified in the same ["XFARE.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file. The transfer fares between the same premium transit mode (modes 100-109 and 120-137) are specified as zero since the station-to-station fares actually count these transfer fares. Additional transfer fare files are specified to represent a county-to-county transit system transfer, which are described in detail in the [Link Based Fares](TransitNetworkCoding#44-link-based-fares) section.
+The transfer fares are fares that are charged when a transfer from one transit line to another occurs. These fares are also specified in the same [xfare.far](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file. The transfer fares between the same premium transit mode (modes 100-109 and 120-137) are specified as zero since the station-to-station fares actually count these transfer fares. Additional transfer fare files are specified to represent a county-to-county transit system transfer, which are described in detail in the [Link Based Fares](TransitNetworkCoding#44-link-based-fares) section.
 
  
 ### 4.3 Station-to-Station Fares

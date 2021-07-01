@@ -300,15 +300,15 @@ The transit fares are specified in separate files denoted with the &ldquo;.FAR&r
  
 ### 4.1 Direct Fares
 
-Direct fares are the initial boarding fares for riding a transit line. Direct fares are specified in the &ldquo;XFARE.FAR&rdquo; file. This file lists both the initial and transfer fares in a matrix form of 137 X 137 transit modes (a combination of modes and operators). From this matrix, the initial fare and transfer fares are read into MODEFARE and XFARE variables of TP+ program respectively. The MODEFARE is an array of fares coded to auxiliary-transit links (walk access connector, drive access connector, walk funnel links) for all the transit modes and is used as an initial boarding fare. The XFARE is an array of transfer fares between all modes including auxiliary-transit to transit mode fares (same as MODEFARE). During path building, for the first boarding, the auxiliary-transit to transit MODEFARE value is read as the initial boarding fare instead of the XFARE auxiliary- transit to transit mode. For the subsequent boardings (transfers to another transit mode), the XFARE value for that mode pair is used as the transfer fare.
+Direct fares are the initial boarding fares for riding a transit line. Direct fares are specified in the [xfare.far](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file. This file lists both the initial and transfer fares in a matrix form of 137 X 137 transit modes (a combination of modes and operators). From this matrix, the initial fare and transfer fares are read into MODEFARE and XFARE variables of TP+ program respectively. The MODEFARE is an array of fares coded to auxiliary-transit links (walk access connector, drive access connector, walk funnel links) for all the transit modes and is used as an initial boarding fare. The XFARE is an array of transfer fares between all modes including auxiliary-transit to transit mode fares (same as MODEFARE). During path building, for the first boarding, the auxiliary-transit to transit MODEFARE value is read as the initial boarding fare instead of the XFARE auxiliary- transit to transit mode. For the subsequent boardings (transfers to another transit mode), the XFARE value for that mode pair is used as the transfer fare.
 
 The transfer fares are explained in the [Transfer Fares](TransitNetworkCoding#42-transfer-fares) section below. The initial boarding fares between transit modes to auxiliary-transit modes and auxiliary-transit modes to auxiliary-transit modes are specified as zeros. For some premium transit modes (modes 100-109 and 120-137) the initial fares are also specified as zeros and are substituted with a station-to-station fares, which are described under the [Station-to-Station Fares](TransitNetworkCoding#43-station-to-station-fares) section below.
 
-*Figure 12 Transit Fare File (XFARE.FAR)*
+*Figure 12 Transit Fare File (xfare.far)*
 
 ![Transit Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/transit_fare_file.jpg)
 
-The ["XFAR.FAR"](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xlsx](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/transit_fares/MODES_%26_FARES_2016.xlsx) Excel file with the following three tabs:
+The [xfare.far](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/xfare.far) file is cumbersome to develop/edit in Cube or a text editor. To make developing/editing the fare matrix easier, MTC developed the [MODES_&amp;_FARES_2016.xlsx](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/transit_fares/MODES_%26_FARES_2016.xlsx) Excel file with the following three tabs:
 1. 2015 Fares
 1. 2015 Fares Conv
 1. xfare table
@@ -331,9 +331,9 @@ The premium transit lines (modes 100-109 and 120 -137) charge fares between stat
 
 ### 4.4 Link Based Fares
 
-Some fare structures are provided between zones. Many times is hard to capture the exact fare using the methods explained above. In those cases we use the command FARELINK. This command adds a specific amount indicated in the FARELINK command to the basic fare as a link is traversed in a path. These links are included in the [FARELINKS.FAR](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/Farelinks.far) file.
+Some fare structures are provided between zones. Many times is hard to capture the exact fare using the methods explained above. In those cases we use the command FARELINK. This command adds a specific amount indicated in the FARELINK command to the basic fare as a link is traversed in a path. These links are included in the [Farelinks.far](https://github.com/BayAreaMetro/TM1_2015_Base_Network/blob/master/trn/Farelinks.far) file.
 
-*Figure 14 Transit Link Based Fare File (FARELINKS.FAR)*
+*Figure 14 Transit Link Based Fare File (Farelinks.far)*
 
 ![Transit Link Based Fare File](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/foswiki_imgs/Farelink_far.jpg)
 

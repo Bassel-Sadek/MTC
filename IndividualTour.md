@@ -23,6 +23,14 @@ Simulation results specific to individual tour decisions.
 | atWork_freq | Number of at work sub-tours (non-zero only for work tours) | Integer |   |
 | num_ob_stops | Number of out-bound stops on the tour (from home for all tours except at work; from work for at work tours) | Integer |   |
 | num_ib_stops | Number of in-bound stops on the tour (to home for all tours except at work; to work for at work tours) | Integer |   |
-
+| avAvailable | Autonomous vehicle available, added in Travel Model 1.5 | Integer | |
+| dcLogsum | To document, added in Travel Model 1.5 | | |
+| sampleRate | To document, added in Travel Model 1.5 | | |
+| origTaxiWait | To document, added in Travel Model 1.5 | | |
+| destTaxiWait | To document, added in Travel Model 1.5 | | |
+| origSingleTNCWait | To document, added in Travel Model 1.5 | | |
+| destSingleTNCWait | To document, added in Travel Model 1.5 | | |
+| origSharedTNCWait | To document, added in Travel Model 1.5 | | |
+| destSharedTNCWait | To document, added in Travel Model 1.5 | | |
 
 -- Main.DavidOry - 07 Jun 2011

@@ -1,6 +1,9 @@
 [[Home]] > [[Forecasting and Modeling Team Best Practices]]
 
 ***
+
+See also [Guidelines for Developing Variants of the MTC Travel Model(s)](Guidelines-for-Developing-Variants-of-the-MTC-Travel-Model(s))
+
 # Background
 
 There are a number of practices I've found useful over the years in creating code/scripts.  In thinking about my motivation for these practices, I think they serve to:

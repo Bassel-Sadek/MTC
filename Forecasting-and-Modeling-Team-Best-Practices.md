@@ -2,7 +2,7 @@
 
 ***
 
-See also [Guidelines for Developing Variants of the MTC Travel Model(s)](Guidelines-for-Developing-Variants-of-the-MTC-Travel-Model(s))
+See also [Guidelines for Developing Variants of the MTC Travel Models](Guidelines-for-Developing-Variants-of-the-MTC-Travel-Models)
 
 # Background
 

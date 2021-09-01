@@ -16,4 +16,4 @@ This is the documentation website for Bay Area Metro's Travel Model, also known 
 
 Scripts/Code - https://github.com/BayAreaMetro/travel-model-one
 
-[Guidelines for Developing Variants of the MTC Travel Model(s)](Guidelines-for-Developing-Variants-of-the-MTC-Travel-Model(s))
+[Guidelines for Developing Variants of the MTC Travel Models](Guidelines-for-Developing-Variants-of-the-MTC-Travel-Models)

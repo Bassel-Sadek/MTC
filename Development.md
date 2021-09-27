@@ -39,9 +39,6 @@
 * [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate) - PDF of slides presented to CMAs on Oct 12, 2018
 * [Draft Calibration and Validation Report](https://mtcdrive.box.com/v/TM1-5-2-CalibrationValidation) - (placeholder)
 
-## Travel Model 1.X Zone System
-* [Travel Analysis Zone and Super District Boundaries](http://opendata.mtc.ca.gov/datasets/travel-analysis-zones)
-
 ## Typical Weekday Flows and Speeds on Freeways
 * Data derived from <a href="http://pems.dot.ca.gov/" target="_blank" title="Caltrans">Caltrans Performance Measurement System</a> (or PeMS) database
   * [Year 2005 to Year 2014 Typical Weekday Flows and Speeds by Time Period](PeMSFlowsAndSpeeds)

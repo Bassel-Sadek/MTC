@@ -37,7 +37,7 @@
 ## Travel Model 1.5 - [Released March 2019](https://github.com/BayAreaMetro/travel-model-one/releases)
 * [What is Travel Model 1.5?](TravelModel1.5)
 * [Background on TM1.5](https://mtcdrive.box.com/v/2018-10-12-ModelUpdate) - PDF of slides presented to CMAs on Oct 12, 2018
-* [Draft Calibration and Validation Report](https://mtcdrive.box.com/v/TM1-5-2-CalibrationValidation) - (placeholder)
+* [Calibration and Validation Report](https://mtcdrive.box.com/v/TM1-5-2-CalibrationValidation)
 
 ## Typical Weekday Flows and Speeds on Freeways
 * Data derived from <a href="http://pems.dot.ca.gov/" target="_blank" title="Caltrans">Caltrans Performance Measurement System</a> (or PeMS) database

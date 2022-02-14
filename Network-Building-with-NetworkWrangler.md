@@ -4,7 +4,7 @@ This is a step-by-step guide for Travel Model 1.5 users who want to build or mod
 
 The basic premise is that we start with a base network (representing 2015), layer network projects on top of that, and output networks representing future years.
 
-![Building a Future](http://bayareametro.github.io//travel-model-two/assets/NetBuildingFuture.PNG)
+![Building a Future](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/assets/NetBuildingFuture.PNG)
 
 ---
 CONTENTS
@@ -175,7 +175,7 @@ C:\Users\lzorn\Documents\NetworkWrangler\scripts>
 
 The futures network script and configuration exists to build the networks for each of the [three Horizon futures](https://mtc.ca.gov/sites/default/files/Horizon-Futures_Shortlist.pdf).  The network building script is [build_network_mtc_futures.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/build_network_mtc_futures.py) and its configuration is [net_spec_futures_round1.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/net_spec_futures_round1.py).
 
-![Building a Future](http://bayareametro.github.io//travel-model-two/assets/NetBuildingFuture.PNG)
+![Building a Future](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/assets/NetBuildingFuture.PNG)
 
 In order to use the script, you will need to set the `PIVOT_DIR` (which is the base network dir) to point to the location of the 2015 base network inputs which should be available via Box Drive.  For example, the location of my inputs are [committed into the network config](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/net_spec_futures_round1.py#L14), but yours may vary depending on which directory is at your top Box level.
 ```python
@@ -216,7 +216,7 @@ This creates the 2015 network (really just a copy of the base) and the 2045 netw
 
 The test network script and configuration are very similar, but they exist as a convenience to test the project coding that you're working on.  As the network projects get coded and the Futures network configuration becomes more filled out, building a full network series for each future will become slower.  To make project coding easier, the test network script and configuration exist to build a bare-bones network so you can add only the project you're working on (and it's required projects, if any) for testing.
 
-![Building a Test Network](http://bayareametro.github.io//travel-model-two/assets/NetBuildingTestNetwork.PNG)
+![Building a Test Network](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/assets/NetBuildingTestNetwork.PNG)
 
 The network building script is [build_network_mtc.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/build_network_mtc.py) and its configuration is [net_spec_test.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/net_spec_test.py).
 

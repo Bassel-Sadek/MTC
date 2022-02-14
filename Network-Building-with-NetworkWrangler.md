@@ -4,7 +4,7 @@ This is a step-by-step guide for Travel Model 1.5 users who want to build or mod
 
 The basic premise is that we start with a base network (representing 2015), layer network projects on top of that, and output networks representing future years.
 
-![Building a Future](https://raw.githubusercontent.com/BayAreaMetro/modeling-website/master/assets/NetBuildingFuture.PNG)
+[[https://github.com/BayAreaMetro/modeling-website/blob/master/assets/NetBuildingFuture.png|alt=Building a Future]]
 
 ---
 CONTENTS

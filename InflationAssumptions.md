@@ -7,7 +7,7 @@ Price indices assumed in the MTC Travel Model<br />
 
 
 | Year | Consumer Price Index<br />(1982 - 1984 Ref) | Consumer Price Index<br />(2000 Reference) | Consumer Price Index<br />(2010 Reference) |
-|------|-------|------|------|
+|:------:|-------:|------:|------:|
 | 1983 | 98.40 | 0.55 | 0.43 |
 | 1984 | 104.00 | 0.58 | 0.46 |
 | 1985 | 108.40 | 0.60 | 0.48 |

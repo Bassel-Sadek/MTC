@@ -2,7 +2,8 @@
 
 ---
 
-Price indices assumed in the MTC Travel Model (Source:  Bureau of Labor Statistics [older data](http://www.bls.gov/regions/west/data/consumerpriceindex_sanfrancisco_table.pdf) [current data](https://data.bls.gov/timeseries/CUURS49BSA0); [FRED API](https://research.stlouisfed.org/fred2/series/CUUSA422SA0)).
+Price indices assumed in the MTC Travel Model<br />
+(Source:  Bureau of Labor Statistics [older data](http://www.bls.gov/regions/west/data/consumerpriceindex_sanfrancisco_table.pdf)/[current data](https://data.bls.gov/timeseries/CUURS49BSA0); [FRED API](https://research.stlouisfed.org/fred2/series/CUUSA422SA0)).
 
 
 | Year | Consumer Price Index<br />(1982 - 1984 Ref) | Consumer Price Index<br />(2000 Reference) | Consumer Price Index<br />(2010 Reference) |

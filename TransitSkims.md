@@ -30,3 +30,6 @@ The procedure outputs a 16-table skim for each time-of-day, access/egress, and l
 |ivtCOM	|Commuter rail in-vehicle time (modes 130 through 139), time (minutes x 100)|	
 |ivtFerry	|Ferry in-vehicle time (modes 100 through 109), time (minutes x 100)|	
 
+A complete list of transit mode definitions can be found in [[TransitModes]].
+
+More information about walk access time, walk egress time and auxiliary walk time can be found in [[TransitNetworkCoding]].

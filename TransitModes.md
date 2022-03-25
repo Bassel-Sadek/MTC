@@ -6,11 +6,11 @@ A complete list of transit modes.
 
 | Name | Mode # | Mode Category | Notes |
 |------|--------|---------------|-------|
-| Walk access connector | 1 | Support |  Example: Walk from centroid to auxiliary rail node/bus stop |
+| Walk access connector | 1 | Support | Example: Walk from centroid to auxiliary rail node/bus stop |
 | Drive access connector | 2 | Support |   |
 | Stop-to-stop or stop-to-station transfer link | 3 | Support |   |
 | Drive access funnel link | 4 | Support |   |
-| Walk access funnel link | 5 | Support |   |
+| Walk access funnel link | 5 | Support | Example: Transfer between walk auxiliary node and station platform node  |
 | Walk egress connector | 6 | Support |   |
 | Drive egress connector | 7 | Support |   |
 | West Berkeley | 10 | Local |   |

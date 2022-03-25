@@ -11,7 +11,7 @@ A complete list of transit modes.
 | Stop-to-stop or stop-to-station transfer link | 3 | Support |   |
 | Drive access funnel link | 4 | Support |   |
 | Walk access funnel link | 5 | Support | Example: Transfer between walk auxiliary node and station platform node  |
-| Walk egress connector | 6 | Support |   |
+| Walk egress connector | 6 | Support | Example: Walk from auxiliary rail node/bus stop to centroid  |
 | Drive egress connector | 7 | Support |   |
 | West Berkeley | 10 | Local |   |
 | Broadway Shuttle | 11 | Local |   |

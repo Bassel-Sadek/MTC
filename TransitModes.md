@@ -6,7 +6,7 @@ A complete list of transit modes.
 
 | Name | Mode # | Mode Category | Notes |
 |------|--------|---------------|-------|
-| Walk access connector | 1 | Support |   |
+| Walk access connector | 1 | Support |  Example: Walk from centroid to auxiliary rail node/bus stop |
 | Drive access connector | 2 | Support |   |
 | Stop-to-stop or stop-to-station transfer link | 3 | Support |   |
 | Drive access funnel link | 4 | Support |   |

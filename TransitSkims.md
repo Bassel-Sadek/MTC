@@ -22,6 +22,7 @@ token_modefac = 'modefac = 9*2.0, 70*1.0, 20*1.0, 10*1.0, 10*1.0, 10*1.0, 10*1.0
 The mode-specific perceived time factors are same (1.0) for all mode all modes, except for support (access/egress/transfer) which is 2.0.
 
 Local bus example:
+
 '; local bus or short-haul basic;` 
 
 `; mode-specific perceived time factors`

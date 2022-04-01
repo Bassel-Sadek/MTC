@@ -28,7 +28,7 @@ The **six line-haul mode combinations** are: (i) long-haul premium or commuter r
 
 > > Local bus example:
 
-> > `; local bus or short-haul basic;` 
+> > `; local bus or short-haul basic` 
 
 > > `; mode-specific perceived time factors`
 

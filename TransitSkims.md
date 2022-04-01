@@ -1,5 +1,7 @@
 [[Home]] > [[TravelModel]] > [[UsersGuide]] > [[DataDictionary]] > [[TransitSkims]]
-#Background
+
+# Background
+
 The [transit skimming procedure](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/skims/TransitSkims.job) creates skim tables for five time periods, three access/egress combinations, and six line-haul mode combinations. 
 
 The five time periods are: (i) early AM, before 6 am; (ii) AM peak period, 6 am to 10 am; (iii) midday, 10 am to 3 pm; (iv) PM peak period, 3 pm to 7 pm; and (v) evening, after 7 pm. 
@@ -36,7 +38,7 @@ Local bus example:
 
 The mode-specific perceived time factor for local bus is 1, and they are higher for other modes.
 
-#Definitions
+# Definitions
 The procedure outputs a 16-table skim for each time-of-day, access/egress, and line-haul mode combination, containing the following:
 |Name	|Definition|	Notes|
 |---|---|---|

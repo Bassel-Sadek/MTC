@@ -6,7 +6,7 @@ The [transit skimming procedure](https://github.com/BayAreaMetro/travel-model-on
 
 The **five time periods** are: (i) early AM, before 6 am; (ii) AM peak period, 6 am to 10 am; (iii) midday, 10 am to 3 pm; (iv) PM peak period, 3 pm to 7 pm; and (v) evening, after 7 pm. 
 
-The** three access/egress combinations **are: (i) walk/transit/walk; (ii) drive/transit/walk; and (iii) walk/transit/drive. 
+The **three access/egress combinations** are: (i) walk/transit/walk; (ii) drive/transit/walk; and (iii) walk/transit/drive. 
 
 The **six line-haul mode combinations** are: (i) long-haul premium or commuter rail; (ii) medium-haul premium or heavy rail (BART) (iii) medium-haul basic or express bus; (iv) short-haul premium or light rail or ferry; (v) short-haul basic or local bus; and (vi) a generic transit path used to calculate accessibility. Some notes on the line-haul mode combinations:
 -  **Light rail and ferry are grouped together.**  This was done to reduce the number of skims that need to be created.  Because light rail and ferry do not compete with each other, travelers in corridors with light rail are presented with the light rail choice and travelers in corridors with ferry are presented with the ferry choice. 

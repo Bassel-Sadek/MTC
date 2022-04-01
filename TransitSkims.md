@@ -13,7 +13,7 @@ The **six line-haul mode combinations** are: (i) long-haul premium or commuter r
 
 -  **What is the "generic transit path"?** The generic skims are used by [Accessibility.job](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/skims/Accessibility.job) to create skims/accessibility.csv which is used by the auto ownership model. They do not necessarily represent the best transit impedance for each OD; they represent paths found in which all line-haul modes are treated equally i.e. having equal mode-specific perceived time factors. In comparison, the non-generic line-haul mode skims have mode-specific perceived time factors that are set to be lower for the given line-haul mode than other line-haul modes. The example below, which is an excerpt of TransitSkims.job, compares mode-specific perceived time factors for the generic “all transit treated equally” mode to “local bus” mode.
 
-Generic TRN mode example:
+> > Generic TRN mode example:
 
 `; all transit treated equally`
 

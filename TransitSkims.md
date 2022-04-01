@@ -14,6 +14,7 @@ Some notes on the line-haul mode combinations:
 
 Generic TRN mode example:
 `; all transit treated equally`
+
 `; mode-specific perceived time factors` 
 `; support loc bus exp bus ferry lt rail hvy rail com rail
 token_modefac = 'modefac = 9*2.0, 70*1.0, 20*1.0, 10*1.0, 10*1.0, 10*1.0, 10*1.0'`

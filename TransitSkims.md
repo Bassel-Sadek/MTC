@@ -8,7 +8,26 @@ The three access/egress combinations are: (i) walk/transit/walk; (ii) drive/tran
 
 The six line-haul mode combinations are: (i) long-haul premium or commuter rail; (ii) medium-haul premium or heavy rail (BART) (iii) medium-haul basic or express bus; (iv) short-haul premium or light rail or ferry; (v) short-haul basic or local bus; and (vi) a generic transit path used to calculate accessibility.
 
-Note that light rail and ferry are grouped together.  This was done to reduce the number of skims that need to be created.  Because light rail and ferry do not compete with each other, travelers in corridors with light rail are presented with the light rail choice and travelers in corridors with ferry are presented with the ferry choice. 
+Some notes on the line-haul mode combinations:
+-  Light rail and ferry are grouped together in (iv).  This was done to reduce the number of skims that need to be created.  Because light rail and ferry do not compete with each other, travelers in corridors with light rail are presented with the light rail choice and travelers in corridors with ferry are presented with the ferry choice. 
+- What is the "generic transit path" (vi)? The generic skims are used by [Accessibility.job](https://github.com/BayAreaMetro/travel-model-one/blob/master/model-files/scripts/skims/Accessibility.job) to create skims/accessibility.csv which is used by the auto ownership model. They do not necessarily represent the best transit impedance for each OD; they represent paths found in which all line-haul modes are treated equally i.e. having equal mode-specific perceived time factors. In comparison, the non-generic line-haul mode skims have mode-specific perceived time factors that are set to be lower for the given line-haul mode than other line-haul modes. The example below, which is an excerpt of TransitSkims.job, compares mode-specific perceived time factors for the generic “all transit treated equally” mode to “local bus” mode.
+
+Generic TRN mode example:
+; all transit treated equally
+; mode-specific perceived time factors for the 
+; support loc bus exp bus ferry lt rail hvy rail com rail
+token_modefac = 'modefac = 9*2.0, 70*1.0, 20*1.0, 10*1.0, 10*1.0, 10*1.0, 10*1.0'
+
+The mode-specific perceived time factors are same (1.0) for all mode all modes, except for support (access/egress/transfer) which is 2.0.
+
+Local bus example:
+; local bus or short-haul basic; 
+; mode-specific perceived time factors
+;  support  loc bus  exp bus   ferry  lt rail  hvy rail  com rail
+ token_modefac = 'modefac  =   9*2.0,  70*1.0,  20*1.5, 10*1.5,  10*1.5,   10*1.5,   10*1.5'   
+
+The mode-specific perceived time factor for local bus is 1, and they are higher for other modes.
+
 
 The procedure outputs a 16-table skim for each time-of-day, access/egress, and line-haul mode combination, containing the following:
 |Name	|Definition|	Notes|

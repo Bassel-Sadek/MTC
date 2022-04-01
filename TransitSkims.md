@@ -28,7 +28,7 @@ Local bus example:
 
 `;  support  loc bus  exp bus   ferry  lt rail  hvy rail  com rail`
 
-` token_modefac = 'modefac  =   9*2.0,  70*1.0,  20*1.5, 10*1.5,  10*1.5,   10*1.5,   10*1.5''   
+` token_modefac = 'modefac  =   9*2.0,  70*1.0,  20*1.5, 10*1.5,  10*1.5,   10*1.5,   10*1.5'`   
 
 The mode-specific perceived time factor for local bus is 1, and they are higher for other modes.
 

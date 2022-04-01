@@ -25,6 +25,7 @@ The **six line-haul mode combinations** are: (i) long-haul premium or commuter r
 
 > > The mode-specific perceived time factors are same (1.0) for all mode all modes, except for support (access/egress/transfer) which is 2.0.
 
+
 > > Local bus example:
 
 > > `; local bus or short-haul basic;` 

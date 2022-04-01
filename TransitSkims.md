@@ -23,7 +23,7 @@ The **six line-haul mode combinations** are: (i) long-haul premium or commuter r
 
 > > `token_modefac = 'modefac = 9*2.0, 70*1.0, 20*1.0, 10*1.0, 10*1.0, 10*1.0, 10*1.0'`
 
-> > The mode-specific perceived time factors are same (1.0) for all mode all modes, except for support -- access/egress/transfer -- which has a factor of 2.0.
+> > The mode-specific perceived time factors are the same (1.0) for all mode all modes, except for support -- access/egress/transfer -- which has a factor of 2.0.
 
 
 > > Local bus example:
@@ -36,7 +36,7 @@ The **six line-haul mode combinations** are: (i) long-haul premium or commuter r
 
 > > `token_modefac = 'modefac  =   9*2.0,  70*1.0,  20*1.5, 10*1.5,  10*1.5,   10*1.5,   10*1.5'`   
 
-The mode-specific perceived time factor for local bus is 1, and they are higher for other modes.
+The mode-specific perceived time factor for local bus is 1.0, and they are higher (1.5) for other modes.
 
 # Definitions
 The procedure outputs a 16-table skim for each time-of-day, access/egress, and line-haul mode combination, containing the following:

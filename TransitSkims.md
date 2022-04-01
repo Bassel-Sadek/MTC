@@ -15,7 +15,7 @@ The **six line-haul mode combinations** are: (i) long-haul premium or commuter r
 
 > > Generic TRN mode example:
 
-`; all transit treated equally`
+> > `; all transit treated equally`
 
 `; mode-specific perceived time factors` 
 

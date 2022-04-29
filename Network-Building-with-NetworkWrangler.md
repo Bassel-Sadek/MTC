@@ -32,7 +32,7 @@ These instructions are written assuming installation on Windows (tested on Windo
 * **Install [Github Desktop](https://desktop.github.com/).**  You can use this for the next step, cloning *NetworkWrangler* from Github, and also for committing changes to the *NetworkWrangler* network configuration back to github.
 * **Clone [NetworkWrangler from Github](https://github.com/BayAreaMetro/NetworkWrangler)** and keep track of where you cloned it.  We typically clone it into our personal `Documents` folder or `Documents\GitHub`.  For example, Flavia's installation is in `C:\Users\ftsang\Documents\GitHub\NetworkWrangler`.
 * **Install [Git](https://git-scm.com/downloads).**  This is related to, but not the same as the [GitHub Desktop application](https://desktop.github.com/); we'll need it because projects are coded as local git repositories (that are not on Github).  This is typically installed in `C:\Program Files\Git`.
-* **Install [Box Drive](https://www.box.com/resources/downloads/drive).**  This is because our 2015 base networks are in Box and using Box Drive ensures you're testing with the most recent versions.  If you don't have access to the [2015 base network inputs here](https://mtcdrive.box.com/s/qbkhr1y6gedifou5i84nm41frtrsco5k), contact a member of the modeling team.  Take note of where Box Drive syncs this folder to your local disk since you'll need that to [Build a network](#build-a-network) below.
+* **Install [Box Drive](https://www.box.com/resources/downloads/drive).**  ~~This is because our 2015 base networks are in Box and using Box Drive ensures you're testing with the most recent versions.  If you don't have access to the [2015 base network inputs here](https://mtcdrive.box.com/s/qbkhr1y6gedifou5i84nm41frtrsco5k), contact a member of the modeling team.  Take note of where Box Drive syncs this folder to your local disk since you'll need that to [Build a network](#build-a-network) below.~~  2015 base networks are available here: [TM1_2015_Base_Network](https://github.com/BayAreaMetro/TM1_2015_Base_Network) which is cloned to `M:\Application\Model One\Networks\TM1_2015_Base_Network`
 
 
 ### Using the command line, python interpreter, and the NetworkWrangler Python module
@@ -177,7 +177,8 @@ The futures network script and configuration exists to build the networks for ea
 
 [[https://github.com/BayAreaMetro/modeling-website/blob/master/assets/NetBuildingFuture.png|alt=Building a Future]]
 
-In order to use the script, you will need to set the `PIVOT_DIR` (which is the base network dir) to point to the location of the 2015 base network inputs which should be available via Box Drive.  For example, the location of my inputs are [committed into the network config](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/net_spec_futures_round1.py#L14), but yours may vary depending on which directory is at your top Box level.
+~~In order to use the script, you will need to set the `PIVOT_DIR` (which is the base network dir) to point to the location of the 2015 base network inputs which should be available via Box Drive.  For example, the location of my inputs are [committed into the network config](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/net_spec_futures_round1.py#L14), but yours may vary depending on which directory is at your top Box level.~~
+
 ```python
 PIVOT_DIR = os.path.join(os.environ["USERPROFILE"], "Box","Modeling and Surveys","Development","Travel Model Two Development","Model Inputs","2015_revised_mazs")
 ```
@@ -251,7 +252,7 @@ C:\Users\lzorn\Documents\NetworkWrangler\scripts>dir Test_Scenario_network*
 
 ## Coding a Project
 
-Network projects are coded as folders within **`M:\Application\Model Two\NetworkProjects`** (configured in [build_network_mtc.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/build_network_mtc.py#L56) and [build_network_mtc_futures.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/build_network_mtc_futures.py#L53)).  Each project or folder is a [local Git repository](https://www.intertech.com/Blog/introduction-to-git-concepts/) (that will not be attached to a remote repository -- so it will be standalone).  
+Network projects are coded as folders within **`M:\Application\Model One\NetworkProjects`** (configured in [build_network_mtc.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/build_network_mtc.py#L56) and [build_network_mtc_futures.py](https://github.com/BayAreaMetro/NetworkWrangler/blob/master/scripts/build_network_mtc_futures.py#L53)).  Each project or folder is a [local Git repository](https://www.intertech.com/Blog/introduction-to-git-concepts/) (that will not be attached to a remote repository -- so it will be standalone).  
 
 ### Step 1: Create project folder
 

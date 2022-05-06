@@ -152,12 +152,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ('Importing ', 'C:\\Users\\lzorn\\Documents\\NetworkWrangler\\Wrangler\\TransitAssignmentData.pyc')
 >>>
 ```
-For most current python users, the required modules are:
+The required modules are:
 * [xlrd](https://pypi.org/project/xlrd/)
 * [SimpleParse](https://pypi.org/project/SimpleParse/)
 * [numpy](https://pypi.org/project/numpy/)
-
-If you are using python 3, you may need [pywin32](https://pypi.org/project/pywin32/) as well.
+* [pywin32](https://pypi.org/project/pywin32/)
 
 ## Build a Network
 
